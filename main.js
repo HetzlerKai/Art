@@ -117,7 +117,7 @@ function handleRequest(request, response){
 }
 
 var oServer = oHttp.createServer(handleRequest);
-oServer.listen(PORT, function(){
+oServer.listen(process.env.PORT || 5000, function(){
     console.log("Server listening on: http://localhost:" + PORT);
     console.log(" ");
     console.log("Hallo Kai...");
