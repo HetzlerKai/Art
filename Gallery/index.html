@@ -1,0 +1,151 @@
+<html>
+	<head>
+
+		<title> Galerie Kai Hetzler </title>
+
+		<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+
+		<style>
+
+		    .pictureScroll{
+					width: 85%;
+    			display: grid;
+			    margin-left: auto;
+			    margin-right: auto;
+			    margin-top: 7rem;
+				}
+
+				.artwork{
+					margin-bottom: 10rem;
+  				box-shadow: 1px 2px 15px 3px;
+			    margin-left: auto;
+			    margin-right: auto;
+				}
+
+				.logoImage{
+					height: 100px;
+					width: 100px;
+					border-radius: 50%;
+				}
+
+				.logoTitle{
+			    margin-left: 20px;
+			    margin-top: auto;
+			    margin-bottom: auto;
+					font-size: 45px;
+					font-family: Audiowide; /* Allerta Stencil */
+				}
+
+				.logoContent{
+					display: flex;
+			    margin-left: auto;
+			    margin-right: auto;
+			    width: 600px;
+			    margin-top: 100px;
+				}
+
+				body{
+					background-color: #cfcfcf;
+				}
+
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+		<script>
+
+			function imgSizeFit(img, maxWidth, maxHeight){
+				var ratio = Math.min(1, maxWidth / img.naturalWidth, maxHeight / img.naturalHeight);
+				img.style.width = img.naturalWidth * ratio + 'px';
+				img.style.height = img.naturalHeight * ratio + 'px';
+			}
+
+			function buildContent(aImages){
+					var
+					oImage,
+					i = 0,
+					iMaxWidth = window.innerWidth * 0.85, //2100, //85% screensize
+					iMaxHeight = window.innerHeight * 0.85, //1200,
+					oDisplay = $(".display"),
+					oSeriesSelect = $(".seriesSelect"),
+					oContent = $(".pictureScroll");
+
+					oContent.empty();
+					oSeriesSelect.empty();
+
+					//var	aImages = ["/pics/test2.jpg", "/pics/test.jpg", "/pics/test3.jpg"];
+
+					//TODO: Handle Series
+					// oSeriesSelect.append("<Button> Series One </Button>");
+					// oSeriesSelect.append("<Button> Series RGB </Button>");
+					// oSeriesSelect.append("<Button> Others </Button>");
+
+					for (i; i < aImages.length; i++) {
+						oImage = new Image();
+						oImage.src = "/pics/" + aImages[i];
+						oImage.id = "idImage" + i;
+						oImage.className = "artwork";
+						oContent.append(oImage);
+					}
+
+
+					$(".artwork").each(function () {
+						$(this).on("load", function () {
+							imgSizeFit($(this)[0], iMaxWidth, iMaxHeight);
+						})
+					});
+			}
+
+			jQuery(document).ready(function(){
+
+				//handle resizing
+				window.onresize = function() {
+					$.ajax({
+						dataType: "json",
+						url: "getAllFileNames",
+						success: function (aData) {
+							buildContent(aData);
+						},
+						error: function (sError) {
+							console.log(sError);
+						}
+					});
+				};
+
+				//init
+				$.ajax({
+				  dataType: "json",
+				  url: "getAllFileNames",
+				  success: function (aData) {
+						buildContent(aData);
+				  },
+					error: function (sError) {
+						console.log(sError);
+					}
+				});
+
+				var oLogoImage = new Image(100, 100);
+				oLogoImage.src = "/logo/logo.jpg";
+				oLogoImage.id = "idLogoImage"
+				oLogoImage.className = "logoImage";
+				$(".logoContent").prepend(oLogoImage);
+
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="display">
+			<div class="logoContent">
+				<h1 class="logoTitle"> Galerie Kai Hetzler </h1>
+			</div>
+			<div class="seriesSelect"> </div>
+			<div class="pictureScroll"> </div>
+		</div>
+
+	</body>
+
+</html>
