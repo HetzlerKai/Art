@@ -35,7 +35,7 @@ function handleRequest(request, response){
         break;
 
         case "/getAllFileNames":
-          let aData = fs.readdirSync("Gallery\\pics");
+          let aData = fs.readdirSync("Gallery/pics");
           response.writeHead(202, {'Content-Type': 'application/json'});
           response.end(JSON.stringify(aData));
         break;
