@@ -1,6 +1,7 @@
 {
   "name": "art",
   "version": "1.0.0",
+  "homepage": "./",
   "description": "Galeri Kai Hetzler",
   "main": "main.js",
   "scripts": {
