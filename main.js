@@ -1,16 +1,12 @@
 var
 oHttp = require('http'),
 fs = require('fs'),
-hHome,
-hToDo,
 hGallery,
 fnGetClientAddress;
 
 const PORT=8080;
 
 newFavicon = fs.readFileSync('favicon.ico');
-hHome = fs.readFileSync('Home/index.html');
-hToDo = fs.readFileSync('ToDo/index.html');
 hGallery = fs.readFileSync('Gallery/index.html');
 
 fnGetClientAddress = function (req) {
