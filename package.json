@@ -1,4 +1,23 @@
 {
   "name": "art",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "description": "Galeri Kai Hetzler",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HetzlerKai/Art.git"
+  },
+  "author": "Kai Hetzler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HetzlerKai/Art/issues"
+  },
+  "homepage": "https://github.com/HetzlerKai/Art#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0"
+  }
 }
