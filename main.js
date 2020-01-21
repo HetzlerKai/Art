@@ -24,6 +24,7 @@ function handleRequest(request, response){
     try {
         switch(sRequest){
 
+        case "/":
         case "/art":
         case "/Art":
         case "/Gallery":
