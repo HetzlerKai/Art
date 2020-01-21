@@ -35,7 +35,7 @@ function handleRequest(request, response){
         break;
 
         case "/getAllFileNames":
-          let aData = fs.readdirSync("C:\\Users\\D061423\\OneDrive - SAP SE\\Documents\\GitHub\\nodejs-Dashboard\\Gallery\\pics");
+          let aData = fs.readdirSync(".\\Gallery\\pics");
           response.writeHead(202, {'Content-Type': 'application/json'});
           response.end(JSON.stringify(aData));
         break;
@@ -103,7 +103,7 @@ function handleRequest(request, response){
             break;
 
     		default:
-    			var sData = fs.readFileSync("C:\\Users\\D061423\\OneDrive - SAP SE\\Documents\\GitHub\\nodejs-Dashboard\\Gallery" + sRequest);
+    			var sData = fs.readFileSync(".\\Gallery" + sRequest);
 
                 response.writeHead(202, {'Content-Type': 'application/json'});
                 response.end(sData);
