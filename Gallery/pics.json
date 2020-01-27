@@ -1,0 +1,104 @@
+{
+  "pics": [
+    {
+      "id": 0,
+      "name": "Mondlicht",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": true,
+      "price": "35€",
+      "path": "0.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Hot Dogs and Caviar",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Bats",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "",
+      "description": "",
+      "type": "D",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "The One",
+      "description": "",
+      "type": "D",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Funken",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Abstract_0",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Scream",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Selbstportrait",
+      "description": "",
+      "type": "A3",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "9.jpg"
+    }
+  ]
+}

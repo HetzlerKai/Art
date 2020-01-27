@@ -16,10 +16,29 @@
 				}
 
 				.artwork{
-					margin-bottom: 10rem;
   				box-shadow: 1px 2px 15px 3px;
 			    margin-left: auto;
 			    margin-right: auto;
+				}
+
+				.artwork-name{
+					margin-top: 2rem;
+					font-size: 40px;
+			    margin-left: auto;
+			    margin-right: auto;
+				}
+
+				.artwork-type{
+					font-size: 40px;
+			    margin-left: auto;
+			    margin-right: auto;
+				}
+
+				.artwork-price{
+					margin-bottom: 10rem;
+					font-size: 40px;
+					margin-left: auto;
+					margin-right: auto;
 				}
 
 				.impressumSection{
@@ -30,7 +49,6 @@
 					width: 600px;
 			    margin-left: auto;
 			    margin-right: auto;
-					font-family: Audiowide;
 				}
 
 				.contactSection{
@@ -41,7 +59,6 @@
 					text-align: center;
 			    margin-left: auto;
 			    margin-right: auto;
-					font-family: Audiowide;
 				}
 
 				.logoImage{
@@ -55,7 +72,6 @@
 			    margin-top: auto;
 			    margin-bottom: auto;
 					font-size: 45px;
-					font-family: Audiowide; /* Allerta Stencil */
 				}
 
 				.logoContent{
@@ -72,6 +88,7 @@
 
 				body{
 					background-color: #cfcfcf;
+					font-family: Audiowide;
 				}
 
 		</style>
@@ -84,6 +101,77 @@
 				var ratio = Math.min(1, maxWidth / img.naturalWidth, maxHeight / img.naturalHeight);
 				img.style.width = img.naturalWidth * ratio + 'px';
 				img.style.height = img.naturalHeight * ratio + 'px';
+			}
+
+			function buildContentWithData (aPics) {
+				var
+				oImage,
+				oNameLine,
+				sName,
+				oTypeLine,
+				sType,
+				oPriceLine,
+				sPrice,
+				i = 0,
+				iMaxWidth = window.innerWidth * 0.85, //2100, //85% screensize
+				iMaxHeight = window.innerHeight * 0.85, //1200,
+				oDisplay = $(".display"),
+				oSeriesSelect = $(".seriesSelect"),
+				oContent = $(".pictureScroll");
+
+				oContent.empty();
+				oSeriesSelect.empty();
+
+				for (i; i < aPics.length; i++) {
+					oImage = new Image();
+					oImage.src = "/pics/" + aPics[i].path;
+					oImage.id = "idImage" + i;
+					oImage.className = "artwork";
+
+					oNameLine = document.createElement('div');
+					if (aPics[i].name) {
+						sName = aPics[i].name;
+					} else {
+						sName = "untitled";
+					}
+					oNameLine.textContent = sName;
+					oNameLine.className = "artwork-name";
+
+					oTypeLine = document.createElement('div');
+					if (aPics[i].type === "AL") {
+						sType = "Acryl auf Leinwand - " + aPics[i].size;
+					} else if (aPics[i].type === "D") {
+						sType = "Digital";
+					} else if (aPics[i].type === "A3") {
+						sType = "Acryl auf Papier - A3";
+					}
+					oTypeLine.textContent = sType;
+					oTypeLine.className = "artwork-type";
+
+					oPriceLine = document.createElement('div');
+					if (aPics[i].sold) {
+						sPrice = "Verkauft";
+					} else if (aPics[i].price) {
+						sPrice = aPics[i].price;
+					} else {
+						sPrice = "Preis auf Nachfrage"
+					}
+					oPriceLine.textContent = sPrice;
+					oPriceLine.className = "artwork-price";
+
+					oContent.append(oImage);
+					oContent.append(oNameLine);
+					oContent.append(oTypeLine);
+					oContent.append(oPriceLine);
+				}
+
+
+				$(".artwork").each(function () {
+					$(this).on("load", function () {
+						imgSizeFit($(this)[0], iMaxWidth, iMaxHeight);
+					})
+				});
+
 			}
 
 			function buildContent(aImages){
@@ -128,9 +216,9 @@
 				window.onresize = function() {
 					$.ajax({
 						dataType: "json",
-						url: "getAllFileNames",
-						success: function (aData) {
-							buildContent(aData);
+						url: "getDataFile", //"getAllFileNames",
+						success: function (oData) {
+							buildContentWithData(oData.pics); //buildContent(aData);
 						},
 						error: function (sError) {
 							console.log(sError);
@@ -141,9 +229,9 @@
 				//init
 				$.ajax({
 				  dataType: "json",
-				  url: "getAllFileNames",
-				  success: function (aData) {
-						buildContent(aData);
+				  url: "getDataFile", //"getAllFileNames",
+				  success: function (oData) {
+						buildContentWithData(oData.pics); //buildContent(aData);
 				  },
 					error: function (sError) {
 						console.log(sError);

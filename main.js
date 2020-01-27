@@ -40,73 +40,23 @@ function handleRequest(request, response){
           response.end(JSON.stringify(aData));
         break;
 
+        case "/getDataFile":
+          let sPicsData = fs.readFileSync('Gallery/pics.json', 'utf8');
+          
+          response.writeHead(202, {'Content-Type': 'application/json'});
+          response.end(sPicsData);
+        break;
+
     		case "/favicon.ico":
     			response.writeHead(200, {'Content-Type': 'image/x-icon'});
     			response.end(newFavicon, 'binary');
-            break;
-
-            case "/writeToConsole":
-                console.log(sOptions);
-            break;
-
-            case "/data":
-                var sData = fs.readFileSync('Home/data.json');
-
-                response.writeHead(202, {'Content-Type': 'application/json'});
-                response.end(sData);
-            break;
-
-            case "/writeToFile":
-
-                var
-                sLog,
-                sTime,
-                sMessage;
-
-                sTime = new Date().toLocaleString();
-                sOptions = decodeURI(sOptions);
-                sLog = "Timestamp: " + sTime + " Text: " + sOptions;
-
-                try {
-                    fs.appendFile("Log.txt", "\n" + sLog);
-                    sMessage = sClient + " - wrote to Log: " + "\n" + sLog;
-                    console.log(sMessage);
-                } catch(err) {
-                    sMessage = sClient + " - writing to File failed: " + "\n" + err;
-                    console.log(sMessage);
-                }
-
-                response.writeHead(200, {'Content-Type': 'text/plain'});
-                response.end(sMessage);
-
-            break;
-
-            case "/http":
-            {
-              let sPath = request.url.replace("/http?", "");
-
-              oHttp.get(sPath, (res) => {
-                const { statusCode } = res;
-                const contentType = res.headers['content-type'];
-
-                res.setEncoding('utf8');
-                let rawData = '';
-                res.on('data', (chunk) => { rawData += chunk; });
-                res.on('end', () => {
-                  response.writeHead(200, {'Content-Type': 'application/json'});
-                  response.end(rawData);
-                });
-              }).on('error', (e) => {
-                console.error(`Got error: ${e.message}`);
-              });
-            }
-            break;
+        break;
 
     		default:
     			var sData = fs.readFileSync("Gallery" + sRequest);
 
-                response.writeHead(202, {'Content-Type': 'application/json'});
-                response.end(sData);
+          response.writeHead(202, {'Content-Type': 'application/json'});
+          response.end(sData);
     		break;
         }
     } catch(err) {
