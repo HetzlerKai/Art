@@ -94,10 +94,27 @@
 
 		<script>
 
-			function imgSizeFit(img, maxWidth, maxHeight){
-				var ratio = Math.min(1, maxWidth / img.naturalWidth, maxHeight / img.naturalHeight);
-				img.style.width = img.naturalWidth * ratio + 'px';
-				img.style.height = img.naturalHeight * ratio + 'px';
+			// function imgSizeFit(img, maxWidth, maxHeight){
+			// 	var ratio = Math.min(1, maxWidth / img.naturalWidth, maxHeight / img.naturalHeight);
+			// 	img.style.width = img.naturalWidth * ratio + 'px';
+			// 	img.style.height = img.naturalHeight * ratio + 'px';
+			// }
+
+			function imgSizeFit(img, maxWidth, maxHeight, naturalWidth, naturalHeight){
+				var ratio = Math.min(1, maxWidth / naturalWidth, maxHeight / naturalHeight);
+				img.style.width = naturalWidth * ratio + 'px';
+				img.style.height = naturalHeight * ratio + 'px';
+			}
+
+			function getImageSize(img, callback) {
+			    var wait = setInterval(function() {
+			        var w = img.naturalWidth,
+			            h = img.naturalHeight;
+			        if (w && h) {
+			            clearInterval(wait);
+			            callback.apply(this, [w, h]);
+			        }
+			    }, 30);
 			}
 
 			function buildContentWithData (aPics) {
@@ -164,9 +181,15 @@
 
 
 				$(".artwork").each(function () {
-					$(this).on("load", function () {
-						imgSizeFit($(this)[0], iMaxWidth, iMaxHeight);
-					})
+					let oImg = $(this)[0];
+
+					getImageSize(oImg, function(width, height) {
+						imgSizeFit(oImg, iMaxWidth, iMaxHeight, width, height);
+					});
+
+					// $(this).on("load", function () {
+					// 	imgSizeFit($(this)[0], iMaxWidth, iMaxHeight);
+					// })
 				});
 
 			}
