@@ -15,10 +15,21 @@
 			    margin-top: 7rem;
 				}
 
-				.artwork{
-  				box-shadow: 1px 2px 15px 3px;
-			    margin-left: auto;
-			    margin-right: auto;
+				.artwork {
+				  opacity: 0;
+					box-shadow: 1px 2px 15px 3px;
+					margin-left: auto;
+					margin-right: auto;
+
+				  -webkit-transition: opacity 500ms ease-in;
+				     -moz-transition: opacity 500ms ease-in;
+				      -ms-transition: opacity 500ms ease-in;
+				       -o-transition: opacity 500ms ease-in;
+				          transition: opacity 500ms ease-in;
+				}
+
+				.artwork-loaded {
+				    opacity: 1;
 				}
 
 				.artwork-name{
@@ -104,6 +115,7 @@
 				var ratio = Math.min(1, maxWidth / naturalWidth, maxHeight / naturalHeight);
 				img.style.width = naturalWidth * ratio + 'px';
 				img.style.height = naturalHeight * ratio + 'px';
+				img.classList.add("artwork-loaded");
 			}
 
 			function getImageSize(img, callback) {
