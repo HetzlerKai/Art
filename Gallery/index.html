@@ -115,7 +115,6 @@
 				var ratio = Math.min(1, maxWidth / naturalWidth, maxHeight / naturalHeight);
 				img.style.width = naturalWidth * ratio + 'px';
 				img.style.height = naturalHeight * ratio + 'px';
-				img.classList.add("artwork-loaded");
 			}
 
 			function getImageSize(img, callback) {
@@ -199,9 +198,9 @@
 						imgSizeFit(oImg, iMaxWidth, iMaxHeight, width, height);
 					});
 
-					// $(this).on("load", function () {
-					// 	imgSizeFit($(this)[0], iMaxWidth, iMaxHeight);
-					// })
+					$(this).on("load", function () {
+						oImg.classList.add("artwork-loaded");
+					})
 				});
 
 			}
