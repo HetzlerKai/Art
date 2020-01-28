@@ -99,6 +99,20 @@
 					font-family: Audiowide;
 				}
 
+				.display .artwork-name,
+				.display .artwork-type,
+				.display .artwork-price,
+				.display .impressumSection {
+					visibility: hidden;
+				}
+
+				.display.loaded .artwork-name,
+				.display.loaded .artwork-type,
+				.display.loaded .artwork-price,
+				.display.loaded .impressumSection {
+					visibility: initial !important;
+				}
+
 		</style>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -268,6 +282,10 @@
 							console.log(sError);
 						}
 					});
+				};
+
+				window.onload = function(){
+					$(".display").addClass("loaded")
 				};
 
 				//init
