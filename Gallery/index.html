@@ -210,18 +210,18 @@
 			jQuery(document).ready(function(){
 
 				//handle resizing
-				window.onresize = function() {
-					$.ajax({
-						dataType: "json",
-						url: "getDataFile", //"getAllFileNames",
-						success: function (oData) {
-							buildContentWithData(oData.pics); //buildContent(aData);
-						},
-						error: function (sError) {
-							console.log(sError);
-						}
-					});
-				};
+				// window.onresize = function() {
+				// 	$.ajax({
+				// 		dataType: "json",
+				// 		url: "getDataFile", //"getAllFileNames",
+				// 		success: function (oData) {
+				// 			buildContentWithData(oData.pics); //buildContent(aData);
+				// 		},
+				// 		error: function (sError) {
+				// 			console.log(sError);
+				// 		}
+				// 	});
+				// };
 
 				//init
 				$.ajax({
