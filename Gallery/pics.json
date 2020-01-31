@@ -12,7 +12,7 @@
     }, {
       "id": 2,
       "name": "Series_RGB",
-      "publish": false
+      "publish": true
     }
   ],
   "pics": [
@@ -51,7 +51,7 @@
     },
     {
       "id": 3,
-      "name": "",
+      "name": "Burning Water",
       "description": "",
       "type": "AL",
       "size": "50cm x 70cm",
@@ -122,6 +122,39 @@
       "sold": false,
       "price": "",
       "path": "9.jpg"
+    },
+    {
+      "id": 10,
+      "name": "RGB_02",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 120cm",
+      "sold": false,
+      "price": "",
+      "path": "10.jpg",
+      "series": "2"
+    },
+    {
+      "id": 11,
+      "name": "RGB_01",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "11.jpg",
+      "series": "2"
+    },
+    {
+      "id": 12,
+      "name": "Drachensteigen im Sturm",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "12.jpg",
+      "series": "2"
     }
   ]
 }
