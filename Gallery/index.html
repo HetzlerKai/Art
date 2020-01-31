@@ -136,9 +136,8 @@
 
 		<script>
 
-			//TODO: rework Header for mobile
+			//TODO: increase font size / popover size for mobile
 			//TODO: change text loading logic
-			//TODO: reenable series select
 
 			function imgSizeFit(img, maxWidth, maxHeight, naturalWidth, naturalHeight){
 				var ratio = Math.min(1, maxWidth / naturalWidth, maxHeight / naturalHeight);
@@ -267,23 +266,30 @@
 					return (oItem.series && oItem.series.indexOf(sSeriesId)) >= 0;
 				});
 
+				_aPicsFiltered = aPicsFiltered;
+
 				buildContentWithData(aPicsFiltered);
 			}
 
 			jQuery(document).ready(function(){
 
 				window.onorientationchange = function() {
-					//buildContentWithData(_aPics);
-					$.ajax({
-					  dataType: "json",
-					  url: "getDataFile",
-					  success: function (oData) {
-							buildContentWithData(oData.pics);
-					  },
-						error: function (sError) {
-							console.log(sError);
-						}
-					});
+					if (_aPicsFiltered) {
+						buildContentWithData(_aPicsFiltered);
+					} else if (_aPics) {
+						buildContentWithData(_aPics);
+					} else {
+						$.ajax({
+							dataType: "json",
+							url: "getDataFile",
+							success: function (oData) {
+								buildContentWithData(oData.pics);
+							},
+							error: function (sError) {
+								console.log(sError);
+							}
+						});
+					}
 				};
 
 				window.onload = function(){
