@@ -273,6 +273,10 @@
 
 			jQuery(document).ready(function(){
 
+				window._aPicsFiltered = null;
+				window._aPics = null;
+				window._aSeries = null;
+
 				window.onorientationchange = function() {
 					if (_aPicsFiltered) {
 						buildContentWithData(_aPicsFiltered);
