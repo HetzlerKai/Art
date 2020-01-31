@@ -5,7 +5,7 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="viewport" content="initial-scale=1">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -17,7 +17,7 @@
     			display: grid;
 			    margin-left: auto;
 			    margin-right: auto;
-			    margin-top: 7rem;
+			    margin-top: 10rem;
 				}
 
 				.artwork {
@@ -75,8 +75,8 @@
 				}
 
 				.logoImage{
-					height: 100px;
-					width: 100px;
+					height: 90px;
+					width: 90px;
 					border-radius: 50%;
 				  margin-left: auto;
 				}
@@ -85,7 +85,7 @@
 			    margin-left: 20px;
 			    margin-top: auto;
 			    margin-bottom: auto;
-					font-size: 45px;
+					font-size: 40px;
 				}
 
 				.popover *{
@@ -98,14 +98,13 @@
 			    margin-bottom: auto;
 			    margin-left: 20px;
 			    font-size: 24px;
-					visibility: hidden;
 				}
 
 				.logoContent{
 					display: flex;
 			    margin-left: auto;
 			    margin-right: auto;
-			    width: 700px;
+			    width: 600px;
 			    margin-top: 100px;
 				}
 
@@ -118,7 +117,7 @@
 
 				body{
 					background-color: #cfcfcf;
-					font-family: Audiowide;
+					font-family: Audiowide;body
 				}
 
 				.display .artwork-name,
@@ -137,11 +136,9 @@
 
 		<script>
 
-			// function imgSizeFit(img, maxWidth, maxHeight){
-			// 	var ratio = Math.min(1, maxWidth / img.naturalWidth, maxHeight / img.naturalHeight);
-			// 	img.style.width = img.naturalWidth * ratio + 'px';
-			// 	img.style.height = img.naturalHeight * ratio + 'px';
-			// }
+			//TODO: rework Header for mobile
+			//TODO: change text loading logic
+			//TODO: reenable series select
 
 			function imgSizeFit(img, maxWidth, maxHeight, naturalWidth, naturalHeight){
 				var ratio = Math.min(1, maxWidth / naturalWidth, maxHeight / naturalHeight);
@@ -277,17 +274,6 @@
 
 				window.onorientationchange = function() {
 					buildContentWithData(_aPics);
-
-					/*$.ajax({
-						dataType: "json",
-						url: "getDataFile",
-						success: function (oData) {
-							buildContentWithData(oData.pics);
-						},
-						error: function (sError) {
-							console.log(sError);
-						}
-					});*/
 				};
 
 				window.onload = function(){
@@ -316,7 +302,7 @@
 
 	<body>
 
-		<div class="display container-fluid">
+		<div class="display">
 			<div class="logoContent">
 				<h1 class="logoTitle"> Galerie Kai Hetzler </h1>
 			</div>
