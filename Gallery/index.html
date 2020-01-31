@@ -5,6 +5,11 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 		<style>
 
 		    .pictureScroll{
@@ -73,6 +78,7 @@
 					height: 100px;
 					width: 100px;
 					border-radius: 50%;
+				  margin-left: auto;
 				}
 
 				.logoTitle{
@@ -82,12 +88,27 @@
 					font-size: 45px;
 				}
 
+				.popover *{
+					font-family: Audiowide;
+				}
+
+				.logoMenu{
+			    margin-right: auto;
+			    margin-top: auto;
+			    margin-bottom: auto;
+			    margin-left: 20px;
+			    font-size: 24px;
+				}
+
 				.logoContent{
 					display: flex;
 			    margin-left: auto;
 			    margin-right: auto;
-			    width: 600px;
+			    width: 700px;
 			    margin-top: 100px;
+				}
+
+				.seriesItem{
 				}
 
 				.lineHeight150{
@@ -114,8 +135,6 @@
 				}
 
 		</style>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 		<script>
 
@@ -219,69 +238,57 @@
 
 			}
 
-			function buildContent(aImages){
-					var
-					oImage,
-					i = 0,
-					iMaxWidth = window.innerWidth * 0.85, //2100, //85% screensize
-					iMaxHeight = window.innerHeight * 0.85, //1200,
-					oDisplay = $(".display"),
-					oSeriesSelect = $(".seriesSelect"),
-					oContent = $(".pictureScroll");
+			function buildLogoSection (aSeries) {
+				var oLogoImage = new Image(100, 100);
+				oLogoImage.src = "/logo/logo.jpg";
+				oLogoImage.id = "idLogoImage"
+				oLogoImage.className = "logoImage";
+				$(".logoContent").prepend(oLogoImage);
 
-					oContent.empty();
-					oSeriesSelect.empty();
-
-					//var	aImages = ["/pics/test2.jpg", "/pics/test.jpg", "/pics/test3.jpg"];
-
-					//TODO: Handle Series
-					// oSeriesSelect.append("<Button> Series One </Button>");
-					// oSeriesSelect.append("<Button> Series RGB </Button>");
-					// oSeriesSelect.append("<Button> Others </Button>");
-
-					for (i; i < aImages.length; i++) {
-						oImage = new Image();
-						oImage.src = "/pics/" + aImages[i];
-						oImage.id = "idImage" + i;
-						oImage.className = "artwork";
-						oContent.append(oImage);
+				var aLines = [];
+				for (var i = 0; i < aSeries.length; i++) {
+					if (aSeries[i].publish) {
+						aLines.push("<a class='seriesItem' onclick='onSeriesChange(\"" + aSeries[i].id + "\")' >" + aSeries[i].name + " </a>"); //onclick='onSeriesChange(\"" + aSeries[i].id + "\")'>
 					}
+				}
+				var sPopoverContent = aLines.join("<br>");
+				var sLogoMenu = "<a title='Series' tabIndex='1' data-trigger='focus' data-placement='bottom' data-html='true' class='logoMenu' data-toggle='popover'> &#9660; </a>"; //data-content='" + sPopoverContent + "'
+				$(".logoContent").append(sLogoMenu);
 
+				setTimeout(function() {
+					$('[data-toggle="popover"]').popover({
+				    html: true,
+				    content: $(sPopoverContent)
+				  });
+				}, 0);
+			}
 
-					$(".artwork").each(function () {
-						$(this).on("load", function () {
-							imgSizeFit($(this)[0], iMaxWidth, iMaxHeight);
-						})
-					});
+			function onSeriesChange (sSeriesId) {
+				var aPicsFiltered;
+
+				aPicsFiltered = _aPics.filter(function(oItem) {
+					if (sSeriesId === "0") { return true; }
+					return (oItem.series && oItem.series.indexOf(sSeriesId)) >= 0;
+				});
+
+				buildContentWithData(aPicsFiltered);
 			}
 
 			jQuery(document).ready(function(){
 
-				//handle resizing
-				// window.onresize = function() {
-				// 	$.ajax({
-				// 		dataType: "json",
-				// 		url: "getDataFile", //"getAllFileNames",
-				// 		success: function (oData) {
-				// 			buildContentWithData(oData.pics); //buildContent(aData);
-				// 		},
-				// 		error: function (sError) {
-				// 			console.log(sError);
-				// 		}
-				// 	});
-				// };
-
 				window.onorientationchange = function() {
-					$.ajax({
+					buildContentWithData(_aPics);
+
+					/*$.ajax({
 						dataType: "json",
-						url: "getDataFile", //"getAllFileNames",
+						url: "getDataFile",
 						success: function (oData) {
-							buildContentWithData(oData.pics); //buildContent(aData);
+							buildContentWithData(oData.pics);
 						},
 						error: function (sError) {
 							console.log(sError);
 						}
-					});
+					});*/
 				};
 
 				window.onload = function(){
@@ -291,21 +298,17 @@
 				//init
 				$.ajax({
 				  dataType: "json",
-				  url: "getDataFile", //"getAllFileNames",
+				  url: "getDataFile",
 				  success: function (oData) {
-						buildContentWithData(oData.pics); //buildContent(aData);
+						_aPics = oData.pics;
+						_aSeries = oData.series;
+						buildLogoSection(oData.series);
+						buildContentWithData(oData.pics);
 				  },
 					error: function (sError) {
 						console.log(sError);
 					}
 				});
-
-				var oLogoImage = new Image(100, 100);
-				oLogoImage.src = "/logo/logo.jpg";
-				oLogoImage.id = "idLogoImage"
-				oLogoImage.className = "logoImage";
-				$(".logoContent").prepend(oLogoImage);
-
 			});
 
 		</script>
@@ -314,7 +317,7 @@
 
 	<body>
 
-		<div class="display">
+		<div class="display container-fluid">
 			<div class="logoContent">
 				<h1 class="logoTitle"> Galerie Kai Hetzler </h1>
 			</div>
