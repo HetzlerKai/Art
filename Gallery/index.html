@@ -128,9 +128,9 @@
 					visibility: hidden;
 				}
 
-				.display.loaded .artwork-name,
-				.display.loaded .artwork-type,
-				.display.loaded .artwork-price {
+				.display .artwork-name.loaded,
+				.display .artwork-type.loaded,
+				.display .artwork-price.loaded {
 					visibility: initial !important;
 				}
 
@@ -138,7 +138,6 @@
 
 		<script>
 
-			//TODO: change text loading logic
 			//TODO: onorientationchange not resizing correctly
 
 			function imgSizeFit(img, maxWidth, maxHeight, naturalWidth, naturalHeight){
@@ -197,6 +196,7 @@
 					oImage.src = "/pics/" + aPics[i].path;
 					oImage.id = "idImage" + i;
 					oImage.className = "artwork";
+					oImage.sId = aPics[i].id;
 
 					oNameLine = document.createElement('div');
 					if (aPics[i].name) {
@@ -206,6 +206,7 @@
 					}
 					oNameLine.textContent = sName;
 					oNameLine.className = "artwork-name";
+					oNameLine.id = "artwork-name-" + aPics[i].id;
 
 					oTypeLine = document.createElement('div');
 					if (aPics[i].type === "AL") {
@@ -217,6 +218,7 @@
 					}
 					oTypeLine.textContent = sType;
 					oTypeLine.className = "artwork-type";
+					oTypeLine.id = "artwork-type-" + aPics[i].id;
 
 					oPriceLine = document.createElement('div');
 					if (aPics[i].sold) {
@@ -228,6 +230,7 @@
 					}
 					oPriceLine.textContent = sPrice;
 					oPriceLine.className = "artwork-price";
+					oPriceLine.id = "artwork-price-" + aPics[i].id;
 
 					oContent.append(oImage);
 					oContent.append(oNameLine);
@@ -245,6 +248,9 @@
 
 					$(this).on("load", function () {
 						oImg.classList.add("artwork-loaded");
+						$("#artwork-price-" + oImg.sId)[0].classList.add("loaded");
+						$("#artwork-type-" + oImg.sId)[0].classList.add("loaded");
+						$("#artwork-name-" + oImg.sId)[0].classList.add("loaded");
 					})
 				});
 
