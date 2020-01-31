@@ -90,6 +90,8 @@
 
 				.popover *{
 					font-family: Audiowide;
+					line-height: 150%;
+    			font-size: min(1.5vw, 20px);
 				}
 
 				.logoMenu{
@@ -136,7 +138,6 @@
 
 		<script>
 
-			//TODO: increase font size / popover size for mobile
 			//TODO: change text loading logic
 			//TODO: onorientationchange not resizing correctly
 
@@ -157,6 +158,19 @@
 			    }, 30);
 			}
 
+			/**
+			 * Randomize array element order in-place.
+			 * Using Durstenfeld shuffle algorithm.
+			 */
+			function shuffleArray(array) {
+			    for (var i = array.length - 1; i > 0; i--) {
+			        var j = Math.floor(Math.random() * (i + 1));
+			        var temp = array[i];
+			        array[i] = array[j];
+			        array[j] = temp;
+			    }
+			}
+
 			function buildContentWithData (aPics) {
 				var
 				oImage,
@@ -175,6 +189,8 @@
 
 				oContent.empty();
 				oSeriesSelect.empty();
+
+				shuffleArray(aPics);
 
 				for (i; i < aPics.length; i++) {
 					oImage = new Image();
@@ -263,7 +279,7 @@
 				var aPicsFiltered;
 
 				aPicsFiltered = _aPics.filter(function(oItem) {
-					if (sSeriesId === "0") { return true; }
+					if (sSeriesId === "0" || sSeriesId === "99") { return true; }
 					return (oItem.series && oItem.series.indexOf(sSeriesId)) >= 0;
 				});
 
