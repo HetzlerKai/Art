@@ -86,6 +86,7 @@
 			    margin-top: auto;
 			    margin-bottom: auto;
 					font-size: 40px;
+					font-size: min(3vw, 40px);
 				}
 
 				.popover *{
@@ -273,7 +274,17 @@
 			jQuery(document).ready(function(){
 
 				window.onorientationchange = function() {
-					buildContentWithData(_aPics);
+					//buildContentWithData(_aPics);
+					$.ajax({
+					  dataType: "json",
+					  url: "getDataFile",
+					  success: function (oData) {
+							buildContentWithData(oData.pics);
+					  },
+						error: function (sError) {
+							console.log(sError);
+						}
+					});
 				};
 
 				window.onload = function(){
