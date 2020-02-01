@@ -210,8 +210,6 @@
 				oContent.empty();
 				oSeriesSelect.empty();
 
-				shuffleArray(aPics);
-
 				for (i; i < aPics.length; i++) {
 					oImage = new Image();
 					oImage.src = "/pics/" + aPics[i].path;
@@ -268,10 +266,12 @@
 					});
 
 					$(this).on("load", function () {
-						oImg.classList.add("artwork-loaded");
-						$("#artwork-price-" + oImg.sId)[0].classList.add("loaded");
-						$("#artwork-type-" + oImg.sId)[0].classList.add("loaded");
-						$("#artwork-name-" + oImg.sId)[0].classList.add("loaded");
+						setTimeout(function () {
+							oImg.classList.add("artwork-loaded");
+							$("#artwork-price-" + oImg.sId)[0].classList.add("loaded");
+							$("#artwork-type-" + oImg.sId)[0].classList.add("loaded");
+							$("#artwork-name-" + oImg.sId)[0].classList.add("loaded");
+						}, 0);
 					})
 				});
 
@@ -327,14 +327,17 @@
 
 				window.onorientationchange = function() {
 					if (_aPicsFiltered) {
+						shuffleArray(_aPicsFiltered);
 						buildContentWithData(_aPicsFiltered);
 					} else if (_aPics) {
+						shuffleArray(aPics);
 						buildContentWithData(_aPics);
 					} else {
 						$.ajax({
 							dataType: "json",
 							url: "getDataFile",
 							success: function (oData) {
+								shuffleArray(oData.pics);
 								buildContentWithData(oData.pics);
 							},
 							error: function (sError) {
@@ -356,6 +359,7 @@
 						_aPics = oData.pics;
 						_aSeries = oData.series;
 						buildLogoSection(oData.series);
+						shuffleArray(oData.pics);
 						buildContentWithData(oData.pics);
 				  },
 					error: function (sError) {
