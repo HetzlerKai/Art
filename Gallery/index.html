@@ -339,17 +339,14 @@
 
 				window.onorientationchange = function() {
 					if (_aPicsFiltered) {
-						shuffleArray(_aPicsFiltered);
 						buildContentWithData(_aPicsFiltered);
 					} else if (_aPics) {
-						shuffleArray(_aPics);
 						buildContentWithData(_aPics);
 					} else {
 						$.ajax({
 							dataType: "json",
 							url: "getDataFile",
 							success: function (oData) {
-								shuffleArray(oData.pics);
 								buildContentWithData(oData.pics);
 							},
 							error: function (sError) {
