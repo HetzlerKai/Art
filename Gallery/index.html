@@ -273,20 +273,27 @@
 
 
 				$(".artwork").each(function () {
-					let oImg = $(this)[0];
+					let oImg = $(this);
 
-					getImageSize(oImg, function(width, height) {
-						imgSizeFit(oImg, iMaxWidth, iMaxHeight, width, height);
-					});
+					getImageSize(oImg[0], function(width, height) {
+						imgSizeFit(oImg[0], iMaxWidth, iMaxHeight, width, height);
 
-					$(this).on("load", function () {
 						setTimeout(function () {
-							oImg.classList.add("artwork-loaded");
-							$("#artwork-price-" + oImg.sId)[0].classList.add("loaded");
-							$("#artwork-type-" + oImg.sId)[0].classList.add("loaded");
-							$("#artwork-name-" + oImg.sId)[0].classList.add("loaded");
+							if (oImg[0].complete) {
+									oImg[0].classList.add("artwork-loaded");
+									$("#artwork-price-" + oImg[0].sId)[0].classList.add("loaded");
+									$("#artwork-type-" + oImg[0].sId)[0].classList.add("loaded");
+									$("#artwork-name-" + oImg[0].sId)[0].classList.add("loaded");
+							} else {
+								oImg.on("load", function () {
+										oImg[0].classList.add("artwork-loaded");
+										$("#artwork-price-" + oImg[0].sId)[0].classList.add("loaded");
+										$("#artwork-type-" + oImg[0].sId)[0].classList.add("loaded");
+										$("#artwork-name-" + oImg[0].sId)[0].classList.add("loaded");
+								});
+							}
 						}, 0);
-					})
+					});
 				});
 
 			}
