@@ -290,7 +290,6 @@
 							} else {
 								oImg.on("load", function () {
 									setTimeout(function () {
-										console.log(oImg[0].complete);
 										oImg[0].classList.add("artwork-loaded");
 										$("#artwork-price-" + oImg[0].sId)[0].classList.add("loaded");
 										$("#artwork-type-" + oImg[0].sId)[0].classList.add("loaded");
@@ -298,7 +297,7 @@
 									}, 0);
 								});
 							}
-						}, 0);
+						}, 50);
 					});
 				});
 
