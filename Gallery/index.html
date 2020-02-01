@@ -289,12 +289,10 @@
 									$("#artwork-name-" + oImg[0].sId)[0].classList.add("loaded");
 							} else {
 								oImg.on("load", function () {
-									setTimeout(function () {
-										oImg[0].classList.add("artwork-loaded");
-										$("#artwork-price-" + oImg[0].sId)[0].classList.add("loaded");
-										$("#artwork-type-" + oImg[0].sId)[0].classList.add("loaded");
-										$("#artwork-name-" + oImg[0].sId)[0].classList.add("loaded");
-									}, 0);
+									oImg[0].classList.add("artwork-loaded");
+									$("#artwork-price-" + oImg[0].sId)[0].classList.add("loaded");
+									$("#artwork-type-" + oImg[0].sId)[0].classList.add("loaded");
+									$("#artwork-name-" + oImg[0].sId)[0].classList.add("loaded");
 								});
 							}
 						}, 500);
