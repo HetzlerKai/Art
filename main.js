@@ -42,7 +42,7 @@ function handleRequest(request, response){
 
         case "/getDataFile":
           let sPicsData = fs.readFileSync('Gallery/pics.json', 'utf8');
-          
+
           response.writeHead(202, {'Content-Type': 'application/json'});
           response.end(sPicsData);
         break;

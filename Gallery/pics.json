@@ -13,6 +13,10 @@
       "id": 2,
       "name": "Series_RGB",
       "publish": true
+    }, {
+      "id": 3,
+      "name": "appel du vide",
+      "publish": true
     }
   ],
   "pics": [
@@ -25,7 +29,8 @@
       "sold": true,
       "price": "35€",
       "path": "0.jpg",
-      "series": "1"
+      "series": "1",
+      "publish": true
     },
     {
       "id": 1,
@@ -36,7 +41,8 @@
       "sold": false,
       "price": "",
       "path": "1.jpg",
-      "series": "1"
+      "series": "1",
+      "publish": true
     },
     {
       "id": 2,
@@ -47,7 +53,8 @@
       "sold": false,
       "price": "",
       "path": "2.jpg",
-      "series": "1"
+      "series": "1",
+      "publish": true
     },
     {
       "id": 3,
@@ -58,7 +65,8 @@
       "sold": false,
       "price": "",
       "path": "3.jpg",
-      "series": "2"
+      "series": "2",
+      "publish": true
     },
     {
       "id": 4,
@@ -69,7 +77,8 @@
       "sold": false,
       "price": "",
       "path": "4.jpg",
-      "series": "1"
+      "series": "1",
+      "publish": true
     },
     {
       "id": 5,
@@ -80,7 +89,8 @@
       "sold": false,
       "price": "",
       "path": "5.jpg",
-      "series": "1"
+      "series": "1",
+      "publish": true
     },
     {
       "id": 6,
@@ -90,7 +100,9 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "6.jpg"
+      "path": "6.jpg",
+      "series": "3",
+      "publish": true
     },
     {
       "id": 7,
@@ -100,7 +112,8 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "7.jpg"
+      "path": "7.jpg",
+      "publish": true
     },
     {
       "id": 8,
@@ -111,7 +124,8 @@
       "sold": false,
       "price": "",
       "path": "8.jpg",
-      "series": "2"
+      "series": "2",
+      "publish": true
     },
     {
       "id": 9,
@@ -121,7 +135,9 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "9.jpg"
+      "path": "9.jpg",
+      "series": "3",
+      "publish": true
     },
     {
       "id": 10,
@@ -132,7 +148,8 @@
       "sold": false,
       "price": "",
       "path": "10.jpg",
-      "series": "2"
+      "series": "2",
+      "publish": true
     },
     {
       "id": 11,
@@ -143,7 +160,8 @@
       "sold": false,
       "price": "",
       "path": "12.jpg",
-      "series": "2"
+      "series": "2",
+      "publish": true
     },
     {
       "id": 12,
@@ -154,7 +172,97 @@
       "sold": false,
       "price": "",
       "path": "11.jpg",
-      "series": "2"
+      "series": "2",
+      "publish": true
+    },
+    {
+      "id": 13,
+      "name": "Get Out",
+      "description": "",
+      "type": "A3",
+      "sold": false,
+      "price": "",
+      "path": "13.jpg",
+      "series": "3",
+      "publish": true
+    },
+    {
+      "id": 14,
+      "name": "Void",
+      "description": "",
+      "type": "A3",
+      "sold": false,
+      "price": "",
+      "path": "14.jpg",
+      "series": "3",
+      "publish": false
+    },
+    {
+      "id": 15,
+      "name": "appel du vide",
+      "description": "",
+      "type": "AOL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "15.jpg",
+      "series": "3",
+      "publish": true
+    },
+    {
+      "id": 16,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": true,
+      "price": "",
+      "path": "16.jpg",
+      "publish": true
+    },
+    {
+      "id": 17,
+      "name": "",
+      "description": "",
+      "type": "A3",
+      "sold": false,
+      "price": "",
+      "path": "17.jpg",
+      "series": "3",
+      "publish": true
+    },
+    {
+      "id": 18,
+      "name": "Selbstportrait",
+      "description": "",
+      "type": "A3",
+      "sold": false,
+      "price": "",
+      "path": "18.jpg",
+      "series": "3",
+      "publish": false
+    },
+    {
+      "id": 19,
+      "name": "",
+      "description": "",
+      "type": "A3",
+      "sold": false,
+      "price": "",
+      "path": "19.jpg",
+      "series": "3",
+      "publish": false
+    },
+    {
+      "id": 20,
+      "name": "",
+      "description": "",
+      "type": "A3",
+      "sold": false,
+      "price": "",
+      "path": "20.jpg",
+      "series": "3",
+      "publish": true
     }
   ]
 }

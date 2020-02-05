@@ -205,8 +205,8 @@
 				oPriceLine,
 				sPrice,
 				i = 0,
-				iMaxWidth = window.innerWidth * 0.85, //2100, //85% screensize
-				iMaxHeight = window.innerHeight * 0.85, //1200,
+				iMaxWidth = window.innerWidth * 0.85,
+				iMaxHeight = window.innerHeight * 0.85,
 				oDisplay = $(".display"),
 				oSeriesSelect = $(".seriesSelect"),
 				oContent = $(".pictureScroll");
@@ -215,50 +215,54 @@
 				oSeriesSelect.empty();
 
 				for (i; i < aPics.length; i++) {
-					oImage = new Image();
-					oImage.src = "/pics/" + aPics[i].path;
-					oImage.id = "idImage" + i;
-					oImage.className = "artwork";
-					oImage.sId = aPics[i].id;
 
-					oNameLine = document.createElement('div');
-					if (aPics[i].name) {
-						sName = aPics[i].name;
-					} else {
-						sName = "untitled";
+					if (aPics[i].publish) {
+
+						oImage = new Image();
+						oImage.src = "/pics/" + aPics[i].path;
+						oImage.id = "idImage" + i;
+						oImage.className = "artwork";
+						oImage.sId = aPics[i].id;
+
+						oNameLine = document.createElement('div');
+						if (aPics[i].name) {
+							sName = aPics[i].name;
+						} else {
+							sName = "untitled";
+						}
+						oNameLine.textContent = sName;
+						oNameLine.className = "artwork-name";
+						oNameLine.id = "artwork-name-" + aPics[i].id;
+
+						oTypeLine = document.createElement('div');
+						if (aPics[i].type === "AL") {
+							sType = "Acryl auf Leinwand - " + aPics[i].size;
+						} else if (aPics[i].type === "D") {
+							sType = "Digital";
+						} else if (aPics[i].type === "A3") {
+							sType = "Acryl auf Papier - A3";
+						}
+						oTypeLine.textContent = sType;
+						oTypeLine.className = "artwork-type";
+						oTypeLine.id = "artwork-type-" + aPics[i].id;
+
+						oPriceLine = document.createElement('div');
+						if (aPics[i].sold) {
+							sPrice = "Verkauft";
+						} else if (aPics[i].price) {
+							sPrice = aPics[i].price;
+						} else {
+							sPrice = "Preis auf Anfrage"
+						}
+						oPriceLine.textContent = sPrice;
+						oPriceLine.className = "artwork-price";
+						oPriceLine.id = "artwork-price-" + aPics[i].id;
+
+						oContent.append(oImage);
+						oContent.append(oNameLine);
+						oContent.append(oTypeLine);
+						oContent.append(oPriceLine);
 					}
-					oNameLine.textContent = sName;
-					oNameLine.className = "artwork-name";
-					oNameLine.id = "artwork-name-" + aPics[i].id;
-
-					oTypeLine = document.createElement('div');
-					if (aPics[i].type === "AL") {
-						sType = "Acryl auf Leinwand - " + aPics[i].size;
-					} else if (aPics[i].type === "D") {
-						sType = "Digital";
-					} else if (aPics[i].type === "A3") {
-						sType = "Acryl auf Papier - A3";
-					}
-					oTypeLine.textContent = sType;
-					oTypeLine.className = "artwork-type";
-					oTypeLine.id = "artwork-type-" + aPics[i].id;
-
-					oPriceLine = document.createElement('div');
-					if (aPics[i].sold) {
-						sPrice = "Verkauft";
-					} else if (aPics[i].price) {
-						sPrice = aPics[i].price;
-					} else {
-						sPrice = "Preis auf Anfrage"
-					}
-					oPriceLine.textContent = sPrice;
-					oPriceLine.className = "artwork-price";
-					oPriceLine.id = "artwork-price-" + aPics[i].id;
-
-					oContent.append(oImage);
-					oContent.append(oNameLine);
-					oContent.append(oTypeLine);
-					oContent.append(oPriceLine);
 				}
 
 
