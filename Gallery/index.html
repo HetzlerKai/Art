@@ -3,6 +3,8 @@
 
 		<title> Galerie Kai Hetzler </title>
 
+		<meta charset="utf-8"/>
+
 		<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 
 	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -237,10 +239,14 @@
 						oTypeLine = document.createElement('div');
 						if (aPics[i].type === "AL") {
 							sType = "Acryl auf Leinwand - " + aPics[i].size;
+						} else if (aPics[i].type === "AOL") {
+							sType = "Acryl und Ölfarbe auf Leinwand";
 						} else if (aPics[i].type === "D") {
 							sType = "Digital";
 						} else if (aPics[i].type === "A3") {
 							sType = "Acryl auf Papier - A3";
+						} else if (aPics[i].type === "AO3") {
+							sType = "Acryl und Ölfarben auf Papier - A3";
 						}
 						oTypeLine.textContent = sType;
 						oTypeLine.className = "artwork-type";
@@ -250,7 +256,7 @@
 						if (aPics[i].sold) {
 							sPrice = "Verkauft";
 						} else if (aPics[i].price) {
-							sPrice = aPics[i].price;
+							sPrice = aPics[i].price + "€ zzgl. Versandkosten";
 						} else {
 							sPrice = "Preis auf Anfrage"
 						}
@@ -327,7 +333,7 @@
 
 				aPicsFiltered = _aPics.filter(function(oItem) {
 					if (sSeriesId === "0" || sSeriesId === "99") { return true; }
-					return (oItem.series && oItem.series.indexOf(sSeriesId)) >= 0;
+					return oItem.series && oItem.series.indexOf(sSeriesId) >= 0;
 				});
 
 				_aPicsFiltered = aPicsFiltered;

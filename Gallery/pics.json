@@ -181,7 +181,7 @@
       "description": "",
       "type": "A3",
       "sold": false,
-      "price": "",
+      "price": "15",
       "path": "13.jpg",
       "series": "",
       "publish": true
@@ -190,12 +190,12 @@
       "id": 14,
       "name": "Void",
       "description": "",
-      "type": "A3",
+      "type": "AO3",
       "sold": false,
       "price": "",
       "path": "14.jpg",
       "series": "3",
-      "publish": false
+      "publish": true
     },
     {
       "id": 15,
@@ -222,9 +222,9 @@
     },
     {
       "id": 17,
-      "name": "",
+      "name": "Rise",
       "description": "",
-      "type": "A3",
+      "type": "AO3",
       "sold": false,
       "price": "",
       "path": "17.jpg",
@@ -235,23 +235,23 @@
       "id": 18,
       "name": "Selbstportrait",
       "description": "",
-      "type": "A3",
+      "type": "AO3",
       "sold": false,
       "price": "",
       "path": "18.jpg",
       "series": "3",
-      "publish": false
+      "publish": true
     },
     {
       "id": 19,
-      "name": "",
+      "name": "Black Ankh",
       "description": "",
-      "type": "A3",
+      "type": "AO3",
       "sold": false,
       "price": "",
       "path": "19.jpg",
       "series": "3",
-      "publish": false
+      "publish": true
     },
     {
       "id": 20,
@@ -259,7 +259,7 @@
       "description": "",
       "type": "A3",
       "sold": false,
-      "price": "",
+      "price": "15",
       "path": "20.jpg",
       "series": "3",
       "publish": true
