@@ -192,7 +192,7 @@
       "description": "",
       "type": "AO3",
       "sold": false,
-      "price": "",
+      "price": "15",
       "path": "14.jpg",
       "series": "3",
       "publish": true
@@ -248,7 +248,7 @@
       "description": "",
       "type": "AO3",
       "sold": false,
-      "price": "",
+      "price": "15",
       "path": "19.jpg",
       "series": "3",
       "publish": true
