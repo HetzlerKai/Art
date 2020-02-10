@@ -257,6 +257,8 @@
 							sPrice = "Verkauft";
 						} else if (aPics[i].price) {
 							sPrice = aPics[i].price + "€ zzgl. Versandkosten";
+						} else if (aPics[i].type === "D") {
+							sPrice = "-";
 						} else {
 							sPrice = "Preis auf Anfrage"
 						}
