@@ -39,7 +39,7 @@
       "type": "AL",
       "size": "50cm x 70cm",
       "sold": false,
-      "price": "",
+      "price": "75",
       "path": "1.jpg",
       "series": "1",
       "publish": true
@@ -122,7 +122,7 @@
       "type": "AL",
       "size": "40cm x 50cm",
       "sold": false,
-      "price": "",
+      "price": "65",
       "path": "8.jpg",
       "series": "2",
       "publish": true
@@ -204,7 +204,7 @@
       "type": "AOL",
       "size": "50cm x 70cm",
       "sold": false,
-      "price": "",
+      "price": "75",
       "path": "15.jpg",
       "series": "3",
       "publish": true
