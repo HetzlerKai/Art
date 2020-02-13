@@ -27,7 +27,7 @@
       "type": "AL",
       "size": "40cm x 50cm",
       "sold": true,
-      "price": "35€",
+      "price": "",
       "path": "0.jpg",
       "series": "1",
       "publish": true
@@ -39,7 +39,7 @@
       "type": "AL",
       "size": "50cm x 70cm",
       "sold": false,
-      "price": "75",
+      "price": "65",
       "path": "1.jpg",
       "series": "1",
       "publish": true
@@ -51,7 +51,7 @@
       "type": "AL",
       "size": "40cm x 50cm",
       "sold": false,
-      "price": "45",
+      "price": "35",
       "path": "2.jpg",
       "series": "1",
       "publish": true
@@ -63,7 +63,7 @@
       "type": "AL",
       "size": "50cm x 70cm",
       "sold": false,
-      "price": "65",
+      "price": "55",
       "path": "3.jpg",
       "series": "2",
       "publish": true
@@ -99,7 +99,7 @@
       "type": "AL",
       "size": "40cm x 50cm",
       "sold": false,
-      "price": "45",
+      "price": "35",
       "path": "6.jpg",
       "series": "3",
       "publish": true
@@ -111,7 +111,7 @@
       "type": "AL",
       "size": "40cm x 50cm",
       "sold": false,
-      "price": "45",
+      "price": "35",
       "path": "7.jpg",
       "publish": true
     },
@@ -122,7 +122,7 @@
       "type": "AL",
       "size": "50cm x 70cm",
       "sold": false,
-      "price": "75",
+      "price": "65",
       "path": "8.jpg",
       "series": "2",
       "publish": true
@@ -134,7 +134,7 @@
       "type": "A3",
       "size": "",
       "sold": false,
-      "price": "25",
+      "price": "20",
       "path": "9.jpg",
       "series": "3",
       "publish": true
@@ -146,7 +146,7 @@
       "type": "AL",
       "size": "40cm x 120cm",
       "sold": false,
-      "price": "65",
+      "price": "55",
       "path": "10.jpg",
       "series": "2",
       "publish": true
@@ -158,7 +158,7 @@
       "type": "AL",
       "size": "50cm x 70cm",
       "sold": false,
-      "price": "65",
+      "price": "55",
       "path": "12.jpg",
       "series": "2",
       "publish": true
@@ -170,7 +170,7 @@
       "type": "AL",
       "size": "40cm x 50cm",
       "sold": false,
-      "price": "45",
+      "price": "35",
       "path": "11.jpg",
       "series": "2",
       "publish": true
@@ -181,7 +181,7 @@
       "description": "",
       "type": "A3",
       "sold": false,
-      "price": "15",
+      "price": "10",
       "path": "13.jpg",
       "series": "",
       "publish": true
@@ -192,7 +192,7 @@
       "description": "",
       "type": "AO3",
       "sold": false,
-      "price": "15",
+      "price": "10",
       "path": "14.jpg",
       "series": "3",
       "publish": true
@@ -204,7 +204,7 @@
       "type": "AOL",
       "size": "50cm x 70cm",
       "sold": false,
-      "price": "75",
+      "price": "65",
       "path": "15.jpg",
       "series": "3",
       "publish": true
@@ -226,7 +226,7 @@
       "description": "",
       "type": "AO3",
       "sold": false,
-      "price": "15",
+      "price": "10",
       "path": "17.jpg",
       "series": "3",
       "publish": true
@@ -237,7 +237,7 @@
       "description": "",
       "type": "AO3",
       "sold": false,
-      "price": "25",
+      "price": "20",
       "path": "18.jpg",
       "series": "3",
       "publish": true
@@ -248,7 +248,7 @@
       "description": "",
       "type": "AO3",
       "sold": false,
-      "price": "15",
+      "price": "10",
       "path": "19.jpg",
       "series": "3",
       "publish": true
@@ -259,7 +259,7 @@
       "description": "",
       "type": "A3",
       "sold": false,
-      "price": "15",
+      "price": "10",
       "path": "20.jpg",
       "series": "3",
       "publish": true
