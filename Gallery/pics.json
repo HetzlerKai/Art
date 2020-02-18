@@ -30,7 +30,8 @@
       "price": "",
       "path": "0.jpg",
       "series": "1",
-      "publish": true
+      "publish": true,
+      "favour": true
     },
     {
       "id": 1,
@@ -42,7 +43,8 @@
       "price": "65",
       "path": "1.jpg",
       "series": "1",
-      "publish": true
+      "publish": true,
+      "favour": true
     },
     {
       "id": 2,
@@ -125,7 +127,8 @@
       "price": "65",
       "path": "8.jpg",
       "series": "2",
-      "publish": true
+      "publish": true,
+      "favour": true
     },
     {
       "id": 9,
@@ -181,7 +184,7 @@
       "description": "",
       "type": "A3",
       "sold": false,
-      "price": "10",
+      "price": "5",
       "path": "13.jpg",
       "series": "",
       "publish": true
@@ -192,7 +195,7 @@
       "description": "",
       "type": "AO3",
       "sold": false,
-      "price": "10",
+      "price": "5",
       "path": "14.jpg",
       "series": "3",
       "publish": true
@@ -207,7 +210,8 @@
       "price": "65",
       "path": "15.jpg",
       "series": "3",
-      "publish": true
+      "publish": true,
+      "favour": true
     },
     {
       "id": 16,
@@ -226,7 +230,7 @@
       "description": "",
       "type": "AO3",
       "sold": false,
-      "price": "10",
+      "price": "5",
       "path": "17.jpg",
       "series": "3",
       "publish": true
@@ -248,7 +252,7 @@
       "description": "",
       "type": "AO3",
       "sold": false,
-      "price": "10",
+      "price": "5",
       "path": "19.jpg",
       "series": "3",
       "publish": true
@@ -259,7 +263,7 @@
       "description": "",
       "type": "A3",
       "sold": false,
-      "price": "10",
+      "price": "5",
       "path": "20.jpg",
       "series": "3",
       "publish": true

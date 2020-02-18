@@ -104,6 +104,17 @@
     			font-size: min(4vw, 25px);
 				}
 
+				@media only screen and (max-device-width: 600px) {
+					.popover {
+						width: 100%;
+						left: 0px;
+					}
+
+					.popover *{
+						font-size: 35px !important;
+					}
+				}
+
 				.logoMenu{
 			    margin-right: auto;
 			    margin-top: auto;
@@ -195,6 +206,16 @@
 			        array[i] = array[j];
 			        array[j] = temp;
 			    }
+
+					array.sort(function(a, b){
+						if (a.favour && b.favour) {
+							return 0;
+						} else if (a.favour) {
+							return -1;
+						} else {
+							return 1;
+						}
+					});
 			}
 
 			function buildContentWithData (aPics) {
@@ -319,14 +340,15 @@
 					}
 				}
 				var sPopoverContent = aLines.join("<br>");
-				var sLogoMenu = "<a title='Series' tabIndex='1' data-trigger='focus' data-placement='bottom' data-html='true' class='logoMenu' data-toggle='popover'> &#9660; </a>"; //data-content='" + sPopoverContent + "'
+				var sLogoMenu = "<a title='Series' tabIndex='1'  data-placement='bottom' data-html='true' class='logoMenu' data-toggle='popover'> &#9660; </a>"; //data-trigger='focus'
 				$(".logoContent").append(sLogoMenu);
 
 				setTimeout(function() {
 					$('[data-toggle="popover"]').popover({
 				    html: true,
-				    content: $(sPopoverContent)
-				  });
+				    content: $(sPopoverContent),
+						container: 'body'
+				  }).on("show.bs.popover", function(){ $(this).data("bs.popover").tip().css("max-width", "100%"); });
 				}, 0);
 			}
 
