@@ -267,6 +267,18 @@
       "path": "20.jpg",
       "series": "3",
       "publish": true
+    },
+    {
+      "id": 21,
+      "name": "Moment of Creation",
+      "description": "",
+      "type": "D",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "21.jpg",
+      "series": "1",
+      "publish": true
     }
   ]
 }
