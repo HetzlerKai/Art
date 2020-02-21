@@ -279,6 +279,30 @@
       "path": "21.jpg",
       "series": "1",
       "publish": true
+    },
+    {
+      "id": 22,
+      "name": "The Wild Hunt",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "22.jpg",
+      "series": "",
+      "publish": true
+    },
+    {
+      "id": 23,
+      "name": "",
+      "description": "",
+      "type": "AOL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "23.jpg",
+      "series": "1",
+      "publish": true
     }
   ]
 }
