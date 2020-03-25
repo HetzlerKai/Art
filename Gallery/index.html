@@ -10,6 +10,7 @@
 	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<style>
 
@@ -159,6 +160,33 @@
 					width: 100%;
 					max-width: 100%;
 					/* darkmode; color: darkred; */
+				}
+
+				.socialMediaItems {
+					width: 50px;
+			    margin-left: auto;
+			    margin-right: auto;
+    			padding-top: 15px;
+				}
+
+				/* Style all font awesome icons */
+				.fa {
+					padding: 14px;
+			    font-size: 29px;
+			    width: 57px;
+			    text-align: center;
+			    text-decoration: none;
+			    border-radius: 50%;
+				}
+
+				/* Add a hover effect if you want */
+				.fa:hover {
+				  opacity: 0.7;
+				}
+
+				.fa-instagram {
+				  background: #125688;
+				  color: white;
 				}
 
 				.artwork-name,
@@ -366,6 +394,17 @@
 				buildContentWithData(aPicsFiltered);
 			}
 
+			function instagramIconPressed () {
+				window.open("https://www.instagram.com/kaihetzler", "_blank");
+			}
+
+			function buildSocialMediaIcons () {
+				var oInstagramIcon;
+
+				oInstagramIcon = '<a onclick="instagramIconPressed()" class="fa fa-instagram"></a>';
+				$(".socialMediaItems").append(oInstagramIcon);
+			}
+
 			jQuery(document).ready(function(){
 
 				window._aPicsFiltered = null;
@@ -399,6 +438,7 @@
 						_aPics = oData.pics;
 						_aSeries = oData.series;
 						buildLogoSection(oData.series);
+						buildSocialMediaIcons();
 						shuffleArray(oData.pics);
 						buildContentWithData(oData.pics);
 				  },
@@ -423,6 +463,7 @@
 				<h1 class="logoTitle"> Galerie Kai Hetzler </h1>
 			</div>
 			<div class="seriesSelect"> </div>
+			<div class="socialMediaItems"> </div>
 			<div class="pictureScroll"> </div>
 			<div class="contactSection">
 				<address>
