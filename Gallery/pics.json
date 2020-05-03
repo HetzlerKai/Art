@@ -44,7 +44,7 @@
       "path": "1.jpg",
       "series": "1",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 2,
@@ -128,7 +128,7 @@
       "path": "8.jpg",
       "series": "2",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 9,
@@ -184,7 +184,7 @@
       "description": "",
       "type": "A3",
       "sold": false,
-      "price": "5",
+      "price": "",
       "path": "13.jpg",
       "series": "",
       "publish": true
@@ -198,7 +198,7 @@
       "price": "5",
       "path": "14.jpg",
       "series": "3",
-      "publish": true
+      "publish": false
     },
     {
       "id": 15,
@@ -211,7 +211,7 @@
       "path": "15.jpg",
       "series": "3",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 16,
@@ -233,7 +233,7 @@
       "price": "5",
       "path": "17.jpg",
       "series": "3",
-      "publish": true
+      "publish": false
     },
     {
       "id": 18,
@@ -255,7 +255,7 @@
       "price": "5",
       "path": "19.jpg",
       "series": "3",
-      "publish": true
+      "publish": false
     },
     {
       "id": 20,
@@ -266,7 +266,7 @@
       "price": "5",
       "path": "20.jpg",
       "series": "3",
-      "publish": true
+      "publish": false
     },
     {
       "id": 21,
@@ -294,15 +294,138 @@
     },
     {
       "id": 23,
-      "name": "",
+      "name": "Mibu",
       "description": "",
       "type": "AOL",
-      "size": "",
+      "size": "40cm x 60cm",
       "sold": false,
       "price": "",
       "path": "23.jpg",
       "series": "1",
       "publish": true
+    },
+    {
+      "id": 24,
+      "name": "Lost to Time",
+      "description": "",
+      "type": "AOL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "24.jpg",
+      "series": "",
+      "publish": true
+    },
+    {
+      "id": 25,
+      "name": "Oceans Green",
+      "description": "",
+      "type": "A",
+      "size": "30cm x 40cm",
+      "sold": false,
+      "price": "",
+      "path": "25.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 26,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "26.jpg",
+      "series": "",
+      "publish": true
+    },
+    {
+      "id": 27,
+      "name": "Illuminatio",
+      "description": "",
+      "type": "AL",
+      "size": "Je 25cm x 30cm",
+      "sold": false,
+      "price": "",
+      "path": "27.jpg",
+      "series": "",
+      "publish": true
+    },
+    {
+      "id": 28,
+      "name": "Pandemonium",
+      "description": "",
+      "type": "D",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "28.jpg",
+      "series": "",
+      "publish": true
+    },
+    {
+      "id": 29,
+      "name": "Mental Funeral",
+      "description": "",
+      "type": "D",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "29.jpg",
+      "series": "",
+      "publish": true
+    },
+    {
+      "id": 30,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "30.jpg",
+      "series": "",
+      "publish": false
+    },
+    {
+      "id": 31,
+      "name": "Cyber Punk",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 100cm",
+      "sold": false,
+      "price": "",
+      "path": "31.jpg",
+      "series": "",
+      "publish": true
+    },
+    {
+      "id": 32,
+      "name": "Sutur",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "32.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 33,
+      "name": "Ba'alzamon",
+      "description": "",
+      "type": "A",
+      "size": "30cm x 40cm",
+      "sold": false,
+      "price": "",
+      "path": "33.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
     }
   ]
 }

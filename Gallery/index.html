@@ -280,7 +280,7 @@
 						if (aPics[i].name) {
 							sName = aPics[i].name;
 						} else {
-							sName = "untitled";
+							sName = "Untitled: Nr. " + aPics[i].id;
 						}
 						oNameLine.textContent = sName;
 						oNameLine.className = "artwork-name";
@@ -290,13 +290,15 @@
 						if (aPics[i].type === "AL") {
 							sType = "Acryl auf Leinwand - " + aPics[i].size;
 						} else if (aPics[i].type === "AOL") {
-							sType = "Acryl und Ölfarbe auf Leinwand";
+							sType = "Acryl und Ölfarbe auf Leinwand - " + aPics[i].size;
 						} else if (aPics[i].type === "D") {
 							sType = "Digital";
 						} else if (aPics[i].type === "A3") {
 							sType = "Acryl auf Papier - A3";
 						} else if (aPics[i].type === "AO3") {
 							sType = "Acryl und Ölfarben auf Papier - A3";
+						} else if (aPics[i].type === "A") {
+							sType = "Acryl - " + aPics[i].size;
 						}
 						oTypeLine.textContent = sType;
 						oTypeLine.className = "artwork-type";
