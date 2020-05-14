@@ -426,6 +426,45 @@
       "series": "",
       "publish": true,
       "favour": true
+    },
+    {
+      "id": 34,
+      "name": "Wildflower",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "34.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 35,
+      "name": "Enki",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "35.jpg",
+      "series": "",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 36,
+      "name": "Izalith",
+      "description": "",
+      "type": "D",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "36.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
     }
   ]
 }
