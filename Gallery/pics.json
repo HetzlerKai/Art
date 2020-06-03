@@ -31,7 +31,7 @@
       "path": "0.jpg",
       "series": "1",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 1,
@@ -56,7 +56,7 @@
       "price": "",
       "path": "2.jpg",
       "series": "1",
-      "publish": true
+      "publish": false
     },
     {
       "id": 3,
@@ -425,7 +425,7 @@
       "path": "33.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 34,
@@ -462,6 +462,110 @@
       "sold": false,
       "price": "",
       "path": "36.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 37,
+      "name": "todo",
+      "description": "",
+      "type": "",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "37.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 38,
+      "name": "Night City",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "38.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 39,
+      "name": "Below",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "39.jpg",
+      "series": "",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 40,
+      "name": "Hotaka",
+      "description": "",
+      "type": "A3",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "40.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 41,
+      "name": "Linien",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "41.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 42,
+      "name": "Kairos",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "42.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 43,
+      "name": "todo",
+      "description": "",
+      "type": "",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "43.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 44,
+      "name": "Rainbow Kite",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "44.jpg",
       "series": "",
       "publish": true,
       "favour": true
