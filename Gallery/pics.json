@@ -56,7 +56,8 @@
       "price": "",
       "path": "2.jpg",
       "series": "1",
-      "publish": false
+      "publish": false,
+      "favour": false
     },
     {
       "id": 3,
@@ -68,7 +69,8 @@
       "price": "",
       "path": "3.jpg",
       "series": "2",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 4,
@@ -80,7 +82,8 @@
       "price": "",
       "path": "4.jpg",
       "series": "1",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 5,
@@ -92,7 +95,8 @@
       "price": "",
       "path": "5.jpg",
       "series": "1",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 6,
@@ -104,7 +108,8 @@
       "price": "",
       "path": "6.jpg",
       "series": "3",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 7,
@@ -115,7 +120,8 @@
       "sold": false,
       "price": "",
       "path": "7.jpg",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 8,
@@ -140,7 +146,8 @@
       "price": "",
       "path": "9.jpg",
       "series": "3",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 10,
@@ -152,7 +159,8 @@
       "price": "",
       "path": "10.jpg",
       "series": "2",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 11,
@@ -164,7 +172,8 @@
       "price": "",
       "path": "12.jpg",
       "series": "2",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 12,
@@ -176,7 +185,8 @@
       "price": "",
       "path": "11.jpg",
       "series": "2",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 13,
@@ -187,7 +197,8 @@
       "price": "",
       "path": "13.jpg",
       "series": "",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 14,
@@ -198,7 +209,8 @@
       "price": "",
       "path": "14.jpg",
       "series": "3",
-      "publish": false
+      "publish": false,
+      "favour": false
     },
     {
       "id": 15,
@@ -222,7 +234,8 @@
       "sold": true,
       "price": "",
       "path": "16.jpg",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 17,
@@ -233,7 +246,8 @@
       "price": "",
       "path": "17.jpg",
       "series": "3",
-      "publish": false
+      "publish": false,
+      "favour": false
     },
     {
       "id": 18,
@@ -244,7 +258,8 @@
       "price": "",
       "path": "18.jpg",
       "series": "3",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 19,
@@ -255,7 +270,8 @@
       "price": "",
       "path": "19.jpg",
       "series": "3",
-      "publish": false
+      "publish": false,
+      "favour": false
     },
     {
       "id": 20,
@@ -266,7 +282,8 @@
       "price": "",
       "path": "20.jpg",
       "series": "3",
-      "publish": false
+      "publish": false,
+      "favour": false
     },
     {
       "id": 21,
@@ -278,7 +295,8 @@
       "price": "",
       "path": "21.jpg",
       "series": "1",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 22,
@@ -290,7 +308,8 @@
       "price": "",
       "path": "22.jpg",
       "series": "",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 23,
@@ -302,7 +321,8 @@
       "price": "",
       "path": "23.jpg",
       "series": "1",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 24,
@@ -314,7 +334,8 @@
       "price": "",
       "path": "24.jpg",
       "series": "",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 25,
@@ -339,7 +360,8 @@
       "price": "",
       "path": "26.jpg",
       "series": "",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 27,
@@ -351,7 +373,8 @@
       "price": "",
       "path": "27.jpg",
       "series": "",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 28,
@@ -363,7 +386,8 @@
       "price": "",
       "path": "28.jpg",
       "series": "",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 29,
@@ -375,7 +399,8 @@
       "price": "",
       "path": "29.jpg",
       "series": "",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 30,
@@ -387,7 +412,8 @@
       "price": "",
       "path": "30.jpg",
       "series": "",
-      "publish": false
+      "publish": false,
+      "favour": false
     },
     {
       "id": 31,
@@ -399,7 +425,8 @@
       "price": "",
       "path": "31.jpg",
       "series": "",
-      "publish": true
+      "publish": true,
+      "favour": false
     },
     {
       "id": 32,

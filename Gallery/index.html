@@ -59,9 +59,9 @@
 					text-align: center;
 				}
 
-				.impressumSection{
+				.impressumSection {
 					font-size: 20px;
-					margin-top: 250px;
+					margin-top: 150px;
 					margin-bottom: 100px;
 					text-align: center;
 					width: 600px;
@@ -70,8 +70,19 @@
 					visibility: hidden;
 				}
 
-				.impressumSectionVisible{
+				.impressumSectionVisible {
 					visibility: visible;
+				}
+
+				.moreArtSection {
+					width: 600px;
+			    margin-left: auto;
+			    margin-right: auto;
+				}
+
+				.moreArtLink{
+					font-size: min(4vw, 25px);
+			    text-align: center;
 				}
 
 				.contactSection{
@@ -84,14 +95,14 @@
 			    margin-right: auto;
 				}
 
-				.logoImage{
+				.logoImage {
 					height: 90px;
 					width: 90px;
 					border-radius: 50%;
 				  margin-left: auto;
 				}
 
-				.logoTitle{
+				.logoTitle {
 			    margin-left: 20px;
 			    margin-top: auto;
 			    margin-bottom: auto;
@@ -135,11 +146,11 @@
 					opacity: 0;
 					visibility: hidden;
 
-					-webkit-transition: opacity 500ms ease-in;
-					   -moz-transition: opacity 500ms ease-in;
-					    -ms-transition: opacity 500ms ease-in;
-					     -o-transition: opacity 500ms ease-in;
-					        transition: opacity 500ms ease-in;
+					-webkit-transition: opacity 1000ms ease-in;
+					   -moz-transition: opacity 1000ms ease-in;
+					    -ms-transition: opacity 1000ms ease-in;
+					     -o-transition: opacity 1000ms ease-in;
+					        transition: opacity 1000ms ease-in;
 				}
 
 				.logoContent-loaded{
@@ -164,6 +175,20 @@
 			    margin-left: auto;
 			    margin-right: auto;
     			padding-top: 15px;
+
+					opacity: 0;
+					visibility: hidden;
+
+					-webkit-transition: opacity 1000ms ease-in;
+					   -moz-transition: opacity 1000ms ease-in;
+					    -ms-transition: opacity 1000ms ease-in;
+					     -o-transition: opacity 1000ms ease-in;
+					        transition: opacity 1000ms ease-in;
+				}
+
+				.socialMediaItems-loaded{
+					opacity: 1;
+					visibility: visible;
 				}
 
 				/* Style all font awesome icons */
@@ -247,7 +272,7 @@
 					});
 			}
 
-			function buildContentWithData (aPics) {
+			function buildContentWithData (aPics, bOnlyFavour) {
 				var
 				oImage,
 				oNameLine,
@@ -266,7 +291,7 @@
 
 				for (i; i < aPics.length; i++) {
 
-					if (aPics[i].publish) { //&& aPics[i].favour
+					if (aPics[i].publish && (aPics[i].favour == true || aPics[i].favour == bOnlyFavour) ) {
 
 						oImage = new Image();
 						oImage.src = "/pics/" + aPics[i].path;
@@ -361,6 +386,7 @@
 				$("#idLogoImage").on("load", function () {
 					//this.classList.add("logoImage-loaded");
 					$(".logoContent")[0].classList.add("logoContent-loaded");
+					$(".socialMediaItems")[0].classList.add("socialMediaItems-loaded");
 				});
 
 				/*var aLines = [];
@@ -418,23 +444,30 @@
 				$(".cover").append(oCover);
 			}
 
+			function showMoreArt () {
+				_onlyFavour = false;
+				$(".moreArtLink").hide();
+				buildContentWithData(_aPics, _onlyFavour);
+			}
+
 			jQuery(document).ready(function(){
 
 				window._aPicsFiltered = null;
 				window._aPics = null;
 				window._aSeries = null;
+				window._onlyFavour = true;
 
 				window.onorientationchange = function() {
 					if (_aPicsFiltered) {
-						buildContentWithData(_aPicsFiltered);
+						buildContentWithData(_aPicsFiltered, _onlyFavour);
 					} else if (_aPics) {
-						buildContentWithData(_aPics);
+						buildContentWithData(_aPics, _onlyFavour);
 					} else {
 						$.ajax({
 							dataType: "json",
 							url: "getDataFile",
 							success: function (oData) {
-								buildContentWithData(oData.pics);
+								buildContentWithData(oData.pics, _onlyFavour);
 							},
 							error: function (sError) {
 								console.log(sError);
@@ -454,7 +487,7 @@
 						//buildCoverSection();
 						buildSocialMediaIcons();
 						shuffleArray(oData.pics);
-						buildContentWithData(oData.pics);
+						buildContentWithData(oData.pics, true);
 				  },
 					error: function (sError) {
 						console.log(sError);
@@ -482,6 +515,11 @@
 				<address>
 					<a href="mailto:hetzler_Kai@web.com">Kai Hetzler</a>
 				</address>
+			</div>
+			<div class="moreArtSection">
+				<center>
+					<a class="moreArtLink" onclick="showMoreArt();"> Mehr Kunst </a>
+				</center>
 			</div>
 			<div class="impressumSection">
 				<h1>Impressum</h1>
