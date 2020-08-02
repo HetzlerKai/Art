@@ -1,0 +1,271 @@
+.pictureScroll{
+  width: 85%;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10rem;
+  overflow: hidden;
+}
+
+.artwork {
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 5px 5px 12px 3px;
+  margin-left: auto;
+  margin-right: auto;
+
+  -webkit-transition: opacity 500ms ease-in;
+     -moz-transition: opacity 500ms ease-in;
+      -ms-transition: opacity 500ms ease-in;
+       -o-transition: opacity 500ms ease-in;
+          transition: opacity 500ms ease-in;
+}
+
+.artwork-loaded {
+    opacity: 1;
+    visibility: visible;
+}
+
+.artwork-name{
+  margin-top: 2rem;
+  font-size: min(4.5vw, 36px);
+  text-align: center;
+}
+
+.artwork-type{
+  font-size: min(4vw, 25px);
+  text-align: center;
+}
+
+.artwork-price{
+  margin-bottom: 10rem;
+  font-size: min(4vw, 25px);
+  text-align: center;
+}
+
+.impressumSection {
+  font-size: 20px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+}
+
+.impressumSectionVisible {
+  visibility: visible;
+}
+
+.moreArtSection {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.moreArtLink{
+  font-size: min(5vw, 35px);
+  text-align: center;
+}
+
+.contactSection{
+  display: none;
+
+  margin-top: 250px;
+  width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logoImage {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin-left: auto;
+
+  cursor: pointer;
+}
+
+.logoTitle {
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 40px;
+  font-size: min(5vw, 40px);
+}
+
+.popover *{
+  font-family: Audiowide;
+  line-height: 150%;
+  font-size: min(4vw, 25px);
+}
+
+@media only screen and (max-device-width: 600px) {
+  .popover {
+    width: 100%;
+    left: 0px;
+  }
+
+  .popover *{
+    font-size: 35px !important;
+  }
+}
+
+.logoMenu{
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+.logoContent{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  margin-top: 100px;
+  height: 90px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  -webkit-transition: opacity 1000ms ease-in;
+     -moz-transition: opacity 1000ms ease-in;
+      -ms-transition: opacity 1000ms ease-in;
+       -o-transition: opacity 1000ms ease-in;
+          transition: opacity 1000ms ease-in;
+}
+
+.logoContent-loaded{
+  opacity: 1;
+  visibility: visible;
+}
+
+.logoContent-showMode{
+  display: none;
+}
+
+.lineHeight150{
+  line-height: 150%;
+}
+
+body{
+  background-color: #f5f3f2; /* darkmode; #121212 */
+  font-family: Audiowide;
+  width: 100%;
+  max-width: 100%;
+  /* darkmode; color: darkred; */
+}
+
+body.darkmode {
+  background-color: black !important;
+  color: #ffffff !important;
+}
+
+.socialMediaItems {
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  -webkit-transition: opacity 1000ms ease-in;
+     -moz-transition: opacity 1000ms ease-in;
+      -ms-transition: opacity 1000ms ease-in;
+       -o-transition: opacity 1000ms ease-in;
+          transition: opacity 1000ms ease-in;
+}
+
+.socialMediaItems-loaded{
+  opacity: 1;
+  visibility: visible;
+}
+
+.socialMediaItems-showMode{
+  display: none;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 14px;
+  font-size: 29px;
+  width: 57px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+  color: white !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.artwork-name,
+.artwork-type,
+.artwork-price {
+  visibility: hidden;
+}
+
+.artwork-name.loaded,
+.artwork-type.loaded,
+.artwork-price.loaded {
+  visibility: initial !important;
+}
+
+
+/* SHOW */
+.loadingLogo {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 300px;
+  margin-top: 50px;
+
+  box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 50px rgba(255, 82, 82, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+	}
+}
+
+.spotifyIframe {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+}
+
+.showArtwork {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 75px;
+}

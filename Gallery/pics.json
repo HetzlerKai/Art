@@ -569,7 +569,7 @@
       "path": "42.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 43,
