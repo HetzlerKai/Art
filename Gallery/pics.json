@@ -28,7 +28,7 @@
       "size": "40cm x 50cm",
       "sold": true,
       "price": "",
-      "path": "0.jpg",
+      "path": "0-min.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -41,7 +41,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "1.jpg",
+      "path": "1-min.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -54,7 +54,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "2.jpg",
+      "path": "2-min.jpg",
       "series": "1",
       "publish": false,
       "favour": false
@@ -67,7 +67,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "3.jpg",
+      "path": "3-min.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -80,7 +80,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "4.jpg",
+      "path": "4-min.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -93,7 +93,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "5.jpg",
+      "path": "5-min.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -106,7 +106,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "6.jpg",
+      "path": "6-min.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -119,7 +119,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "7.jpg",
+      "path": "7-min.jpg",
       "publish": true,
       "favour": false
     },
@@ -131,7 +131,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "8.jpg",
+      "path": "8-min.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -144,7 +144,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "9.jpg",
+      "path": "9-min.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -157,7 +157,7 @@
       "size": "40cm x 120cm",
       "sold": false,
       "price": "",
-      "path": "10.jpg",
+      "path": "10-min.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -170,7 +170,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "12.jpg",
+      "path": "12-min.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -183,7 +183,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "11.jpg",
+      "path": "11-min.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -195,7 +195,7 @@
       "type": "A3",
       "sold": false,
       "price": "",
-      "path": "13.jpg",
+      "path": "13-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -207,7 +207,7 @@
       "type": "AO3",
       "sold": false,
       "price": "",
-      "path": "14.jpg",
+      "path": "14-min.jpg",
       "series": "3",
       "publish": false,
       "favour": false
@@ -220,7 +220,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "15.jpg",
+      "path": "15-min.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -233,7 +233,7 @@
       "size": "40cm x 50cm",
       "sold": true,
       "price": "",
-      "path": "16.jpg",
+      "path": "16-min.jpg",
       "publish": true,
       "favour": false
     },
@@ -244,7 +244,7 @@
       "type": "AO3",
       "sold": false,
       "price": "",
-      "path": "17.jpg",
+      "path": "17-min.jpg",
       "series": "3",
       "publish": false,
       "favour": false
@@ -256,7 +256,7 @@
       "type": "AO3",
       "sold": false,
       "price": "",
-      "path": "18.jpg",
+      "path": "18-min.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -268,7 +268,7 @@
       "type": "AO3",
       "sold": false,
       "price": "",
-      "path": "19.jpg",
+      "path": "19-min.jpg",
       "series": "3",
       "publish": false,
       "favour": false
@@ -280,7 +280,7 @@
       "type": "A3",
       "sold": false,
       "price": "",
-      "path": "20.jpg",
+      "path": "20-min.jpg",
       "series": "3",
       "publish": false,
       "favour": false
@@ -293,7 +293,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "21.jpg",
+      "path": "21-min.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -306,7 +306,7 @@
       "size": "40cm x 60cm",
       "sold": false,
       "price": "",
-      "path": "22.jpg",
+      "path": "22-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -319,7 +319,7 @@
       "size": "40cm x 60cm",
       "sold": true,
       "price": "",
-      "path": "23.jpg",
+      "path": "23-min.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -332,7 +332,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "24.jpg",
+      "path": "24-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -345,7 +345,7 @@
       "size": "30cm x 40cm",
       "sold": false,
       "price": "",
-      "path": "25.jpg",
+      "path": "25-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
@@ -358,7 +358,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "26.jpg",
+      "path": "26-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -371,7 +371,7 @@
       "size": "Je 25cm x 30cm",
       "sold": false,
       "price": "",
-      "path": "27.jpg",
+      "path": "27-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -384,7 +384,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "28.jpg",
+      "path": "28-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -397,7 +397,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "29.jpg",
+      "path": "29-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -410,7 +410,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "30.jpg",
+      "path": "30-min.jpg",
       "series": "",
       "publish": false,
       "favour": false
@@ -423,7 +423,7 @@
       "size": "50cm x 100cm",
       "sold": false,
       "price": "",
-      "path": "31.jpg",
+      "path": "31-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -436,7 +436,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "32.jpg",
+      "path": "32-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
@@ -449,7 +449,7 @@
       "size": "30cm x 40cm",
       "sold": false,
       "price": "",
-      "path": "33.jpg",
+      "path": "33-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -462,7 +462,7 @@
       "size": "50cm x 70cm",
       "sold": true,
       "price": "",
-      "path": "34.jpg",
+      "path": "34-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
@@ -475,7 +475,7 @@
       "size": "50cm x 70cm",
       "sold": true,
       "price": "",
-      "path": "35.jpg",
+      "path": "35-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -488,7 +488,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "36.jpg",
+      "path": "36-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
@@ -501,7 +501,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "37.jpg",
+      "path": "37-min.jpg",
       "series": "",
       "publish": false,
       "favour": false
@@ -514,7 +514,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "38.jpg",
+      "path": "38-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -527,7 +527,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "39.jpg",
+      "path": "39-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -540,7 +540,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "40.jpg",
+      "path": "40-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
@@ -553,7 +553,7 @@
       "size": "40cm x 50cm",
       "sold": false,
       "price": "",
-      "path": "41.jpg",
+      "path": "41-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
@@ -566,7 +566,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "42.jpg",
+      "path": "42-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -579,7 +579,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "43.jpg",
+      "path": "43-min.jpg",
       "series": "",
       "publish": false,
       "favour": false
@@ -592,7 +592,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "44.jpg",
+      "path": "44-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -605,7 +605,7 @@
       "size": "60cm x 90cm",
       "sold": false,
       "price": "",
-      "path": "45.jpg",
+      "path": "45-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -618,7 +618,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "46.jpg",
+      "path": "46-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
@@ -631,7 +631,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "47.jpg",
+      "path": "47-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -644,7 +644,7 @@
       "size": "40cm x 60cm",
       "sold": false,
       "price": "",
-      "path": "48.jpg",
+      "path": "48-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -657,7 +657,7 @@
       "size": "40cm x 60cm",
       "sold": false,
       "price": "",
-      "path": "49.jpg",
+      "path": "49-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -670,7 +670,7 @@
       "size": "40cm x 60cm",
       "sold": false,
       "price": "",
-      "path": "50.jpg",
+      "path": "50-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
@@ -683,7 +683,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "51.jpg",
+      "path": "51-min.jpg",
       "series": "",
       "publish": true,
       "favour": false
@@ -696,7 +696,7 @@
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "52.jpg",
+      "path": "52-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
