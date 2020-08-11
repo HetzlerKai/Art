@@ -120,7 +120,7 @@ function _showLoadingIcon () {
   oContent = $(".pictureScroll");
 
   oLoadingLogo = new Image(500, 500);
-  oLoadingLogo.src = "/logo/logo.jpg";
+  oLoadingLogo.src = "/logo/logo.png";
   oLoadingLogo.id = "idLoadingLogo"
   oLoadingLogo.className = "loadingLogo";
 

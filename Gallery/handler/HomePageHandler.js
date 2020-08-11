@@ -145,7 +145,7 @@ function buildContentWithData (aPics, bOnlyFavour) {
 
 function buildLogoSection (aSeries) {
   var oLogoImage = new Image(100, 100);
-  oLogoImage.src = "/logo/logo.jpg";
+  oLogoImage.src = "/logo/logo.png";
   oLogoImage.id = "idLogoImage"
   oLogoImage.className = "logoImage";
   $(".logoContent").prepend(oLogoImage);
