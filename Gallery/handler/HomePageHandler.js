@@ -89,7 +89,10 @@ function buildContentWithData (aPics, bOnlyFavour) {
         sType = "Acryl und Ölfarben auf Papier - A3";
       } else if (aPics[i].type === "A") {
         sType = "Acryl - " + aPics[i].size;
+      } else if (aPics[i].type === "MM") {
+        sType = "Mixed-Media - Leinwand - " + aPics[i].size;
       }
+
       oTypeLine.textContent = sType;
       oTypeLine.className = "artwork-type";
       oTypeLine.id = "artwork-type-" + aPics[i].id;

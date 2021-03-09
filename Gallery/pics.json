@@ -218,7 +218,7 @@
       "description": "",
       "type": "AOL",
       "size": "50cm x 70cm",
-      "sold": false,
+      "sold": true,
       "price": "",
       "path": "15-min.jpg",
       "series": "3",
@@ -434,7 +434,7 @@
       "description": "",
       "type": "AL",
       "size": "50cm x 70cm",
-      "sold": false,
+      "sold": true,
       "price": "",
       "path": "32-min.jpg",
       "series": "",
@@ -465,7 +465,7 @@
       "path": "34-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 35,
@@ -556,7 +556,7 @@
       "path": "41-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 42,
@@ -692,11 +692,63 @@
       "id": 52,
       "name": "Neo Tokio",
       "description": "",
-      "type": "AL",
+      "type": "MM",
+      "size": "50cm x 60cm",
+      "sold": true,
+      "price": "",
+      "path": "52-min.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 53,
+      "name": "sunken",
+      "description": "",
+      "type": "MM",
       "size": "50cm x 70cm",
       "sold": false,
       "price": "",
-      "path": "52-min.jpg",
+      "path": "53-min.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 54,
+      "name": "Ainu",
+      "description": "",
+      "type": "MM",
+      "size": "50cm x 60cm",
+      "sold": false,
+      "price": "",
+      "path": "54-min.jpg",
+      "series": "",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 55,
+      "name": "Nature. Art. Humans.",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "55-min.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 56,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "56-min.jpg",
       "series": "",
       "publish": true,
       "favour": true
