@@ -99,7 +99,7 @@ function buildContentWithData (aPics, bOnlyFavour) {
 
       oPriceLine = document.createElement('a');
       if (aPics[i].sold) {
-        sPrice = "Verkauft - Prints Verfügbar";
+        sPrice = "Orginal Vergriffen - Prints Verfügbar";
       } else if (aPics[i].price) {
         sPrice = aPics[i].price + "€ zzgl. Versandkosten";
       } else if (aPics[i].type === "D") {
