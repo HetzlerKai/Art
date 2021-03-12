@@ -765,6 +765,19 @@
       "series": "",
       "publish": true,
       "favour": true
+    },
+    {
+      "id": 58,
+      "name": "Erebos",
+      "description": "",
+      "type": "MM",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "58-min.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
     }
   ]
 }
