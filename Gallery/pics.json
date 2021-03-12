@@ -752,6 +752,19 @@
       "series": "",
       "publish": true,
       "favour": true
+    },
+    {
+      "id": 57,
+      "name": "2020",
+      "description": "",
+      "type": "MM",
+      "size": "40cm x 50cm",
+      "sold": false,
+      "price": "",
+      "path": "57-min.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
     }
   ]
 }
