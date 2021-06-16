@@ -465,7 +465,7 @@
       "path": "34-min.jpg",
       "series": "",
       "publish": true,
-      "favour": false
+      "favour": true
     },
     {
       "id": 35,
@@ -478,7 +478,7 @@
       "path": "35-min.jpg",
       "series": "",
       "publish": true,
-      "favour": false
+      "favour": true
     },
     {
       "id": 36,
@@ -621,7 +621,7 @@
       "path": "46-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 47,
@@ -738,7 +738,7 @@
       "path": "55-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 56,
@@ -764,7 +764,7 @@
       "path": "57-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 58,
@@ -777,7 +777,176 @@
       "path": "58-min.jpg",
       "series": "",
       "publish": true,
+      "favour": false
+    },
+    {
+      "id": 59,
+      "name": "Now",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "59.jpg",
+      "series": "",
+      "publish": true,
       "favour": true
+    },
+    {
+      "id": 60,
+      "name": "Gefährten",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "60.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 61,
+      "name": "Ascension",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "61.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 62,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "62.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 63,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "63.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 64,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "64.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 65,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "65.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 66,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "66.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 67,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "67.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 68,
+      "name": "Memories Lost",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "68.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 69,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "69.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 70,
+      "name": "Disparität",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "70.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 71,
+      "name": "Was bleibt?",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "71.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
     }
   ]
 }
