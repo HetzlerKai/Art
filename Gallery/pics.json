@@ -478,7 +478,7 @@
       "path": "35-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 36,
@@ -673,7 +673,7 @@
       "path": "50-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 51,
@@ -712,7 +712,7 @@
       "path": "53-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 54,
@@ -787,7 +787,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "59.jpg",
+      "path": "59.jpeg",
       "series": "",
       "publish": true,
       "favour": true
@@ -800,7 +800,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "60.jpg",
+      "path": "60.jpeg",
       "series": "",
       "publish": true,
       "favour": true
@@ -813,7 +813,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "61.jpg",
+      "path": "61.jpeg",
       "series": "",
       "publish": true,
       "favour": true
@@ -826,7 +826,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "62.jpg",
+      "path": "62.jpeg",
       "series": "",
       "publish": false,
       "favour": false
@@ -839,7 +839,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "63.jpg",
+      "path": "63.jpeg",
       "series": "",
       "publish": false,
       "favour": false
@@ -852,7 +852,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "64.jpg",
+      "path": "64.jpeg",
       "series": "",
       "publish": false,
       "favour": false
@@ -865,7 +865,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "65.jpg",
+      "path": "65.jpeg",
       "series": "",
       "publish": false,
       "favour": false
@@ -878,7 +878,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "66.jpg",
+      "path": "66.jpeg",
       "series": "",
       "publish": false,
       "favour": false
@@ -891,7 +891,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "67.jpg",
+      "path": "67.jpeg",
       "series": "",
       "publish": false,
       "favour": false
@@ -904,7 +904,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "68.jpg",
+      "path": "68.jpeg",
       "series": "",
       "publish": false,
       "favour": false
@@ -917,7 +917,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "69.jpg",
+      "path": "69.jpeg",
       "series": "",
       "publish": false,
       "favour": false
@@ -930,7 +930,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "70.jpg",
+      "path": "70.jpeg",
       "series": "",
       "publish": false,
       "favour": false
@@ -943,7 +943,7 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "71.jpg",
+      "path": "71.jpeg",
       "series": "",
       "publish": false,
       "favour": false
