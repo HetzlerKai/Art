@@ -103,7 +103,8 @@ function buildContentWithData (aPics, bOnlyFavour) {
       }
       //else if (aPics[i].price) {
       //  sPrice = aPics[i].price + "€ zzgl. Versandkosten";
-      } else if (aPics[i].type === "D") {
+      //} 
+      else if (aPics[i].type === "D") {
         sPrice = "Prints Verfügbar";
       } else {
         sPrice = "Preis auf Anfrage"
