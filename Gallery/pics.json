@@ -439,7 +439,7 @@
       "path": "32-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 33,
@@ -465,7 +465,7 @@
       "path": "34-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 35,
@@ -543,7 +543,7 @@
       "path": "40-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 41,
@@ -699,7 +699,7 @@
       "path": "52-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 53,
@@ -751,7 +751,7 @@
       "path": "56-min.jpg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 57,
@@ -790,7 +790,7 @@
       "path": "59.jpeg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 60,
@@ -816,7 +816,7 @@
       "path": "61.jpeg",
       "series": "",
       "publish": true,
-      "favour": true
+      "favour": false
     },
     {
       "id": 62,
@@ -841,7 +841,7 @@
       "price": "",
       "path": "63.jpeg",
       "series": "",
-      "publish": false,
+      "publish": true,
       "favour": false
     },
     {
@@ -854,7 +854,7 @@
       "price": "",
       "path": "64.jpeg",
       "series": "",
-      "publish": false,
+      "publish": true,
       "favour": false
     },
     {
@@ -945,8 +945,229 @@
       "price": "",
       "path": "71.jpeg",
       "series": "",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 72,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "72.jpg",
+      "series": "",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 73,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": true,
+      "price": "",
+      "path": "73.jpg",
+      "series": "",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 74,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": true,
+      "price": "",
+      "path": "74.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 75,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "75.jpg",
+      "series": "",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 76,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "76.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 77,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "77.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 78,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "78.jpg",
+      "series": "",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 79,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "79.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 80,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "80.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 81,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "81.jpg",
+      "series": "",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 82,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "82.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 83,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "83.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 84,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "84.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 85,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "85.jpg",
+      "series": "",
       "publish": false,
       "favour": false
+    },
+    {
+      "id": 86,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "86.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
+    },
+    {
+      "id": 87,
+      "name": "",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "87.jpg",
+      "series": "",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 88,
+      "name": "Yandragsil",
+      "description": "",
+      "type": "AL",
+      "size": "",
+      "sold": false,
+      "price": "",
+      "path": "88.jpg",
+      "series": "",
+      "publish": true,
+      "favour": true
     }
   ]
 }
