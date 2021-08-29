@@ -1,0 +1,434 @@
+#container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  overflow: hidden;
+  color: #c9c9c9;
+}
+
+#container canvas, #breachedMSG {
+  position: absolute;
+}
+
+canvas{
+  z-index: 1;
+}
+
+.invisible{
+  display: none !important;
+}
+
+.content{
+  background-color: #383535;//black;//#A9A9A9;
+  min-height: 100%;
+  width: 100%;
+}
+
+.MenuItem{
+  overflow: hidden;
+  color: #EE4B2B;
+  background-color: black;
+  z-index: 100;
+  font-size: 24px;
+  margin-top: 4rem;
+  vertical-align: top;
+  text-orientation: upright;
+  writing-mode: tb-rl;
+}
+
+.MenuItem:hover {
+  cursor: pointer;
+}
+
+.breachedDialog{
+  padding: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20rem;
+  overflow: hidden;
+  width: 30rem;
+  color: #EE4B2B;
+  background-color: black;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  font-size: 35px;
+}
+
+
+/*HOME*/
+.HomeHeader{
+  color: #EE4B2B;
+  text-align: center;
+}
+
+.HomeSpotlightContainer{
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 3rem;
+  //box-shadow: 5px 5px 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.HomeBlogContainer{
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 3rem;
+  //box-shadow: 5px 5px 5px;
+  border-style: solid;
+  border-width: 2px;
+  height: 75%;
+  overflow-y: scroll;
+  position: absolute;
+}
+
+.HomeSection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  //height: 55%;
+  object-fit: contain;
+}
+
+.spotlightText{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.blogHeadline{
+  font-size: 24px;
+  color: #EE4B2B;
+}
+
+.blogText{
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+/*CONTACT*/
+.impressumSection {
+  font-size: 20px;
+  margin-top: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fa {
+  padding: 14px;
+  font-size: 29px;
+  width: 57px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  color: white !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.socialMediaItems {
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12rem;
+  margin-bottom: 8rem;
+}
+
+/*ARTIST*/
+
+.artistImg{
+    margin: 10rem;
+    height: 450px;
+}
+
+/*_________________________
+
+.pictureScroll{
+  width: 85%;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10rem;
+  overflow: hidden;
+}
+
+.artwork {
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 5px 5px 12px 3px;
+  margin-left: auto;
+  margin-right: auto;
+
+  -webkit-transition: opacity 500ms ease-in;
+     -moz-transition: opacity 500ms ease-in;
+      -ms-transition: opacity 500ms ease-in;
+       -o-transition: opacity 500ms ease-in;
+          transition: opacity 500ms ease-in;
+}
+
+.artwork-loaded {
+    opacity: 1;
+    visibility: visible;
+}
+
+.artwork-name{
+  margin-top: 2rem;
+  font-size: min(4.5vw, 36px);
+  text-align: center;
+}
+
+.artwork-type{
+  font-size: min(4vw, 25px);
+  text-align: center;
+}
+
+.artwork-price{
+  margin-bottom: 10rem;
+  font-size: min(4vw, 25px);
+  text-align: center;
+}
+
+.impressumSection {
+  font-size: 20px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+}
+
+.impressumSectionVisible {
+  visibility: visible;
+}
+
+.moreArtSection {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.moreArtLink{
+  font-size: min(5vw, 35px);
+  text-align: center;
+}
+
+.contactSection{
+  display: none;
+
+  margin-top: 250px;
+  width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logoImage {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin-left: auto;
+
+  cursor: pointer;
+}
+
+.logoTitle {
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 40px;
+  font-size: min(5vw, 40px);
+}
+
+.popover *{
+  font-family: Audiowide;
+  line-height: 150%;
+  font-size: min(4vw, 25px);
+}
+
+@media only screen and (max-device-width: 600px) {
+  .popover {
+    width: 100%;
+    left: 0px;
+  }
+
+  .popover *{
+    font-size: 35px !important;
+  }
+}
+
+.logoMenu{
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+.logoContent{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  margin-top: 100px;
+  height: 90px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  -webkit-transition: opacity 1000ms ease-in;
+     -moz-transition: opacity 1000ms ease-in;
+      -ms-transition: opacity 1000ms ease-in;
+       -o-transition: opacity 1000ms ease-in;
+          transition: opacity 1000ms ease-in;
+}
+
+.logoContent-loaded{
+  opacity: 1;
+  visibility: visible;
+}
+
+.logoContent-showMode{
+  display: none;
+}
+
+.lineHeight150{
+  line-height: 150%;
+}
+
+body{
+  font-family: Audiowide;
+  width: 100%;
+  max-width: 100%;
+}
+
+body.darkmode {
+  background-color: black !important;
+  color: #ffffff !important;
+}
+
+.socialMediaItems {
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  -webkit-transition: opacity 1000ms ease-in;
+     -moz-transition: opacity 1000ms ease-in;
+      -ms-transition: opacity 1000ms ease-in;
+       -o-transition: opacity 1000ms ease-in;
+          transition: opacity 1000ms ease-in;
+}
+
+.socialMediaItems-loaded{
+  opacity: 1;
+  visibility: visible;
+}
+
+.socialMediaItems-showMode{
+  display: none;
+}
+
+.fa {
+  padding: 14px;
+  font-size: 29px;
+  width: 57px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  color: white !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.artwork-name,
+.artwork-type,
+.artwork-price {
+  visibility: hidden;
+}
+
+.artwork-name.loaded,
+.artwork-type.loaded,
+.artwork-price.loaded {
+  visibility: initial !important;
+}
+
+
+.loadingLogo {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 300px;
+  margin-top: 50px;
+
+  box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 50px rgba(255, 82, 82, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+	}
+}
+
+.spotifyIframe {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+}
+
+.showArtwork {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 75px;
+}
+*/

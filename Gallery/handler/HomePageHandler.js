@@ -61,7 +61,7 @@ function buildContentWithData (aPics, bOnlyFavour) {
     if (aPics[i].publish && (aPics[i].favour == true || aPics[i].favour == bOnlyFavour) ) {
 
       oImage = new Image();
-      oImage.src = "/pics/" + aPics[i].path;
+      oImage.src = "pics/" + aPics[i].path;
       oImage.id = "idImage" + i;
       oImage.className = "artwork";
       oImage.sId = aPics[i].id;
@@ -103,7 +103,7 @@ function buildContentWithData (aPics, bOnlyFavour) {
       }
       //else if (aPics[i].price) {
       //  sPrice = aPics[i].price + "€ zzgl. Versandkosten";
-      //} 
+      //}
       else if (aPics[i].type === "D") {
         sPrice = "Prints Verfügbar";
       } else {
@@ -150,7 +150,7 @@ function buildContentWithData (aPics, bOnlyFavour) {
 
 function buildLogoSection (aSeries) {
   var oLogoImage = new Image(100, 100);
-  oLogoImage.src = "/logo/logo.png";
+  oLogoImage.src = "logo/logo.png";
   oLogoImage.id = "idLogoImage"
   oLogoImage.className = "logoImage";
   $(".logoContent").prepend(oLogoImage);
@@ -198,9 +198,9 @@ function buildCoverSection () {
   var oCover;
 
   oCover = new Image();
-  oCover.src = "/pics/" + aPics[i].path;
+  oCover.src = "pics/" + aPics[i].path;
 
-  oCover.src = "/logo/cover.gif";
+  oCover.src = "logo/cover.gif";
   oCover.id = "idCover"
   oCover.className = "cover";
   $(".cover").append(oCover);

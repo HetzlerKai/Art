@@ -1,7 +1,7 @@
 {
   "name": "art",
   "version": "1.0.0",
-  "homepage": "./",
+  "homepage": "https://github.com/HetzlerKai/Art#readme",
   "description": "Galeri Kai Hetzler",
   "main": "main.js",
   "scripts": {
@@ -17,9 +17,9 @@
   "bugs": {
     "url": "https://github.com/HetzlerKai/Art/issues"
   },
-  "homepage": "https://github.com/HetzlerKai/Art#readme",
   "dependencies": {
     "fs": "0.0.1-security",
-    "http": "0.0.0"
+    "http": "0.0.0",
+    "is-mobile": "^3.0.0"
   }
 }

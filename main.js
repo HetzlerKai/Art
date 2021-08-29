@@ -1,13 +1,15 @@
 var
 oHttp = require('http'),
 fs = require('fs'),
-hGallery,
-fnGetClientAddress;
+hGallery, hLeak, fnGetClientAddress;
+var mobile = require('is-mobile');
 
 const PORT=8080;
 
 newFavicon = fs.readFileSync('favicon.ico');
+hLeak = fs.readFileSync('PRJ_LEAK/index.html');
 hGallery = fs.readFileSync('Gallery/index.html');
+dir = "";
 
 fnGetClientAddress = function (req) {
         return (req.headers['x-forwarded-for'] || '').split(',')[0]
@@ -28,20 +30,37 @@ function handleRequest(request, response){
         case "/art":
         case "/Art":
         case "/Gallery":
+          dir = "Gallery";
           console.log(sClient + " - requested the Gallery.");
           response.writeHeader(200, {"Content-Type": "text/html"});
           response.write(hGallery);
           response.end();
         break;
 
+        case "/v2":
+          if (mobile()) {
+              dir = "Gallery";
+              console.log(sClient + " - requested the Gallery.");
+              response.writeHeader(200, {"Content-Type": "text/html"});
+              response.write(hGallery);
+              response.end();
+          } else {
+              dir = "PRJ_LEAK";
+              console.log(sClient + " - requested the Leak.");
+              response.writeHeader(200, {"Content-Type": "text/html"});
+              response.write(hLeak);
+              response.end();
+          }
+        break;
+
         case "/getAllFileNames":
-          let aData = fs.readdirSync("Gallery/pics");
+          let aData = fs.readdirSync(dir + "/pics");
           response.writeHead(202, {'Content-Type': 'application/json'});
           response.end(JSON.stringify(aData));
         break;
 
         case "/getDataFile":
-          let sPicsData = fs.readFileSync('Gallery/pics.json', 'utf8');
+          let sPicsData = fs.readFileSync(dir + '/pics.json', 'utf8');
 
           response.writeHead(202, {'Content-Type': 'application/json'});
           response.end(sPicsData);
@@ -53,7 +72,11 @@ function handleRequest(request, response){
         break;
 
     		default:
-    			var sData = fs.readFileSync("Gallery" + sRequest);
+          //crutch for old version
+          if (sRequest.startsWith("Gallery")) {
+            dir = '';
+          }
+    			var sData = fs.readFileSync(dir + sRequest);
 
           response.writeHead(202, {'Content-Type': 'application/json'});
           response.end(sData);
