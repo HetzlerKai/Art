@@ -206,9 +206,54 @@ function showHome () {
 }
 
 function showArt () {
-  var artContent = getArtContent();
-  $(".content").empty();
-  $(".content").append(artContent);
+    var fnGetArtContentPromise = function () {
+      var myPromise = new Promise((resolve, reject) => {
+        $.ajax({
+          dataType: "html",
+          url: "/src/pics.json",
+          success: function (data) {
+            resolve(data);
+          },
+          error: function (sError) {
+            reject();
+          }
+        });
+      });
+
+      return myPromise;
+    };
+
+    var fnBuild = function () {
+      $(".content").empty();
+      $(".content").append(_sArtHtml);
+    };
+
+    var fnGetSeriesItem = function (series) {
+      if (series.publish) {
+        var seriesHTML = "<div class='seriesItemContent'>";
+        seriesHTML = seriesHTML + "<div class='seriesItemHeader'>" + series.name + "</div>";
+        seriesHTML = seriesHTML + "<img src='" + series.previewImg + "' alt='Image not found' class='img seriesImg'></img>";
+
+        return seriesHTML + "</div>";
+      } else {
+        return "";
+      }
+    }
+
+    var seriesHTML = "";
+
+    if (window._sArtHtml == null) {
+      fnGetArtContentPromise().then( (data) => {
+        aSeries = JSON.parse(data).series;
+        for (var i = 0; i < aSeries.length; i++) {
+          seriesHTML = seriesHTML + fnGetSeriesItem(aSeries[i]);
+        }
+        _sArtHtml = "<div class='seriesContainer'>" + seriesHTML + "</div>";
+        fnBuild();
+      });
+    } else {
+      fnBuild();
+    }
 }
 
 function showArtist () {

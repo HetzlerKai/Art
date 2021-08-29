@@ -3,8 +3,9 @@
   display: flex;
   flex-direction: row;
   height: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   color: #c9c9c9;
+  background-color: #383535;//black;//#A9A9A9;
 }
 
 #container canvas, #breachedMSG {
@@ -20,9 +21,12 @@ canvas{
 }
 
 .content{
-  background-color: #383535;//black;//#A9A9A9;
   min-height: 100%;
   width: 100%;
+}
+
+.Menu{
+  background-color: black;
 }
 
 .MenuItem{
@@ -161,6 +165,35 @@ canvas{
 .artistImg{
     margin: 10rem;
     height: 450px;
+}
+
+/*ART*/
+
+.seriesContainer{
+  background-color: #383535;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.seriesImg{
+    height: 500px;
+}
+
+.seriesItemHeader{
+    font-size: 30px;
+    color: #EE4B2B;
+}
+
+.seriesItemContent{
+  height: 550px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
 }
 
 /*_________________________

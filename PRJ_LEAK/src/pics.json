@@ -2,21 +2,25 @@
   "series": [
     {
       "id": 0,
-      "name": "All",
-      "publish": true
+      "name": "Archive",
+      "publish": true,
+      "previewImg": "/pics/prev0.jpeg"
     },
     {
       "id": 1,
       "name": "Radikal; Trivial",
-      "publish": true
+      "publish": true,
+      "previewImg": "/pics/prev1.jpeg"
     }, {
       "id": 2,
       "name": "Series_RGB",
-      "publish": true
+      "publish": true,
+      "previewImg": "/pics/prev2.jpeg"
     }, {
       "id": 3,
       "name": "appel du vide",
-      "publish": true
+      "publish": true,
+      "previewImg": "/pics/prev3.jpeg"
     }
   ],
   "pics": [
