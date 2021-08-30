@@ -230,7 +230,7 @@ function showArt () {
 
     var fnGetSeriesItem = function (series) {
       if (series.publish) {
-        var seriesHTML = "<div class='seriesItemContent'>";
+        var seriesHTML = "<div class='seriesItemContent' onClick='onClickSeries(" + series.id + ")'>";
         seriesHTML = seriesHTML + "<div class='seriesItemHeader'>" + series.name + "</div>";
         seriesHTML = seriesHTML + "<img src='" + series.previewImg + "' alt='Image not found' class='img seriesImg'></img>";
 
@@ -254,6 +254,10 @@ function showArt () {
     } else {
       fnBuild();
     }
+}
+
+function onClickSeries (sId) {
+  alert(sId);
 }
 
 function showArtist () {
