@@ -67,7 +67,6 @@ function showTitleScreen() {
     document.getElementById("Menu").classList.remove("invisible");
     document.getElementById("content").classList.remove("invisible");
 
-    //TODO: print in matrix style: Ⓐrtist, Art, Contact, ???
     var itemArtist = document.getElementById("MenuArtist");
     var itemArt = document.getElementById("MenuArt");
     var itemContact = document.getElementById("MenuContact");
@@ -244,9 +243,15 @@ function showArt () {
 
     if (window._sArtHtml == null) {
       fnGetArtContentPromise().then( (data) => {
-        aSeries = JSON.parse(data).series;
-        for (var i = 0; i < aSeries.length; i++) {
-          seriesHTML = seriesHTML + fnGetSeriesItem(aSeries[i]);
+        _aSeries = JSON.parse(data).series;
+        _aPics = JSON.parse(data).pics;
+        /*for (var i = 0; i < _aSeries.length; i++) {
+          seriesHTML = seriesHTML + fnGetSeriesItem(_aSeries[i]);
+        }*/
+        i = _aSeries.length;
+        while (i > 0) {
+          i--;
+          seriesHTML = seriesHTML + fnGetSeriesItem(_aSeries[i]);
         }
         _sArtHtml = "<div class='seriesContainer'>" + seriesHTML + "</div>";
         fnBuild();
@@ -256,8 +261,46 @@ function showArt () {
     }
 }
 
-function onClickSeries (sId) {
-  alert(sId);
+function onClickArtwork (id) {
+  alert("Show Artwork: " + id);
+}
+
+function onClickSeries (id) {
+  var fnGetImgHTMLContent = function (seriesId) {
+    var sIMGHTML = "";
+    var sImageName, sImageNameHTML, sImage, artworkId;
+
+    //#TODO replace with proper path
+    for (var i = 0; i < _aPics.length; i++) {
+      if (_aPics[i].series == seriesId) {
+
+        if (_aPics[i].name) {
+          sImageName = _aPics[i].name;
+        } else {
+          sImageName = "Untitled: Nr. " + _aPics[i].id;
+        }
+
+        sImageNameHTML = "<div class='AtworkName' onClick='onClickArtwork(" + _aPics[i].id + ")'>" + sImageName + "</div>";
+        sImage = "<img src='pics/" + seriesId + "/" + _aPics[i].path + "' alt='Image not found' class='img artworkImg'></img>";
+        sIMGHTML = sIMGHTML + "<div class='ImgItemContainer' onClick='onClickArtwork(" + _aPics[i].id + ")'>" + sImageNameHTML + sImage + "</div>";
+      }
+    }
+
+    return sIMGHTML;
+  };
+
+  var seriesHTML;
+  var name = _aSeries[id].name;
+  var desc = _aSeries[id].description;
+  var sImgHTML = fnGetImgHTMLContent(id);
+
+  seriesHTML = "<button type='button' class='btn btn-default btnBack' onclick='showArt();'>Back</button>";
+  seriesHTML = seriesHTML + "<div class='seriesDetailContainer'><div class='seriesDetailHeader'>" + name + "</div>";
+  seriesHTML = seriesHTML + "<div class='seriesDetailDescription'>" + desc + "</div>";
+  seriesHTML = seriesHTML + "<div class='seriesDetailImgContainer'>" + sImgHTML + "</div></div>";
+
+  $(".content").empty();
+  $(".content").append(seriesHTML);
 }
 
 function showArtist () {

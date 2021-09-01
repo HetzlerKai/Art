@@ -188,11 +188,34 @@ canvas{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;//space-between;
+}
+
+.seriesDetailImgContainer{
+  background-color: #383535;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;//space-between;
 }
 
 .seriesImg{
     height: 500px;
+}
+
+.artworkImg{
+  height: 500px;
+}
+
+.AtworkName{
+    font-size: 30px;
+    color: #EE4B2B;
+    font-family: Audiowide;
+    margin-bottom: 1.5rem;
+}
+
+.AtworkName:hover{
+  cursor: pointer;
 }
 
 .seriesItemHeader{
@@ -212,9 +235,40 @@ canvas{
   margin: 5rem;
 }
 
+.ImgItemContainer{
+  height: 550px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+}
+
+.ImgItemContainer:hover{
+  cursor: pointer;
+}
+
 .seriesItemContent:hover {
   cursor: pointer;
 }
+
+.seriesDetailHeader {
+    font-size: 30px;
+    color: #EE4B2B;
+    font-family: Audiowide;
+    margin: 1.5rem;
+}
+
+.seriesDetailDescription {
+    font-size: 24px;
+    font-family: Audiowide;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
 
 /*_________________________
 
