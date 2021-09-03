@@ -468,7 +468,7 @@ function getDialogContent (id) {
   var sButtons = "<a class='left carousel-control' href='#artDialogCarousel' data-slide='prev'><span class='glyphicon glyphicon-chevron-left'></span><span class='sr-only'>Previous</span></a>";
   sButtons = sButtons + "<a class='right carousel-control' href='#artDialogCarousel' data-slide='next'><span class='glyphicon glyphicon-chevron-right'></span><span class='sr-only'>Next</span></a>";
 
-  var sArtCarousel = "<div id='artDialogCarousel' class='carousel slide' data-ride='carousel'><ol class='carousel-indicators'>" + fnGetCarouselIndicators(aParts) + "</ol> <div class='carousel-inner'>" + fnGetCarouselItems(aParts, _aPics[id].series) + "</div>" + sButtons + "</div>";
+  var sArtCarousel = "<div id='artDialogCarousel' class='carousel' data-ride='carousel'><ol class='carousel-indicators'>" + fnGetCarouselIndicators(aParts) + "</ol> <div class='carousel-inner'>" + fnGetCarouselItems(aParts, _aPics[id].series) + "</div>" + sButtons + "</div>";
 
    return "<div>" + fnGetArtWorkDetails(_aPics[id]) + sArtCarousel + "</div>";
 }
