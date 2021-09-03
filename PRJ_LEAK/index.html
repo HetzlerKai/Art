@@ -31,9 +31,16 @@
 			    var evtSource = $(event.relatedTarget);
 			    var id = evtSource.data('artworkid');
 					var sDialogContentHTML = getDialogContent(id);
+					var sName;
+
+					if (_aPics[id].name) {
+			      sName = _aPics[id].name;
+			    } else {
+			      sName = "Untitled: Nr. " + _aPics[id].id;
+			    }
 
 			    var modal = $(this);
-			    modal.find('#artDialogTitle').text(_aPics[id].name)
+			    modal.find('#artDialogTitle').text(sName)
 					modal.find('#artDialogContent').empty();
 				  modal.find('#artDialogContent').append(sDialogContentHTML);
 			  })

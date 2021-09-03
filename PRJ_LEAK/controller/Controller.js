@@ -275,7 +275,6 @@ function onClickSeries (id) {
     var sIMGHTML = "";
     var sImageName, sImageNameHTML, sImage, artworkId;
 
-    //#TODO replace with proper path
     for (var i = 0; i < _aPics.length; i++) {
       if (_aPics[i].series == seriesId) {
 
@@ -410,13 +409,15 @@ function getDialogContent (id) {
   };
 
   var fnGetArtWorkDetails = function (dataItem) {
-    var sDetails, line1, line2, line3, line4;
+    var sDetails, line1, line2, line3, line4, sName;
 
     if (dataItem.name) {
-      line1 = "Name: " + dataItem.name;
+      sName = dataItem.name;
     } else {
-      line1 = "Name: Untitled Nr_" + dataItem.id;
+      sName = "Untitled: Nr. " + dataItem.id;
     }
+
+    line1 = "Name: " + sName;
 
     if (dataItem.type === "AL") {
       line2 = "Acryl auf Leinwand - " + dataItem.size;
@@ -440,7 +441,7 @@ function getDialogContent (id) {
       line3 = "Orginal verfügbar";
     }
 
-    var sKaufButton = '<a class="btn btn-primary buyButton" href="mailto:contact@kai-hetzler.art?subject=Anfrage ' + dataItem.name + '&body=Hallo Kai, %0A%0A ich hätte Interesse an [einem Druck | dem Orginal] von ' + dataItem.name + '. %0A%0A Viele Grüße %0A [Dein Name]">Kaufanfrage</a>';
+    var sKaufButton = '<a class="btn btn-primary buyButton" href="mailto:contact@kai-hetzler.art?subject=Anfrage ' + sName + '&body=Hallo Kai, %0A%0A ich hätte Interesse an [einem Druck | dem Orginal] von ' + sName + '. %0A%0A Viele Grüße %0A [Dein Name]">Kaufanfrage</a>';
 
 
     return sDetails = "<div class='artDialogText'> <div> <p>" + line1 + "</p><p>" + line2 + "</p><p>" + line3 + "</p></div> " + sKaufButton + " </div>";
