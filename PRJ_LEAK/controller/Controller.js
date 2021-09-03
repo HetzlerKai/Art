@@ -78,9 +78,11 @@ function showTitleScreen() {
       console.log('callback - particles.js config loaded');
     });
 
+    showArt();3
+    
     setTimeout(function(){
       //showHome();3
-      showArt();3
+      $(".content").addClass("loaded");
     },1000);
   }
 

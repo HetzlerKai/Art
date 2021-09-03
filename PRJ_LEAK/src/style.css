@@ -38,6 +38,18 @@ canvas{
   height: max-content;
   /* position: absolute;
   margin-left: 5.5rem; */
+
+    opacity: 0;
+
+    -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+         -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+}
+
+.content.loaded{
+  opacity: 1;
 }
 
 .contentContainer{
@@ -340,7 +352,10 @@ canvas{
     font-size: 30px;
     color: #8f100b;//#EE4B2B;
     font-family: Audiowide;
-    margin-bottom: 1.5rem;
+    //margin-bottom: 1.5rem;
+    border-bottom: 2px #8f100b solid;
+    width: 100%;
+    text-align: center;
 }
 
 .mobile .seriesItemHeader{
@@ -356,6 +371,7 @@ canvas{
   align-items: center;
   margin: 5rem;
   z-index: 100;
+  background-color: black !important;
 }
 
 .mobile .seriesItemContent{
