@@ -35,13 +35,19 @@ canvas{
 .content{
   min-height: 100%;
   width: 97%;
-  position: absolute;
-  margin-left: 5.5rem;
+  height: max-content;
+  /* position: absolute;
+  margin-left: 5.5rem; */
+}
+
+.contentContainer{
+  display: flex;
+  height: max-content;
 }
 
 .mobile .content{
     width: 92% !important;
-    margin-left: 9rem !important;
+    //margin-left: 9rem !important;
 }
 
 .Menu{
@@ -50,6 +56,7 @@ canvas{
     padding-left: 1rem;
     padding-right: 1rem;
     z-index: 100;
+    min-height: 100%;
 }
 
 .MenuItem{
