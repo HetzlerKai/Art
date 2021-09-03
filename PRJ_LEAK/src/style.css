@@ -264,6 +264,7 @@ canvas{
 
 .artistContact{
   z-index: 100;
+    margin-top: 5rem;
 }
 
 .mobile .artistContact{
@@ -546,6 +547,7 @@ canvas{
   font-size: 20px;
   z-index:100;
   color:#c3bdbd;
+  backdrop-filter: blur(10px);
 }
 
 .mobile .artistText{
@@ -559,6 +561,7 @@ canvas{
   align-items: center;
   justify-content: center;
   background-color: #383535;
+    flex-direction: column;
 }
 
 .mobile .artistContainer{
