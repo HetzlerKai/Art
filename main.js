@@ -38,19 +38,11 @@ function handleRequest(request, response){
         break;
 
         case "/v2":
-          if (mobile()) {
-              dir = "Gallery";
-              console.log(sClient + " - requested the Gallery.");
-              response.writeHeader(200, {"Content-Type": "text/html"});
-              response.write(hGallery);
-              response.end();
-          } else {
-              dir = "PRJ_LEAK";
-              console.log(sClient + " - requested the Leak.");
-              response.writeHeader(200, {"Content-Type": "text/html"});
-              response.write(hLeak);
-              response.end();
-          }
+          dir = "PRJ_LEAK";
+          console.log(sClient + " - requested the Leak.");
+          response.writeHeader(200, {"Content-Type": "text/html"});
+          response.write(hLeak);
+          response.end();
         break;
 
         case "/getAllFileNames":

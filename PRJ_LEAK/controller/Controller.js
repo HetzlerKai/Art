@@ -258,7 +258,7 @@ function showArt () {
           i--;
           seriesHTML = seriesHTML + fnGetSeriesItem(_aSeries[i]);
         }
-        _sArtHtml = "<div class='seriesContainer'>" + seriesHTML + "</div>";
+        _sArtHtml = "<div class='ArtSeriesHeader'>Projekte</div><div class='seriesContainer'>" + seriesHTML + "</div>";
         fnBuild();
       });
     } else {
@@ -440,7 +440,10 @@ function getDialogContent (id) {
       line3 = "Orginal verfügbar";
     }
 
-    return sDetails = "<div class='artDialogText'> <div> <p>" + line1 + "</p><p>" + line2 + "</p><p>" + line3 + "</p></div> <button type='button' class='btn btn-primary buyButton' onclick='triggerKaufanfrage(" + dataItem.id + ");'>Kaufanfrage</button> </div>";
+    var sKaufButton = '<a class="btn btn-primary buyButton" href="mailto:contact@kai-hetzler.art?subject=Anfrage ' + dataItem.name + '&body=Hallo Kai, %0A%0A ich hätte Interesse an [einem Druck | dem Orginal] von ' + dataItem.name + '. %0A%0A Viele Grüße %0A [Dein Name]">Kaufanfrage</a>';
+
+
+    return sDetails = "<div class='artDialogText'> <div> <p>" + line1 + "</p><p>" + line2 + "</p><p>" + line3 + "</p></div> " + sKaufButton + " </div>";
   };
 
   var aParts = _aPics[id].altPaths.split(",");

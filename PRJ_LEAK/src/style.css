@@ -39,6 +39,11 @@ canvas{
   margin-left: 5.5rem;
 }
 
+.mobile .content{
+    width: 92% !important;
+    margin-left: 9rem !important;
+}
+
 .Menu{
   background-color: #0c0101;
     font-family: Audiowide;
@@ -53,10 +58,14 @@ canvas{
   background-color: black;
   z-index: 100;
   font-size: 24px;
-  margin-top: 4rem;
+  margin-top: 7rem;
   vertical-align: top;
   text-orientation: upright;
   writing-mode: tb-rl;
+}
+
+.mobile .MenuItem{
+  font-size: 50px !important;
 }
 
 .MenuItem:hover {
@@ -182,16 +191,49 @@ canvas{
   width: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 8rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   z-index: 100;
 }
 
 /*ARTIST*/
 
+.artistMailLink{
+  font-size: 26px;
+}
+
+.mobile .artistMailLink{
+  font-size: 40px;
+}
+
+.artistContactHeader{
+    font-size: 40px;
+    color: #8f100b;
+    font-family: Audiowide;
+}
+
+.artistImpressumHeader{
+    font-size: 40px;
+    color: #8f100b;
+    font-family: Audiowide;
+    margin-top: 4rem;
+}
+
+.artistImpressumText{
+  font-size: 26px;
+}
+
+.mobile .artistImpressumText{
+  font-size: 40px !important;
+}
+
 .artistImg{
     margin: 10rem;
     height: 450px;
+}
+
+.mobile .artistImg{
+    z-index: 100;
 }
 
 .artistContent{
@@ -203,16 +245,42 @@ canvas{
   z-index: 100;
 }
 
+.mobile .artistContact{
+  backdrop-filter: blur(10px);
+}
+
 .artistHeader{
     font-size: 40px;
     color: #8f100b;//#EE4B2B;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 5rem;
     font-family: Audiowide;
     z-index: 100;
 }
 
+.mobile .artistHeader,.artistContactHeader,.artistImpressumHeader{
+    font-size: 60px !important;
+}
+
+.mobile .artistContactHeader,.artistImpressumHeader{
+    margin-top: 10rem;
+}
+
 /*ART*/
+
+.ArtSeriesHeader{
+    font-size: 40px;
+    color: #8f100b;//#EE4B2B;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: Audiowide;
+    z-index: 100;
+}
+
+.mobile .ArtSeriesHeader{
+  font-size: 60px !important;
+}
 
 .seriesContainer{
   background-color: #383535;
@@ -234,8 +302,16 @@ canvas{
     height: 500px;
 }
 
+.mobile .seriesImg{
+    height: 700px !important;
+}
+
 .artworkImg{
   height: 500px;
+}
+
+.mobile .artWorkImg{
+  height: 90% !important;
 }
 
 .AtworkName{
@@ -249,11 +325,19 @@ canvas{
   cursor: pointer;
 }
 
+.mobile .AtworkName{
+  font-size: 60px !important;
+}
+
 .seriesItemHeader{
     font-size: 30px;
     color: #8f100b;//#EE4B2B;
     font-family: Audiowide;
     margin-bottom: 1.5rem;
+}
+
+.mobile .seriesItemHeader{
+  font-size: 50px !important;
 }
 
 .seriesItemContent{
@@ -265,6 +349,12 @@ canvas{
   align-items: center;
   margin: 5rem;
   z-index: 100;
+}
+
+.mobile .seriesItemContent{
+  height: 720px !important;
+  width: 100% !important;
+  margin-bottom: 10rem !important;
 }
 
 .ImgItemContainer{
@@ -282,6 +372,11 @@ canvas{
   cursor: pointer;
 }
 
+.mobile .ImgItemContainer{
+  height: 800px !important;
+  width: 100% !important;
+}
+
 .seriesItemContent:hover {
   cursor: pointer;
 }
@@ -292,6 +387,10 @@ canvas{
     font-family: Audiowide;
     margin: 1.5rem;
     z-index: 100;
+}
+
+.mobile .seriesDetailHeader{
+  font-size: 60px !important;
 }
 
 .seriesDetailDescription {
@@ -305,6 +404,11 @@ canvas{
     color: #8f100b;//#EE4B2B;
 }
 
+.mobile .seriesDetailDescription{
+  font-size: 40px !important;
+    padding-left: 3rem !important;
+}
+
 .seriesDetailContainer {
   background-color: black;
 }
@@ -313,6 +417,10 @@ canvas{
     font-size: 30px;
     color: #8f100b;//#EE4B2B;
     font-family: Audiowide;
+}
+
+.mobile .artDialogTitle{
+  font-size: 45px !important;
 }
 
 .artDialogText{
@@ -358,6 +466,10 @@ canvas{
   z-index: 100;
 }
 
+.mobile .seriesDetailHeaderContent{
+  padding-left: 2rem !important;
+}
+
 .btnBack{
     margin-left: 1.5rem;
 	-moz-transform: scaleX(-1);
@@ -380,6 +492,10 @@ canvas{
     padding-bottom: 0px;
 }
 
+.mobile .btnBack{
+    font-size: 40px !important;
+}
+
 .btnBack:hover{
   background-color: #8f100b;
   color: black;
@@ -393,274 +509,26 @@ canvas{
   overflow: hidden;
 }
 
-
-
-/*_________________________
-
-.pictureScroll{
-  width: 85%;
-  display: grid;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10rem;
-  overflow: hidden;
-}
-
-.artwork {
-  opacity: 0;
-  visibility: hidden;
-  box-shadow: 5px 5px 12px 3px;
-  margin-left: auto;
-  margin-right: auto;
-
-  -webkit-transition: opacity 500ms ease-in;
-     -moz-transition: opacity 500ms ease-in;
-      -ms-transition: opacity 500ms ease-in;
-       -o-transition: opacity 500ms ease-in;
-          transition: opacity 500ms ease-in;
-}
-
-.artwork-loaded {
-    opacity: 1;
-    visibility: visible;
-}
-
-.artwork-name{
-  margin-top: 2rem;
-  font-size: min(4.5vw, 36px);
-  text-align: center;
-}
-
-.artwork-type{
-  font-size: min(4vw, 25px);
-  text-align: center;
-}
-
-.artwork-price{
-  margin-bottom: 10rem;
-  font-size: min(4vw, 25px);
-  text-align: center;
-}
-
-.impressumSection {
+.artistText{
+  width: 40%;
   font-size: 20px;
-  margin-top: 150px;
-  margin-bottom: 100px;
-  text-align: center;
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  visibility: hidden;
+  z-index:100;
+  color:#c3bdbd;
 }
 
-.impressumSectionVisible {
-  visibility: visible;
+.mobile .artistText{
+  width: 80% !important;
+  font-size: 40px !important;
+  backdrop-filter: blur(10px);
 }
 
-.moreArtSection {
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.moreArtLink{
-  font-size: min(5vw, 35px);
-  text-align: center;
-}
-
-.contactSection{
-  display: none;
-
-  margin-top: 250px;
-  width: 600px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.logoImage {
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  margin-left: auto;
-
-  cursor: pointer;
-}
-
-.logoTitle {
-  margin-left: 20px;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 40px;
-  font-size: min(5vw, 40px);
-}
-
-.popover *{
-  font-family: Audiowide;
-  line-height: 150%;
-  font-size: min(4vw, 25px);
-}
-
-@media only screen and (max-device-width: 600px) {
-  .popover {
-    width: 100%;
-    left: 0px;
-  }
-
-  .popover *{
-    font-size: 35px !important;
-  }
-}
-
-.logoMenu{
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 20px;
-  font-size: 24px;
-}
-
-.logoContent{
+.artistContainer{
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 600px;
-  margin-top: 100px;
-  height: 90px;
-
-  opacity: 0;
-  visibility: hidden;
-
-  -webkit-transition: opacity 1000ms ease-in;
-     -moz-transition: opacity 1000ms ease-in;
-      -ms-transition: opacity 1000ms ease-in;
-       -o-transition: opacity 1000ms ease-in;
-          transition: opacity 1000ms ease-in;
+  align-items: center;
+  justify-content: center;
+  background-color: #383535;
 }
 
-.logoContent-loaded{
-  opacity: 1;
-  visibility: visible;
+.mobile .artistContainer{
+    flex-direction: column !important;
 }
-
-.logoContent-showMode{
-  display: none;
-}
-
-.lineHeight150{
-  line-height: 150%;
-}
-
-body{
-  font-family: Audiowide;
-  width: 100%;
-  max-width: 100%;
-}
-
-body.darkmode {
-  background-color: black !important;
-  color: #ffffff !important;
-}
-
-.socialMediaItems {
-  width: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 15px;
-
-  opacity: 0;
-  visibility: hidden;
-
-  -webkit-transition: opacity 1000ms ease-in;
-     -moz-transition: opacity 1000ms ease-in;
-      -ms-transition: opacity 1000ms ease-in;
-       -o-transition: opacity 1000ms ease-in;
-          transition: opacity 1000ms ease-in;
-}
-
-.socialMediaItems-loaded{
-  opacity: 1;
-  visibility: visible;
-}
-
-.socialMediaItems-showMode{
-  display: none;
-}
-
-.fa {
-  padding: 14px;
-  font-size: 29px;
-  width: 57px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-.fa:hover {
-  opacity: 0.7;
-  color: white !important;
-  text-decoration: none !important;
-  cursor: pointer;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.artwork-name,
-.artwork-type,
-.artwork-price {
-  visibility: hidden;
-}
-
-.artwork-name.loaded,
-.artwork-type.loaded,
-.artwork-price.loaded {
-  visibility: initial !important;
-}
-
-
-.loadingLogo {
-  height: 500px;
-  width: 500px;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 300px;
-  margin-top: 50px;
-
-  box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
-	transform: scale(1);
-	animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-	0% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
-	}
-
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 50px rgba(255, 82, 82, 0);
-	}
-
-	100% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
-	}
-}
-
-.spotifyIframe {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 150px;
-}
-
-.showArtwork {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 75px;
-}
-*/
