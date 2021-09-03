@@ -9,34 +9,34 @@
     },
     {
       "id": 1,
-      "name": "Series_RGB",
+      "name": "OPEN/CLOSE",
       "publish": true,
       "previewImg": "/pics/prev1.jpeg",
-      "description": "Meine erste Serie, sie zeichnet sich durch start Kontraste aus."
+      "description": "Nur wer sein inneres wirklich offenbart kann tiefgreifende Verbindungen aufbauen und Verbundenheit ist einer der zentralsten Aspekte des Menschseins."
     }, {
       "id": 2,
-      "name": "radikal; trivial",
+      "name": "if you go, go bold",
       "publish": true,
       "previewImg": "/pics/prev2.jpeg",
-      "description": "radikaler Stil und triviale Message"
+      "description": "Das Leben ist, wie alles andere, vergänglich. Es ist zwar wichtig Gefahren zu erkennen und zu umgehen doch heißt das nicht dass der ungefährlichste Weg auch der Beste ist. Viel mehr sollten wir unseren eigenen Weg finden und diesen mit Entschlossenheit gehen und uns nicht vor Gefahren und Ängsten auf diesem Weg scheuen."
     }, {
       "id": 3,
-      "name": "purple rain",
+      "name": "all these lights",
       "publish": true,
       "previewImg": "/pics/prev3.jpeg",
-      "description": "I never meant to cause you any sorrow. I never meant to cause you any pain. I only wanted to one time to see you laughing. I only wanted to see you - Laughing in the purple rain"
+      "description": "Wenn du dich das nächste mal in einer belebten Menge befindest oder nachts Licht aus fremden Fenstern scheinen siehst, mache dir einmal bewusst das jeder um dich herum in sich Ängste, Sorgen, Träume und Liebe trägt. Jeder ist der Hauptcharakter seiner ganz eigenen Geschichte. "
     }, {
       "id": 4,
-      "name": "Orion",
+      "name": "deleted",
       "publish": false,
-      "previewImg": "/pics/prev4.jpeg",
+      "previewImg": "",
       "description": ""
     }, {
       "id": 5,
-      "name": "The Descent",
+      "name": "deleted",
       "publish": false,
-      "previewImg": "/pics/prev5.jpeg",
-      "description": "Was wohl am Grund verborgen liegt..."
+      "previewImg": "",
+      "description": ""
     }, {
       "id": 6,
       "name": "appel du vide",
@@ -48,19 +48,19 @@
       "name": "The Ascent",
       "publish": true,
       "previewImg": "/pics/prev7.jpeg",
-      "description": "Was wohl hinter dem Horizont liegt..."
+      "description": "Der Aufstieg ist schwer doch die Aussicht lohnt sich..."
     }, {
       "id": 8,
       "name": "a (bright) future",
       "publish": true,
       "previewImg": "/pics/prev8.jpeg",
-      "description": "Es ist nicht alles Gold was glänzt"
+      "description": "... und eine leuchtende Zukunft mag kommen."
     }, {
       "id": 9,
-      "name": "I'm a real artist",
+      "name": "We need to go Deeper",
       "publish": true,
       "previewImg": "/pics/prev9.jpeg",
-      "description": "Heute sag’ ich ganz bescheiden: Mama, I’m a real artist"
+      "description": "Ich möchte mit meiner Kunst auch etwas Unverständnis, etwas Unklarheit vermitteln. Statt uns vor dem unverständlichen und komplexem zu verschließen sollten wir neugierig bleiben und weiter forschen. Dieses Gefühl steht im Zentrum dieser Serie."
     }
   ],
   "pics": [
@@ -73,7 +73,7 @@
       "sold": true,
       "price": "",
       "path": "0.jpg",
-      "altPaths": "1.jpg,prev3.jpeg",
+      "altPaths": "0-1.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -87,7 +87,7 @@
       "sold": true,
       "price": "",
       "path": "1.jpg",
-      "altPaths": "",
+      "altPaths": "1-1.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -101,7 +101,7 @@
       "sold": false,
       "price": "45",
       "path": "2.jpg",
-      "altPaths": "",
+      "altPaths": "2-1.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -115,7 +115,7 @@
       "sold": true,
       "price": "",
       "path": "3.jpg",
-      "altPaths": "",
+      "altPaths": "3-1.jpg,3-2.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -129,7 +129,7 @@
       "sold": false,
       "price": "",
       "path": "5.jpg",
-      "altPaths": "",
+      "altPaths": "5-1.jpeg",
       "series": "0",
       "publish": true,
       "favour": false
@@ -145,7 +145,7 @@
       "path": "6.jpg",
       "altPaths": "",
       "series": "0",
-      "publish": true,
+      "publish": false,
       "favour": false
     },
     {
@@ -159,7 +159,7 @@
       "path": "7.jpg",
       "altPaths": "",
       "series": "2",
-      "publish": true,
+      "publish": false,
       "favour": false
     },
     {
@@ -171,7 +171,7 @@
       "sold": false,
       "price": "65",
       "path": "8.jpg",
-      "altPaths": "",
+      "altPaths": "8-1.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -199,27 +199,13 @@
       "sold": true,
       "price": "",
       "path": "10.jpg",
-      "altPaths": "",
+      "altPaths": "10-1.jpg",
       "series": "1",
       "publish": true,
       "favour": false
     },
     {
       "id": 11,
-      "name": "RGB_01",
-      "description": "",
-      "type": "AL",
-      "size": "50cm x 70cm",
-      "sold": true,
-      "price": "",
-      "path": "12.jpg",
-      "altPaths": "",
-      "series": "1",
-      "publish": true,
-      "favour": false
-    },
-    {
-      "id": 12,
       "name": "Drachensteigen im Sturm",
       "description": "",
       "type": "AL",
@@ -227,7 +213,21 @@
       "sold": true,
       "price": "",
       "path": "11.jpg",
-      "altPaths": "",
+      "altPaths": "3-1.jpg,11-1.jpg",
+      "series": "1",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 12,
+      "name": "RGB_01",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": true,
+      "price": "",
+      "path": "12.jpg",
+      "altPaths": "12-1.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -240,7 +240,7 @@
       "sold": false,
       "price": "35",
       "path": "13.jpg",
-      "altPaths": "",
+      "altPaths": "13-1.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -268,7 +268,21 @@
       "sold": true,
       "price": "",
       "path": "16.jpg",
-      "altPaths": "",
+      "altPaths": "16-1.jpg",
+      "series": "3",
+      "publish": true,
+      "favour": false
+    },
+    {
+      "id": 17,
+      "name": "fine, thank you",
+      "description": "",
+      "type": "AL",
+      "size": "40cm x 50cm",
+      "sold": true,
+      "price": "",
+      "path": "17.jpg",
+      "altPaths": "17-1.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -282,7 +296,7 @@
       "sold": true,
       "price": "",
       "path": "22.jpg",
-      "altPaths": "",
+      "altPaths": "22-1.jpg",
       "series": "1",
       "publish": true,
       "favour": false
@@ -296,7 +310,7 @@
       "sold": true,
       "price": "",
       "path": "23.jpg",
-      "altPaths": "",
+      "altPaths": "23-1.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -324,7 +338,7 @@
       "sold": true,
       "price": "",
       "path": "25.jpg",
-      "altPaths": "",
+      "altPaths": "25-1.jpg",
       "series": "2",
       "publish": true,
       "favour": true
@@ -340,6 +354,20 @@
       "path": "26.jpg",
       "altPaths": "",
       "series": "0",
+      "publish": false,
+      "favour": false
+    },
+    {
+      "id": 27,
+      "name": "Faram",
+      "description": "",
+      "type": "AL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "45",
+      "path": "27.jpg",
+      "altPaths": "27-1.jpg",
+      "series": "3",
       "publish": true,
       "favour": false
     },
@@ -354,7 +382,7 @@
       "path": "28.jpg",
       "altPaths": "",
       "series": "0",
-      "publish": true,
+      "publish": false,
       "favour": false
     },
     {
@@ -366,7 +394,7 @@
       "sold": false,
       "price": "",
       "path": "29.jpg",
-      "altPaths": "",
+      "altPaths": "29-1.jpeg",
       "series": "0",
       "publish": true,
       "favour": false
@@ -380,7 +408,7 @@
       "sold": false,
       "price": "",
       "path": "30.jpg",
-      "altPaths": "",
+      "altPaths": "30-1.jpeg",
       "series": "0",
       "publish": true,
       "favour": false
@@ -396,7 +424,7 @@
       "path": "31.jpg",
       "altPaths": "",
       "series": "2",
-      "publish": true,
+      "publish": false,
       "favour": false
     },
     {
@@ -408,7 +436,7 @@
       "sold": true,
       "price": "",
       "path": "32.jpg",
-      "altPaths": "",
+      "altPaths": "32-1.jpg,3-1.jpg",
       "series": "1",
       "publish": true,
       "favour": true
@@ -422,7 +450,7 @@
       "sold": false,
       "price": "35",
       "path": "33.jpg",
-      "altPaths": "",
+      "altPaths": "33-1.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -436,7 +464,7 @@
       "sold": true,
       "price": "",
       "path": "34.jpg",
-      "altPaths": "",
+      "altPaths": "34-1.jpg",
       "series": "3",
       "publish": true,
       "favour": true
@@ -450,7 +478,7 @@
       "sold": true,
       "price": "",
       "path": "35.jpg",
-      "altPaths": "",
+      "altPaths": "35-1.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -464,7 +492,7 @@
       "sold": false,
       "price": "",
       "path": "36.jpg",
-      "altPaths": "",
+      "altPaths": "36-1.jpg",
       "series": "0",
       "publish": true,
       "favour": true
@@ -494,7 +522,7 @@
       "path": "39.jpg",
       "altPaths": "",
       "series": "0",
-      "publish": true,
+      "publish": false,
       "favour": false
     },
     {
@@ -506,7 +534,7 @@
       "sold": false,
       "price": "35",
       "path": "40.jpg",
-      "altPaths": "",
+      "altPaths": "40-1.jpg,40-2.jpg",
       "series": "3",
       "publish": true,
       "favour": true
@@ -520,7 +548,7 @@
       "sold": false,
       "price": "45",
       "path": "41.jpg",
-      "altPaths": "",
+      "altPaths": "41-1.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -534,7 +562,7 @@
       "sold": false,
       "price": "65",
       "path": "42.jpg",
-      "altPaths": "",
+      "altPaths": "42-1.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -548,8 +576,8 @@
       "sold": false,
       "price": "45",
       "path": "44.jpg",
-      "altPaths": "",
-      "series": "0",
+      "altPaths": "44-1.jpg",
+      "series": "3",
       "publish": true,
       "favour": false
     },
@@ -632,8 +660,8 @@
       "sold": false,
       "price": "65",
       "path": "51.jpg",
-      "altPaths": "",
-      "series": "0",
+      "altPaths": "51-1.jpg",
+      "series": "3",
       "publish": true,
       "favour": false
     },
@@ -674,7 +702,7 @@
       "sold": false,
       "price": "45",
       "path": "55.jpg",
-      "altPaths": "",
+      "altPaths": "55-1.jpg",
       "series": "0",
       "publish": true,
       "favour": false
@@ -688,7 +716,7 @@
       "sold": false,
       "price": "45",
       "path": "56.jpg",
-      "altPaths": "",
+      "altPaths": "56-1.jpg,56-2.jpg,56-3.jpg",
       "series": "3",
       "publish": true,
       "favour": true
@@ -744,8 +772,8 @@
       "sold": false,
       "price": "",
       "path": "60.jpg",
-      "altPaths": "",
-      "series": "0",
+      "altPaths": "60-1.jpg",
+      "series": "3",
       "publish": true,
       "favour": true
     },
@@ -772,7 +800,7 @@
       "sold": false,
       "price": "",
       "path": "62.jpg",
-      "altPaths": "",
+      "altPaths": "62-1.jpg",
       "series": "2",
       "publish": true,
       "favour": false
@@ -898,7 +926,7 @@
       "sold": false,
       "price": "",
       "path": "73.jpg",
-      "altPaths": "",
+      "altPaths": "73-1.jpg,73-2.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -909,10 +937,10 @@
       "description": "",
       "type": "AL",
       "size": "",
-      "sold": false,
+      "sold": true,
       "price": "",
       "path": "74.jpg",
-      "altPaths": "",
+      "altPaths": "74-1.jpg",
       "series": "3",
       "publish": true,
       "favour": false
@@ -954,8 +982,8 @@
       "sold": false,
       "price": "",
       "path": "78.jpg",
-      "altPaths": "",
-      "series": "0",
+      "altPaths": "78-1.jpg",
+      "series": "7",
       "publish": true,
       "favour": false
     },
@@ -968,8 +996,8 @@
       "sold": false,
       "price": "",
       "path": "79.jpg",
-      "altPaths": "",
-      "series": "0",
+      "altPaths": "79-1.jpg,79-2.jpg,79-3.jpg",
+      "series": "8",
       "publish": true,
       "favour": false
     },
@@ -982,7 +1010,7 @@
       "sold": false,
       "price": "",
       "path": "80.jpg",
-      "altPaths": "80-1.jpg,80-2.jpg,80-3.jpg",
+      "altPaths": "80-1.jpg,80-3.jpg",
       "series": "9",
       "publish": true,
       "favour": false
@@ -1080,8 +1108,8 @@
       "sold": false,
       "price": "",
       "path": "87.jpg",
-      "altPaths": "",
-      "series": "0",
+      "altPaths": "87-1.jpg,87-2.jpg,87-3.jpg",
+      "series": "8",
       "publish": true,
       "favour": false
     },
@@ -1122,7 +1150,7 @@
       "sold": false,
       "price": "",
       "path": "90.jpeg",
-      "altPaths": "90-1.jpg,90-2.jpg,90-3.jpg,90-4.jpg,90-5.jpg,90-6.jpg",
+      "altPaths": "90-1.jpg,90-2.jpg,90-4.jpg,90-5.jpg,90-6.jpg",
       "series": "9",
       "publish": true,
       "favour": false
@@ -1150,7 +1178,7 @@
       "sold": false,
       "price": "",
       "path": "92.jpg",
-      "altPaths": "92-0.jpeg,92-1.jpeg,92-2.jpeg",
+      "altPaths": "92-1.jpeg,92-2.jpeg",
       "series": "9",
       "publish": true,
       "favour": false

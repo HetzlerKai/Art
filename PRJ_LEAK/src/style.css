@@ -32,23 +32,25 @@ canvas{
   display: none !important;
 }
 
+.seriesContainer{
+    opacity: 0;
+
+    -webkit-transition: opacity 1s ease-in;
+       -moz-transition: opacity 1s ease-in;
+        -ms-transition: opacity 1s ease-in;
+         -o-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+}
+
 .content{
   min-height: 100%;
   width: 97%;
   height: max-content;
   /* position: absolute;
   margin-left: 5.5rem; */
-
-    opacity: 0;
-
-    -webkit-transition: opacity 2s ease-in;
-       -moz-transition: opacity 2s ease-in;
-        -ms-transition: opacity 2s ease-in;
-         -o-transition: opacity 2s ease-in;
-            transition: opacity 2s ease-in;
 }
 
-.content.loaded{
+.seriesContainer.loaded{
   opacity: 1;
 }
 
@@ -360,6 +362,8 @@ canvas{
 
 .mobile .seriesItemHeader{
   font-size: 50px !important;
+  background-color: black;
+  width: 700px;
 }
 
 .seriesItemContent{
@@ -378,6 +382,7 @@ canvas{
   height: 720px !important;
   width: 100% !important;
   margin-bottom: 10rem !important;
+  background-color: inherit !important;
 }
 
 .ImgItemContainer{
