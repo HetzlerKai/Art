@@ -435,11 +435,19 @@ function getDialogContent (id) {
     } else if (dataItem.type === "A3") {
       line2 = "Acryl auf Papier - A3";
     } else if (dataItem.type === "AO3") {
-      line2 = "Acryl und Ölfarben auf Papier - A3";
+      line2 = "Acryl und Ölfarben auf Malkarton - A3";
     } else if (dataItem.type === "A") {
       line2 = "Acryl - " + dataItem.size;
     } else if (dataItem.type === "MM") {
       line2 = "Mixed-Media - Leinwand - " + dataItem.size;
+    } else if (dataItem.type === "SFL") {
+      line2 = "Sprühfarbe auf Leinwand - " + dataItem.size;
+    } else if (dataItem.type === "ASL") {
+      line2 = "Acryl und Sprühfarbe auf Leinwand - " + dataItem.size;
+    } else if (dataItem.type === "MMR") {
+      line2 = "Mixed Media mit echtem Rost auf Leinwand - " + dataItem.size;
+    } else if (dataItem.type === "ARL") {
+      line2 = "Acryl auf Leinwand mit echtem Rost - " + dataItem.size;
     }
 
     if (dataItem.sold) {
