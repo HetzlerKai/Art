@@ -44,7 +44,7 @@ canvas{
 
 .content{
   min-height: 100%;
-  width: 97%;
+  width: 98%;
   height: max-content;
   /* position: absolute;
   margin-left: 5.5rem; */
@@ -426,14 +426,17 @@ canvas{
     font-family: Audiowide;
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    //margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
+    border-bottom-color: #8f100b;
+    padding-left: 4.5rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-right: 10rem;
     z-index: 100;
-    color: #8f100b;//#EE4B2B;
+    color: #c3bdbd;//#8f100b;//#EE4B2B;
 }
 
 .mobile .seriesDetailDescription{
-  font-size: 40px !important;
+  font-size: 35px !important;
     padding-left: 3rem !important;
 }
 
@@ -492,6 +495,7 @@ canvas{
   flex-direction: row;
   align-items: center;
   z-index: 100;
+  padding-left: 3rem;
 }
 
 .mobile .seriesDetailHeaderContent{
