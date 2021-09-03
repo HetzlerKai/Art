@@ -74,9 +74,14 @@ function showTitleScreen() {
 
     menuMatrixText();
 
+    particlesJS.load('particles-js', 'src/particlesjs-config.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+
     setTimeout(function(){
-      showHome();
-    },0);
+      //showHome();3
+      showArt();3
+    },1000);
   }
 
   //fnStartPhase3();
@@ -262,7 +267,7 @@ function showArt () {
 }
 
 function onClickArtwork (id) {
-  alert("Show Artwork: " + id);
+  $('#artDialog').modal();
 }
 
 function onClickSeries (id) {
@@ -280,9 +285,9 @@ function onClickSeries (id) {
           sImageName = "Untitled: Nr. " + _aPics[i].id;
         }
 
-        sImageNameHTML = "<div class='AtworkName' onClick='onClickArtwork(" + _aPics[i].id + ")'>" + sImageName + "</div>";
-        sImage = "<img src='pics/" + seriesId + "/" + _aPics[i].path + "' alt='Image not found' class='img artworkImg'></img>";
-        sIMGHTML = sIMGHTML + "<div class='ImgItemContainer' onClick='onClickArtwork(" + _aPics[i].id + ")'>" + sImageNameHTML + sImage + "</div>";
+        sImageNameHTML = "<div class='AtworkName' onClick='onClickArtwork(" + _aPics[i].id + ")' data-toggle='modal' data-target='#artDialog' data-artWorkId='" + i + "'>" + sImageName + "</div>";
+        sImage = "<img src='pics/" + seriesId + "/" + _aPics[i].path + "' alt='Image not found' class='img artworkImg' data-toggle='modal' data-target='#artDialog' data-artWorkId='" + i + "'></img>";
+        sIMGHTML = sIMGHTML + "<div class='ImgItemContainer'>" + sImageNameHTML + sImage + "</div>";
       }
     }
 
@@ -294,8 +299,9 @@ function onClickSeries (id) {
   var desc = _aSeries[id].description;
   var sImgHTML = fnGetImgHTMLContent(id);
 
-  seriesHTML = "<button type='button' class='btn btn-default btnBack' onclick='showArt();'>Back</button>";
-  seriesHTML = seriesHTML + "<div class='seriesDetailContainer'><div class='seriesDetailHeader'>" + name + "</div>";
+  seriesHTML = "<div class='seriesDetailContainer'>";
+  seriesHTML = seriesHTML + "<div class='seriesDetailHeaderContent'><button type='button' class='btn btn-default btnBack' onclick='showArt();'>ᗒ</button>";
+  seriesHTML = seriesHTML + "<div class='seriesDetailHeader'>" + name + "</div></div>";
   seriesHTML = seriesHTML + "<div class='seriesDetailDescription'>" + desc + "</div>";
   seriesHTML = seriesHTML + "<div class='seriesDetailImgContainer'>" + sImgHTML + "</div></div>";
 
@@ -373,9 +379,87 @@ function instagramIconPressed () {
   window.open("https://www.instagram.com/kaihetzler", "_blank");
 }
 
+function getDialogContent (id) {
 
-/** old stuff **/
+  var fnGetCarouselIndicators = function (parts) {
+    var sIndicators = "";
 
+    for (var i = 0; i < parts.length; i++) {
+      if (i == 0) {
+        sIndicators = sIndicators + "<li data-target='#artDialogCarousel' data-slide-to='" + i + "' class='active'>";
+      } else {
+        sIndicators = sIndicators + "<li data-target='#artDialogCarousel' data-slide-to='" + i + "'>";
+      }
+    }
+
+    return sIndicators;
+  };
+
+  var fnGetCarouselItems = function (parts, seriesId) {
+    var sItems = "";
+
+    for (var i = 0; i < parts.length; i++) {
+      if (i == 0) {
+        sItems = sItems + "<div class='item active'><img src='pics/" + seriesId + "/" + parts[i] + "' alt='Image not found' style='height: 600px'></div>"
+      } else {
+        sItems = sItems + "<div class='item'><img src='pics/" + seriesId + "/" + parts[i] + "' alt='Image not found' style='height: 600px'></div>"
+      }
+    }
+
+    return sItems;
+  };
+
+  var fnGetArtWorkDetails = function (dataItem) {
+    var sDetails, line1, line2, line3, line4;
+
+    if (dataItem.name) {
+      line1 = "Name: " + dataItem.name;
+    } else {
+      line1 = "Name: Untitled Nr_" + dataItem.id;
+    }
+
+    if (dataItem.type === "AL") {
+      line2 = "Acryl auf Leinwand - " + dataItem.size;
+    } else if (dataItem.type === "AOL") {
+      line2 = "Acryl und Ölfarbe auf Leinwand - " + dataItem.size;
+    } else if (dataItem.type === "D") {
+      line2 = "Digital";
+    } else if (dataItem.type === "A3") {
+      line2 = "Acryl auf Papier - A3";
+    } else if (dataItem.type === "AO3") {
+      line2 = "Acryl und Ölfarben auf Papier - A3";
+    } else if (dataItem.type === "A") {
+      line2 = "Acryl - " + dataItem.size;
+    } else if (dataItem.type === "MM") {
+      line2 = "Mixed-Media - Leinwand - " + dataItem.size;
+    }
+
+    if (dataItem.sold) {
+      line3 = "Orginal vergriffen";
+    } else {
+      line3 = "Orginal verfügbar";
+    }
+
+    return sDetails = "<div class='artDialogText'> <div> <p>" + line1 + "</p><p>" + line2 + "</p><p>" + line3 + "</p></div> <button type='button' class='btn btn-primary buyButton' onclick='triggerKaufanfrage(" + dataItem.id + ");'>Kaufanfrage</button> </div>";
+  };
+
+  var aParts = _aPics[id].altPaths.split(",");
+  aParts.push(_aPics[id].path);
+
+  var sButtons = "<a class='left carousel-control' href='#artDialogCarousel' data-slide='prev'><span class='glyphicon glyphicon-chevron-left'></span><span class='sr-only'>Previous</span></a>";
+  sButtons = sButtons + "<a class='right carousel-control' href='#artDialogCarousel' data-slide='next'><span class='glyphicon glyphicon-chevron-right'></span><span class='sr-only'>Next</span></a>";
+
+  var sArtCarousel = "<div id='artDialogCarousel' class='carousel slide' data-ride='carousel'><ol class='carousel-indicators'>" + fnGetCarouselIndicators(aParts) + "</ol> <div class='carousel-inner'>" + fnGetCarouselItems(aParts, _aPics[id].series) + "</div>" + sButtons + "</div>";
+
+   return "<div>" + fnGetArtWorkDetails(_aPics[id]) + sArtCarousel + "</div>";
+}
+
+function triggerKaufanfrage (id) {
+  alert("Kaufanfrage für Artwork: " + id);
+}
+
+
+/* old stuff
 
 
 function imgSizeFit(img, maxWidth, maxHeight, naturalWidth, naturalHeight){
@@ -395,10 +479,7 @@ function getImageSize(img, callback) {
     }, 30);
 }
 
-/**
- * Randomize array element order in-place.
- * Using Durstenfeld shuffle algorithm.
- */
+
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -590,3 +671,4 @@ function showMoreArt () {
     buildContentWithData(_aPics, _onlyFavour);
   }
 }
+**/

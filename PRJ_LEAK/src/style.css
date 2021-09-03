@@ -1,10 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 #container {
   position: relative;
   display: flex;
   flex-direction: row;
   height: 100%;
   /*overflow: hidden;*/
-  color: #c9c9c9;
   background-color: #383535;//black;//#A9A9A9;
 }
 
@@ -22,17 +34,22 @@ canvas{
 
 .content{
   min-height: 100%;
-  width: 100%;
+  width: 97%;
+  position: absolute;
+  margin-left: 5.5rem;
 }
 
 .Menu{
-  background-color: black;
-  font-family: Audiowide;
+  background-color: #0c0101;
+    font-family: Audiowide;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    z-index: 100;
 }
 
 .MenuItem{
   overflow: hidden;
-  color: #EE4B2B;
+  color: #8f100b;
   background-color: black;
   z-index: 100;
   font-size: 24px;
@@ -69,6 +86,7 @@ canvas{
   color: #EE4B2B;
   text-align: center;
   font-family: Audiowide;
+  z-index: 100;
 }
 
 .HomeSpotlightContainer{
@@ -78,6 +96,7 @@ canvas{
   //box-shadow: 5px 5px 5px;
   border-style: solid;
   border-width: 2px;
+  z-index: 100;
 }
 
 .HomeBlogContainer{
@@ -91,6 +110,7 @@ canvas{
   height: 850px;
   overflow-y: scroll;
   position: absolute;
+  z-index: 100;
 }
 
 .HomeSection{
@@ -162,8 +182,9 @@ canvas{
   width: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 12rem;
-  margin-bottom: 8rem;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  z-index: 100;
 }
 
 /*ARTIST*/
@@ -173,12 +194,22 @@ canvas{
     height: 450px;
 }
 
+.artistContent{
+  display: flex;
+  flex-direction: column;
+}
+
+.artistContact{
+  z-index: 100;
+}
+
 .artistHeader{
     font-size: 40px;
-    color: #EE4B2B;
+    color: #8f100b;//#EE4B2B;
     text-align: center;
     margin-top: 10rem;
     font-family: Audiowide;
+    z-index: 100;
 }
 
 /*ART*/
@@ -209,7 +240,7 @@ canvas{
 
 .AtworkName{
     font-size: 30px;
-    color: #EE4B2B;
+    color: #8f100b;//#EE4B2B;
     font-family: Audiowide;
     margin-bottom: 1.5rem;
 }
@@ -220,7 +251,7 @@ canvas{
 
 .seriesItemHeader{
     font-size: 30px;
-    color: #EE4B2B;
+    color: #8f100b;//#EE4B2B;
     font-family: Audiowide;
     margin-bottom: 1.5rem;
 }
@@ -233,6 +264,7 @@ canvas{
   justify-content: center;
   align-items: center;
   margin: 5rem;
+  z-index: 100;
 }
 
 .ImgItemContainer{
@@ -243,6 +275,7 @@ canvas{
   justify-content: center;
   align-items: center;
   margin: 5rem;
+  z-index: 100;
 }
 
 .ImgItemContainer:hover{
@@ -255,9 +288,10 @@ canvas{
 
 .seriesDetailHeader {
     font-size: 30px;
-    color: #EE4B2B;
+    color: #8f100b;//#EE4B2B;
     font-family: Audiowide;
     margin: 1.5rem;
+    z-index: 100;
 }
 
 .seriesDetailDescription {
@@ -265,9 +299,100 @@ canvas{
     font-family: Audiowide;
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    margin-bottom: 1.5rem;
+    //margin-bottom: 1.5rem;
     padding-left: 1.5rem;
+    z-index: 100;
+    color: #8f100b;//#EE4B2B;
 }
+
+.seriesDetailContainer {
+  background-color: black;
+}
+
+.artDialogTitle{
+    font-size: 30px;
+    color: #8f100b;//#EE4B2B;
+    font-family: Audiowide;
+}
+
+.artDialogText{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+        color: #3e3b3b;
+        font-size: 17px;
+}
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-header {
+  background-color: black;
+  border-color: #8f100b;
+  border-width: 2px;
+}
+
+.seriesDetailHeaderContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 100;
+}
+
+.btnBack{
+    margin-left: 1.5rem;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	-ms-filter: "FlipH";
+	filter: FlipH;
+	text-align: right;
+  z-index: 100;
+  color: #8f100b;
+  border-color: #8f100b;
+  border-width: 2px;
+  background-color: black;
+  border-radius: 50%;
+    font-size: 20px;
+    padding-right: 5px;
+    padding-left: 9px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.btnBack:hover{
+  background-color: #8f100b;
+  color: black;
+  border-color: black;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
 
 
 /*_________________________

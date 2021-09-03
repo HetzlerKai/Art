@@ -20,6 +20,7 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "http": "0.0.0",
-    "is-mobile": "^3.0.0"
+    "is-mobile": "^3.0.0",
+    "particlesjs": "^2.2.3"
   }
 }

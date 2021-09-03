@@ -78,7 +78,7 @@ function handleRequest(request, response){
           }
     			var sData = fs.readFileSync(dir + sRequest);
 
-          response.writeHead(202, {'Content-Type': 'application/json'});
+          response.writeHead(200, {'Content-Type': 'application/json'});
           response.end(sData);
     		break;
         }

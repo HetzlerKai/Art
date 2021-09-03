@@ -12,12 +12,37 @@
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+		<!--<script src="/src/particles.min.js"></script>-->
+		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+		<script>
+			// particlesJS.load('particles-js', 'src/particlesjs-config.json', function() {
+			// 	console.log('callback - particles.js config loaded');
+			// });
+
+		// window.onload = function() {
+		// 	Particles.init({
+		// 		selector: '.background'
+		// 	});
+		</script>
+
 		<script src="controller/Controller.js"></script>
 		<link rel="stylesheet" href="src/style.css">
 
 		<script>
 
 			jQuery(document).ready(function(){
+
+			  $('#artDialog').on('show.bs.modal', function (event) {
+			    var evtSource = $(event.relatedTarget);
+			    var id = evtSource.data('artworkid');
+					var sDialogContentHTML = getDialogContent(id);
+
+			    var modal = $(this);
+			    modal.find('#artDialogTitle').text(_aPics[id].name)
+					modal.find('#artDialogContent').empty();
+				  modal.find('#artDialogContent').append(sDialogContentHTML);
+			  })
+
 
         showTitleScreen();
 
@@ -36,17 +61,36 @@
 		</script>
 	</head>
 
-	<body style="background:black; width:100%; height:100%">
+	<body style="background:#383535; width:100%; height:100%; color: #c3bdbd;">
     <div id="container">
+			  <div class="modal fade" id="artDialog" tabindex="-1" role="dialog" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title artDialogTitle" id="artDialogTitle"></h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body" id="artDialogContent"></div>
+			      <!--<div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Kaufanfrage</button>
+			      </div>-->
+			    </div>
+			  </div>
+			</div>
       <canvas id="canvas" style="display: block;"></canvas>
       <div id="breachedMSG" class="invisible breachedDialog">[BREACHED]</div>
       <div id="Menu" class="Menu invisible">
-				<div id="HomeIcon" class="invisible MenuItem" onclick="showHome();">LOGO</div>
+				<!--<div id="HomeIcon" class="invisible MenuItem" onclick="showHome();">Home</div>-->
 	      <div id="MenuArt" class="invisible MenuItem" onclick="showArt();">Art</div>
 	      <div id="MenuArtist" class="invisible MenuItem" onclick="showArtist();">Artist</div>
 	      <div id="MenuContact" class="invisible MenuItem" onclick="showContact();">Contact</div>
 			</div>
 			<div id="content" class="content invisible"></div>
+			<!--<canvas class="background"></canvas>-->
+			<div id="particles-js"></div>
     <div>
 
 	</body>

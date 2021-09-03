@@ -1,4 +1,4 @@
-
+/**
 function startTheShow () {
   _cleanUp();
   _setDarkMode();
@@ -130,3 +130,4 @@ function _showLoadingIcon () {
 function _hideLoadingIcon () {
   _cleanUp();
 }
+**/
