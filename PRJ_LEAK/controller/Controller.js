@@ -79,7 +79,7 @@ function showTitleScreen() {
     });
 
     showArt();3
-    
+
     setTimeout(function(){
       //showHome();3
       $(".content").addClass("loaded");
@@ -278,7 +278,7 @@ function onClickSeries (id) {
     var sImageName, sImageNameHTML, sImage, artworkId;
 
     for (var i = 0; i < _aPics.length; i++) {
-      if (_aPics[i].series == seriesId) {
+      if (_aPics[i].series == seriesId && _aPics[i].publish == true) {
 
         if (_aPics[i].name) {
           sImageName = _aPics[i].name;

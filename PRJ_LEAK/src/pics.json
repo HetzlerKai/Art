@@ -28,13 +28,13 @@
     }, {
       "id": 4,
       "name": "Orion",
-      "publish": true,
+      "publish": false,
       "previewImg": "/pics/prev4.jpeg",
       "description": ""
     }, {
       "id": 5,
       "name": "The Descent",
-      "publish": true,
+      "publish": false,
       "previewImg": "/pics/prev5.jpeg",
       "description": "Was wohl am Grund verborgen liegt..."
     }, {
@@ -185,7 +185,7 @@
       "sold": false,
       "price": "",
       "path": "9.jpeg",
-      "altPaths": "",
+      "altPaths": "9-1.jpg",
       "series": "6",
       "publish": true,
       "favour": false
@@ -254,7 +254,7 @@
       "sold": true,
       "price": "",
       "path": "15.jpg",
-      "altPaths": "",
+      "altPaths": "15-1.jpg",
       "series": "6",
       "publish": true,
       "favour": false
@@ -310,7 +310,7 @@
       "sold": false,
       "price": "45",
       "path": "24.jpg",
-      "altPaths": "",
+      "altPaths": "24-1.jpg",
       "series": "6",
       "publish": true,
       "favour": false
@@ -478,7 +478,7 @@
       "sold": false,
       "price": "45",
       "path": "38.jpg",
-      "altPaths": "",
+      "altPaths": "38-1.jpg",
       "series": "7",
       "publish": true,
       "favour": false
@@ -562,8 +562,8 @@
       "sold": false,
       "price": "65",
       "path": "45.jpg",
-      "altPaths": "",
-      "series": "4",
+      "altPaths": "45-1.jpg",
+      "series": "1",
       "publish": true,
       "favour": false
     },
@@ -576,8 +576,8 @@
       "sold": false,
       "price": "65",
       "path": "46.jpeg",
-      "altPaths": "",
-      "series": "4",
+      "altPaths": "46-1.jpg,46-2.jpg",
+      "series": "1",
       "publish": true,
       "favour": false
     },
@@ -590,8 +590,8 @@
       "sold": false,
       "price": "45",
       "path": "48.jpg",
-      "altPaths": "",
-      "series": "4",
+      "altPaths": "48-1.jpg,46-2.jpg,48-2.jpg",
+      "series": "1",
       "publish": true,
       "favour": false
     },
@@ -604,8 +604,8 @@
       "sold": false,
       "price": "45",
       "path": "49.jpg",
-      "altPaths": "",
-      "series": "4",
+      "altPaths": "49-1.jpg,48-2.jpg,46-2.jpg",
+      "series": "1",
       "publish": true,
       "favour": false
     },
@@ -618,8 +618,8 @@
       "sold": false,
       "price": "45",
       "path": "50.jpg",
-      "altPaths": "",
-      "series": "4",
+      "altPaths": "50-1.jpg",
+      "series": "1",
       "publish": true,
       "favour": false
     },
@@ -646,7 +646,7 @@
       "sold": true,
       "price": "",
       "path": "52.jpg",
-      "altPaths": "",
+      "altPaths": "52-1.jpg",
       "series": "7",
       "publish": true,
       "favour": true
@@ -660,7 +660,7 @@
       "sold": false,
       "price": "65",
       "path": "53.jpg",
-      "altPaths": "",
+      "altPaths": "53-1.jpg",
       "series": "7",
       "publish": true,
       "favour": false
@@ -702,8 +702,8 @@
       "sold": false,
       "price": "",
       "path": "57.jpg",
-      "altPaths": "",
-      "series": "5",
+      "altPaths": "57-1.jpg",
+      "series": "6",
       "publish": true,
       "favour": false
     },
@@ -716,8 +716,8 @@
       "sold": false,
       "price": "",
       "path": "58.jpeg",
-      "altPaths": "",
-      "series": "5",
+      "altPaths": "58-1.jpg",
+      "series": "6",
       "publish": true,
       "favour": false
     },
@@ -730,8 +730,8 @@
       "sold": false,
       "price": "",
       "path": "59.jpg",
-      "altPaths": "",
-      "series": "5",
+      "altPaths": "59-1.jpg",
+      "series": "6",
       "publish": true,
       "favour": true
     },
@@ -758,7 +758,7 @@
       "sold": false,
       "price": "",
       "path": "61.jpeg",
-      "altPaths": "",
+      "altPaths": "61-1.jpg",
       "series": "7",
       "publish": true,
       "favour": true
@@ -786,7 +786,7 @@
       "sold": false,
       "price": "",
       "path": "64.jpg",
-      "altPaths": "",
+      "altPaths": "64-1.jpg",
       "series": "7",
       "publish": true,
       "favour": false
@@ -799,10 +799,10 @@
       "size": "",
       "sold": false,
       "price": "",
-      "path": "66.jpg",
+      "path": "66-old.jpg",
       "altPaths": "",
-      "series": "5",
-      "publish": true,
+      "series": "6",
+      "publish": false,
       "favour": false
     },
     {
@@ -814,7 +814,7 @@
       "sold": false,
       "price": "",
       "path": "67.jpg",
-      "altPaths": "",
+      "altPaths": "67-1.jpg",
       "series": "6",
       "publish": true,
       "favour": true
@@ -828,7 +828,7 @@
       "sold": false,
       "price": "",
       "path": "68.jpg",
-      "altPaths": "",
+      "altPaths": "68-1.jpg",
       "series": "6",
       "publish": true,
       "favour": false
@@ -842,7 +842,7 @@
       "sold": false,
       "price": "",
       "path": "69.jpg",
-      "altPaths": "",
+      "altPaths": "69-1.jpg",
       "series": "6",
       "publish": true,
       "favour": false
@@ -856,23 +856,23 @@
       "sold": false,
       "price": "",
       "path": "70.jpg",
-      "altPaths": "",
-      "series": "5",
+      "altPaths": "70-1.jpg",
+      "series": "6",
       "publish": true,
       "favour": false
     },
     {
       "id": 71,
-      "name": "Was bleibt?",
+      "name": "[old] Was bleibt?",
       "description": "",
       "type": "AL",
       "size": "",
       "sold": false,
       "price": "",
-      "path": "71.jpg",
+      "path": "71-old.jpg",
       "altPaths": "",
-      "series": "5",
-      "publish": true,
+      "series": "6",
+      "publish": false,
       "favour": false
     },
     {
@@ -884,7 +884,7 @@
       "sold": false,
       "price": "",
       "path": "72.jpg",
-      "altPaths": "",
+      "altPaths": "72-1.jpg",
       "series": "7",
       "publish": true,
       "favour": false
@@ -926,7 +926,7 @@
       "sold": false,
       "price": "",
       "path": "75.jpg",
-      "altPaths": "",
+      "altPaths": "75-1.jpg",
       "series": "7",
       "publish": true,
       "favour": false
@@ -940,7 +940,7 @@
       "sold": false,
       "price": "",
       "path": "76.jpg",
-      "altPaths": "",
+      "altPaths": "76-1.jpeg",
       "series": "6",
       "publish": true,
       "favour": false
@@ -982,7 +982,7 @@
       "sold": false,
       "price": "",
       "path": "80.jpg",
-      "altPaths": "",
+      "altPaths": "80-1.jpg,80-2.jpg,80-3.jpg",
       "series": "9",
       "publish": true,
       "favour": false
@@ -996,7 +996,7 @@
       "sold": false,
       "price": "",
       "path": "81.jpg",
-      "altPaths": "",
+      "altPaths": "81-1.jpg,81-2.jpg",
       "series": "8",
       "publish": true,
       "favour": false
@@ -1010,7 +1010,7 @@
       "sold": false,
       "price": "",
       "path": "82.jpg",
-      "altPaths": "",
+      "altPaths": "82-1.jpg,82-2.jpg",
       "series": "8",
       "publish": true,
       "favour": false
@@ -1024,7 +1024,7 @@
       "sold": false,
       "price": "",
       "path": "83.jpeg",
-      "altPaths": "",
+      "altPaths": "83-1.jpg,83-2.jpg,83-3.jpg,83-4.jpg",
       "series": "8",
       "publish": true,
       "favour": false
@@ -1038,7 +1038,7 @@
       "sold": false,
       "price": "",
       "path": "84.jpg",
-      "altPaths": "",
+      "altPaths": "84-1.jpg,84-2.jpg,84-3.jpg,84-4.jpg",
       "series": "8",
       "publish": true,
       "favour": false
@@ -1052,7 +1052,7 @@
       "sold": false,
       "price": "",
       "path": "85.jpg",
-      "altPaths": "",
+      "altPaths": "85-1.jpg,85-2.jpg,85-3.jpg",
       "series": "8",
       "publish": true,
       "favour": false
@@ -1066,7 +1066,7 @@
       "sold": false,
       "price": "",
       "path": "86.jpg",
-      "altPaths": "",
+      "altPaths": "86-1.jpeg,86-2.jpg,86-3.jpg",
       "series": "9",
       "publish": true,
       "favour": false
@@ -1108,7 +1108,7 @@
       "sold": false,
       "price": "",
       "path": "89.jpg",
-      "altPaths": "",
+      "altPaths": "89-1.jpg",
       "series": "6",
       "publish": true,
       "favour": false
@@ -1122,7 +1122,7 @@
       "sold": false,
       "price": "",
       "path": "90.jpeg",
-      "altPaths": "",
+      "altPaths": "90-1.jpg,90-2.jpg,90-3.jpg,90-4.jpg,90-5.jpg,90-6.jpg",
       "series": "9",
       "publish": true,
       "favour": false
@@ -1136,7 +1136,7 @@
       "sold": false,
       "price": "",
       "path": "91.jpg",
-      "altPaths": "",
+      "altPaths": "91-1.jpg,91-2.jpg,91-3.jpg",
       "series": "9",
       "publish": true,
       "favour": false
