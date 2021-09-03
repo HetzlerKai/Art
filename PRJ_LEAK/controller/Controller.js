@@ -406,9 +406,9 @@ function getDialogContent (id) {
 
     for (var i = 0; i < parts.length; i++) {
       if (i == 0) {
-        sItems = sItems + "<div class='item active'><img src='pics/" + seriesId + "/" + parts[i] + "' alt='Image not found' style='height: 600px'></div>"
+        sItems = sItems + "<div class='item active'><img src='pics/" + seriesId + "/" + parts[i] + "' alt='Image not found'></div>" //style='height: 600px'
       } else {
-        sItems = sItems + "<div class='item'><img src='pics/" + seriesId + "/" + parts[i] + "' alt='Image not found' style='height: 600px'></div>"
+        sItems = sItems + "<div class='item'><img src='pics/" + seriesId + "/" + parts[i] + "' alt='Image not found'></div>" //style='height: 600px'
       }
     }
 
@@ -457,9 +457,9 @@ function getDialogContent (id) {
     }
 
     var sKaufButton = '<a class="btn btn-primary buyButton" href="mailto:contact@kai-hetzler.art?subject=Anfrage ' + sName + '&body=Hallo Kai, %0A%0A ich hätte Interesse an [einem Druck | dem Orginal] von ' + sName + '. %0A%0A Viele Grüße %0A [Dein Name]">Kaufanfrage</a>';
+    var sCloseButton = '<button class="btn btn-secondary" onclick="closeArtDialog();" style="margin-top: 1rem;">Schließen</button>';
 
-
-    return sDetails = "<div class='artDialogText'> <div> <p>" + line1 + "</p><p>" + line2 + "</p><p>" + line3 + "</p></div> " + sKaufButton + " </div>";
+    return sDetails = "<div class='artDialogText'> <div> <p>" + line1 + "</p><p>" + line2 + "</p><p>" + line3 + "</p></div><div class='artDialogButtonContainer'>" + sKaufButton + sCloseButton + "</div></div>";
   };
 
   var aParts = _aPics[id].altPaths.split(",");
@@ -471,6 +471,10 @@ function getDialogContent (id) {
   var sArtCarousel = "<div id='artDialogCarousel' class='carousel slide' data-ride='carousel'><ol class='carousel-indicators'>" + fnGetCarouselIndicators(aParts) + "</ol> <div class='carousel-inner'>" + fnGetCarouselItems(aParts, _aPics[id].series) + "</div>" + sButtons + "</div>";
 
    return "<div>" + fnGetArtWorkDetails(_aPics[id]) + sArtCarousel + "</div>";
+}
+
+function closeArtDialog () {
+  $('#artDialog').modal('hide')
 }
 
 function triggerKaufanfrage (id) {
