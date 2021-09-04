@@ -120,19 +120,19 @@
 
 					preload(["/pics/prev0.jpeg","/pics/prev1.jpeg","/pics/prev2.jpeg","/pics/prev3.jpeg","/pics/prev6.jpeg","/pics/prev7.jpeg","/pics/prev8.jpeg","/pics/prev9.jpeg"]);
 
-					$.ajax({
+					/*$.ajax({
 	          dataType: "html",
 	          url: "/src/pics.json",
 	          success: function (data) {
 							JSON.parse(data).pics.forEach(function (item) {
 								if (item.publish) {
 									paths.push("pics/" + item.series + "/" + item.path);
-									/*altPaths = item.altPaths.split(",");
+									altPaths = item.altPaths.split(",");
 									for (var i = 0; i < altPaths.length; i++) {
 										if (altPaths[i]) {
 											paths.push("pics/" + item.series + "/" + altPaths[i]);
 										}
-									}*/
+									}
 								}
 							});
 
@@ -141,7 +141,7 @@
 	          error: function (sError) {
 							console.log("Preload failed");
 							console.log(sError);
-	          }});
+	          }});*/
 			</script>
 		</div>
 

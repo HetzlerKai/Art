@@ -136,7 +136,7 @@ function setGenericMatrixText (sFinalText, sItemId) {
     } else {
       secIndex++;
     }
-  }, 50);
+  }, 40);
 }
 
 function showHome () {
