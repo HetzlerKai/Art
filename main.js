@@ -29,19 +29,19 @@ function handleRequest(request, response){
         case "/":
         case "/art":
         case "/Art":
-        case "/Gallery":
-          dir = "Gallery";
-          console.log(sClient + " - requested the Gallery.");
-          response.writeHeader(200, {"Content-Type": "text/html"});
-          response.write(hGallery);
-          response.end();
-        break;
-
         case "/v2":
           dir = "PRJ_LEAK";
           console.log(sClient + " - requested the Leak.");
           response.writeHeader(200, {"Content-Type": "text/html"});
           response.write(hLeak);
+          response.end();
+        break;
+
+        case "/Gallery":
+          dir = "Gallery";
+          console.log(sClient + " - requested the Gallery.");
+          response.writeHeader(200, {"Content-Type": "text/html"});
+          response.write(hGallery);
           response.end();
         break;
 
