@@ -508,7 +508,7 @@
       "path": "38.jpg",
       "altPaths": "38-1.jpg",
       "series": "7",
-      "publish": true,
+      "publish": false,
       "favour": false
     },
     {
@@ -564,7 +564,7 @@
       "path": "42.jpg",
       "altPaths": "42-1.jpg",
       "series": "3",
-      "publish": true,
+      "publish": false,
       "favour": false
     },
     {
@@ -653,7 +653,7 @@
     },
     {
       "id": 51,
-      "name": "",
+      "name": "all these lights",
       "description": "",
       "type": "AL",
       "size": "50cm x 70cm",
@@ -709,7 +709,7 @@
     },
     {
       "id": 56,
-      "name": "",
+      "name": "Nebelwand",
       "description": "",
       "type": "AL",
       "size": "40cm x 50cm",
@@ -1045,7 +1045,7 @@
     },
     {
       "id": 83,
-      "name": "durchbrechend",
+      "name": "Zwanglos",
       "description": "",
       "type": "ASL",
       "size": "40cm x 50cm",
@@ -1101,7 +1101,7 @@
     },
     {
       "id": 87,
-      "name": "Glückseligkeit",
+      "name": "Glück",
       "description": "",
       "type": "ASL",
       "size": "50cm x 50cm",

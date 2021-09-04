@@ -105,6 +105,44 @@
 			<div id="particles-js"></div>
     <div>
 
+		<div class="hidden">
+			<script type="text/javascript">
+					var images = [];
+					var paths = [];
+					var altPaths;
+
+					function preload(aPaths) {
+						for (i = 0; i < aPaths.length; i++) {
+							images[i] = new Image()
+							images[i].src = aPaths[i];
+						}
+					}
+
+					$.ajax({
+	          dataType: "html",
+	          url: "/src/pics.json",
+	          success: function (data) {
+							JSON.parse(data).pics.forEach(function (item) {
+								if (item.publish) {
+									paths.push("pics/" + item.series + "/" + item.path);
+									altPaths = item.altPaths.split(",");
+									for (var i = 0; i < altPaths.length; i++) {
+										if (altPaths[i]) {
+											paths.push("pics/" + item.series + "/" + altPaths[i]);
+										}
+									}
+								}
+							});
+
+							preload(paths)
+	          },
+	          error: function (sError) {
+							console.log("Preload failed");
+							console.log(sError);
+	          }});
+			</script>
+		</div>
+
 	</body>
 
 </html>
