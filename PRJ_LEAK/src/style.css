@@ -446,15 +446,15 @@ canvas{
 }
 
 .artDialogTitle{
-    font-size: 30px;
+    font-size: 45px;
     color: #8f100b;//#EE4B2B;
     font-family: Audiowide;
     text-align: center;
 }
 
-.mobile .artDialogTitle{
+/* .mobile .artDialogTitle{
   font-size: 45px !important;
-}
+} */
 
 .artDialogText{
     display: flex;
@@ -464,7 +464,7 @@ canvas{
     justify-content: space-between;
     align-items: center;
         color: #3e3b3b;
-        font-size: 17px;
+        font-size: 20px;
 }
 
 .modal {
@@ -502,6 +502,10 @@ canvas{
 
 .mobile .seriesDetailHeaderContent{
   padding-left: 2rem !important;
+}
+
+.btn{
+  font-size: 22px;
 }
 
 .btnBack{
