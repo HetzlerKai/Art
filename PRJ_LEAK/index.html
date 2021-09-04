@@ -127,12 +127,12 @@
 							JSON.parse(data).pics.forEach(function (item) {
 								if (item.publish) {
 									paths.push("pics/" + item.series + "/" + item.path);
-									altPaths = item.altPaths.split(",");
+									/*altPaths = item.altPaths.split(",");
 									for (var i = 0; i < altPaths.length; i++) {
 										if (altPaths[i]) {
 											paths.push("pics/" + item.series + "/" + altPaths[i]);
 										}
-									}
+									}*/
 								}
 							});
 
