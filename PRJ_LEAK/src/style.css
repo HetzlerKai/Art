@@ -272,7 +272,7 @@ canvas{
 }
 
 .artistHeader{
-    font-size: 40px;
+    font-size: 55px;
     color: #8f100b;//#EE4B2B;
     text-align: center;
     margin-top: 5rem;
@@ -281,7 +281,7 @@ canvas{
 }
 
 .mobile .artistHeader,.artistContactHeader,.artistImpressumHeader{
-    font-size: 60px !important;
+    font-size: 55px !important;
 }
 
 .mobile .artistContactHeader,.artistImpressumHeader{
@@ -291,17 +291,13 @@ canvas{
 /*ART*/
 
 .ArtSeriesHeader{
-    font-size: 40px;
+    font-size: 55px;
     color: #8f100b;//#EE4B2B;
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
     font-family: Audiowide;
     z-index: 100;
-}
-
-.mobile .ArtSeriesHeader{
-  font-size: 60px !important;
 }
 
 .seriesContainer{
