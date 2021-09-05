@@ -17,7 +17,7 @@ html, body {
   flex-direction: row;
   height: 100%;
   /*overflow: hidden;*/
-  background-color: #383535;//black;//#A9A9A9;
+  background-color: #cacaca;//#383535;//black;//#A9A9A9;
 }
 
 #container canvas, #breachedMSG {
@@ -75,7 +75,7 @@ canvas{
 
 .MenuItem{
   overflow: hidden;
-  color: #8f100b;
+  color: #656565;//#8f100b;
   background-color: black;
   z-index: 100;
   font-size: 24px;
@@ -229,13 +229,13 @@ canvas{
 
 .artistContactHeader{
     font-size: 40px;
-    color: #8f100b;
+    color: #656565;//#8f100b;
     font-family: Audiowide;
 }
 
 .artistImpressumHeader{
     font-size: 40px;
-    color: #8f100b;
+    color: #656565;//#8f100b;
     font-family: Audiowide;
     margin-top: 4rem;
 }
@@ -273,7 +273,7 @@ canvas{
 
 .artistHeader{
     font-size: 55px;
-    color: #8f100b;//#EE4B2B;
+    color: #656565;//#8f100b;//#EE4B2B;
     text-align: center;
     margin-top: 5rem;
     font-family: Audiowide;
@@ -292,7 +292,7 @@ canvas{
 
 .ArtSeriesHeader{
     font-size: 55px;
-    color: #8f100b;//#EE4B2B;
+    color: #656565;//#8f100b;//#EE4B2B;
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -301,7 +301,7 @@ canvas{
 }
 
 .seriesContainer{
-  background-color: #383535;
+  background-color: #cacaca;//#383535;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -309,7 +309,7 @@ canvas{
 }
 
 .seriesDetailImgContainer{
-  background-color: #383535;
+  background-color: #cacaca;//#383535;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -334,7 +334,7 @@ canvas{
 
 .AtworkName{
     font-size: 30px;
-    color: #8f100b;//#EE4B2B;
+    color: #656565;//#8f100b;//#EE4B2B;
     font-family: Audiowide;
     margin-bottom: 1.5rem;
 }
@@ -349,10 +349,10 @@ canvas{
 
 .seriesItemHeader{
     font-size: 30px;
-    color: #8f100b;//#EE4B2B;
+    color: #656565;//#8f100b;//#EE4B2B;
     font-family: Audiowide;
     //margin-bottom: 1.5rem;
-    border-bottom: 2px #8f100b solid;
+    border-bottom: 2px #656565;//#8f100b solid;
     width: 100%;
     text-align: center;
 }
@@ -364,7 +364,7 @@ canvas{
 }
 
 .seriesItemContent{
-  height: 550px;
+  height: 546px;
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -408,7 +408,7 @@ canvas{
 
 .seriesDetailHeader {
     font-size: 30px;
-    color: #8f100b;//#EE4B2B;
+    color: #656565;//#8f100b;//#EE4B2B;
     font-family: Audiowide;
     margin: 1.5rem;
     z-index: 100;
@@ -423,13 +423,13 @@ canvas{
     font-family: Audiowide;
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    border-bottom-color: #8f100b;
+    border-bottom-color: #656565;//#8f100b;
     padding-left: 4.5rem;
     padding-bottom: 3rem;
     padding-top: 3rem;
     padding-right: 10rem;
     z-index: 100;
-    color: #c3bdbd;//#8f100b;//#EE4B2B;
+    color: #c3bdbd;//#656565;//#8f100b;//#EE4B2B;
 }
 
 .mobile .seriesDetailDescription{
@@ -443,7 +443,7 @@ canvas{
 
 .artDialogTitle{
     font-size: 45px;
-    color: #8f100b;//#EE4B2B;
+    color: #656565;//#8f100b;//#EE4B2B;
     font-family: Audiowide;
     text-align: center;
 }
@@ -484,7 +484,7 @@ canvas{
 
 .modal-header {
   background-color: black;
-  border-color: #8f100b;
+  border-color: #656565;//#8f100b;
   border-width: 2px;
 }
 
@@ -514,8 +514,8 @@ canvas{
 	filter: FlipH;
 	text-align: right;
   z-index: 100;
-  color: #8f100b;
-  border-color: #8f100b;
+  color: #656565;//#8f100b;
+  border-color: #656565;//#8f100b;
   border-width: 2px;
   background-color: black;
   border-radius: 50%;
@@ -531,7 +531,7 @@ canvas{
 }
 
 .btnBack:hover{
-  background-color: #8f100b;
+  background-color: #656565;//#8f100b;
   color: black;
   border-color: black;
 }
@@ -554,7 +554,7 @@ canvas{
   width: 40%;
   font-size: 20px;
   z-index:100;
-  color:#c3bdbd;
+  color:#656565;
   backdrop-filter: blur(10px);
 }
 
@@ -568,7 +568,7 @@ canvas{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #383535;
+  background-color: #cacaca;//#383535;
     flex-direction: column;
 }
 

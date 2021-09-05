@@ -72,11 +72,11 @@ function showTitleScreen() {
     var itemContact = document.getElementById("MenuContact");
     var itemHome = document.getElementById("HomeIcon")
 
-    menuMatrixText();
+    //menuMatrixText();
 
-    particlesJS.load('particles-js', 'src/particlesjs-config.json', function() {
-      console.log('callback - particles.js config loaded');
-    });
+    // particlesJS.load('particles-js', 'src/particlesjs-config.json', function() {
+    //   console.log('callback - particles.js config loaded');
+    // });
 
     showArt();3
 
@@ -102,10 +102,10 @@ function menuMatrixText () {
   itemArt.removeClass("invisible");
   itemContact.removeClass("invisible");
 
-  setGenericMatrixText(itemHome.text(), "HomeIcon");
-  setGenericMatrixText(itemArtist.text(), "MenuArtist");
-  setGenericMatrixText(itemArt.text(), "MenuArt");
-  setGenericMatrixText(itemContact.text(), "MenuContact");
+  //setGenericMatrixText(itemHome.text(), "HomeIcon");
+  //setGenericMatrixText(itemArtist.text(), "MenuArtist");
+  //setGenericMatrixText(itemArt.text(), "MenuArt");
+  //setGenericMatrixText(itemContact.text(), "MenuContact");
 }
 
 function setGenericMatrixText (sFinalText, sItemId) {
@@ -186,8 +186,8 @@ function showHome () {
     $(".content").empty();
     $(".content").append(sHome);
 
-    setGenericMatrixText($("#HomeSpotlightHeader").text(), "HomeSpotlightHeader");
-    setGenericMatrixText($("#HomeBlogHeader").text(), "HomeBlogHeader");
+    //setGenericMatrixText($("#HomeSpotlightHeader").text(), "HomeSpotlightHeader");
+    //setGenericMatrixText($("#HomeBlogHeader").text(), "HomeBlogHeader");
   };
 
   if (window._sSpotlightContent == null) {
@@ -233,7 +233,7 @@ function showArt () {
       $(".content").empty();
       $(".content").append(_sArtHtml);
       $(".seriesContainer").addClass("loaded");
-      setGenericMatrixText($("#ArtSeriesHeader").text(), "ArtSeriesHeader");
+      //setGenericMatrixText($("#ArtSeriesHeader").text(), "ArtSeriesHeader");
     };
 
     var fnGetSeriesItem = function (series) {
@@ -333,9 +333,9 @@ function showArtist () {
     var fnBuild = function () {
       $(".content").empty();
       $(".content").append(_sArtistHtml);
-      setGenericMatrixText($("#artistHeader").text(), "artistHeader");
-      setGenericMatrixText($("#artistContactHeader").text(), "artistContactHeader");
-      setGenericMatrixText($("#artistImpressumHeader").text(), "artistImpressumHeader");
+      //setGenericMatrixText($("#artistHeader").text(), "artistHeader");
+      //setGenericMatrixText($("#artistContactHeader").text(), "artistContactHeader");
+      //setGenericMatrixText($("#artistImpressumHeader").text(), "artistImpressumHeader");
     };
 
     if (window._sArtistHtml == null) {

@@ -13,7 +13,7 @@
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
-		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
 
 		<script src="controller/Controller.js"></script>
 		<link rel="stylesheet" href="src/style.css">
@@ -49,7 +49,28 @@
 			  })
 
 
-        showTitleScreen();
+        //showTitleScreen();
+				showArt();
+
+				setTimeout(function(){
+		      //showHome();3
+		      $(".seriesContainer").addClass("loaded");
+		    },1000);
+
+
+				  var itemArtist = $("#MenuArtist");
+				  var itemArt = $("#MenuArt");
+				  var itemContact = $("#MenuContact");
+				  var itemHome = $("#HomeIcon");
+
+				  itemHome.removeClass("invisible");
+				  itemArtist.removeClass("invisible");
+				  itemArt.removeClass("invisible");
+				  itemContact.removeClass("invisible");
+
+				    //document.getElementById("canvas").classList.add("invisible");
+				    document.getElementById("Menu").classList.remove("invisible");
+				    document.getElementById("content").classList.remove("invisible");
 
 				window._oData = null;
         window._bDataReady = false;
@@ -90,7 +111,7 @@
 			    </div>
 			  </div>
 			</div>
-      <canvas id="canvas" style="display: block;"></canvas>
+      <!--<canvas id="canvas" style="display: block;"></canvas>-->
       <div id="breachedMSG" class="invisible breachedDialog">[BREACHED]</div>
 			<div class="contentContainer">
       <div id="Menu" class="Menu invisible">
@@ -100,10 +121,10 @@
 	      <!--<div id="MenuContact" class="invisible MenuItem" onclick="showContact();">Contact</div>-->
 			</div>
 			<div id="content" class="content invisible"></div>
-		</div>
-			<!--<canvas class="background"></canvas>-->
+		<!-- </div>
+			<canvas class="background"></canvas>
 			<div id="particles-js"></div>
-    <div>
+    <div> -->
 
 		<div class="hidden">
 			<script type="text/javascript">
