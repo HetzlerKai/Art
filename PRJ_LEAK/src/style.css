@@ -44,7 +44,7 @@ canvas{
 
 .content{
   min-height: 100%;
-  width: 98%;
+  width: 100%;
   height: max-content;
   /* position: absolute;
   margin-left: 5.5rem; */
@@ -57,6 +57,7 @@ canvas{
 .contentContainer{
   display: flex;
   height: max-content;
+  flex-direction: column;
 }
 
 .mobile .content{
@@ -64,8 +65,8 @@ canvas{
     //margin-left: 9rem !important;
 }
 
-.Menu{
-  background-color: #0c0101;
+.Menu-alt{
+    background-color: #0c0101;
     font-family: Audiowide;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -73,7 +74,27 @@ canvas{
     min-height: 100%;
 }
 
+.Menu{
+  z-index: 100;
+  width: 100%;
+  background-color: #383535;
+  display: flex;
+  justify-content: center;
+}
+
+#MenuArtist{
+      margin-left: 5rem;
+}
+
 .MenuItem{
+  overflow: hidden;
+  z-index: 100;
+  font-size: 30px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.MenuItem-alt{
   overflow: hidden;
   color: #656565;//#8f100b;
   background-color: black;
@@ -305,7 +326,8 @@ canvas{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;//space-between;
+  /* justify-content: flex-start;//space-between; */
+  justify-content: center;
 }
 
 .seriesDetailImgContainer{
@@ -317,7 +339,7 @@ canvas{
 }
 
 .seriesImg{
-    height: 500px;
+    height: 700px;//500px;
 }
 
 .mobile .seriesImg{
@@ -350,7 +372,7 @@ canvas{
 .seriesItemHeader{
     font-size: 30px;
     color: #656565;//#8f100b;//#EE4B2B;
-    font-family: Audiowide;
+    //font-family: Audiowide;
     //margin-bottom: 1.5rem;
     border-bottom: 2px #656565;//#8f100b solid;
     width: 100%;
@@ -364,8 +386,8 @@ canvas{
 }
 
 .seriesItemContent{
-  height: 543px;
-  width: 500px;
+  height: 745px;//543px;
+  width: 700px;//500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -556,6 +578,7 @@ canvas{
   z-index:100;
   color:#656565;
   backdrop-filter: blur(10px);
+  margin-bottom: 5rem;
 }
 
 .mobile .artistText{
