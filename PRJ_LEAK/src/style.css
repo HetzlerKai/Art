@@ -80,6 +80,7 @@ canvas{
   background-color: #383535;
   display: flex;
   justify-content: center;
+  border-bottom: 2px solid #383535;
 }
 
 #MenuArtist{
@@ -90,7 +91,7 @@ canvas{
   overflow: hidden;
   z-index: 100;
   font-size: 30px;
-  padding-bottom: 1rem;
+  //padding-bottom: 1rem;
   padding-top: 1rem;
 }
 
@@ -112,6 +113,7 @@ canvas{
 
 .MenuItem:hover {
   cursor: pointer;
+  color: white;
 }
 
 .breachedDialog{
@@ -363,6 +365,7 @@ canvas{
 
 .AtworkName:hover{
   cursor: pointer;
+  color: white;
 }
 
 .mobile .AtworkName{
@@ -383,6 +386,10 @@ canvas{
   font-size: 50px !important;
   background-color: #383535;
   width: 700px;
+}
+
+.seriesItemHeader:hover{
+  color: white;
 }
 
 .seriesItemContent{
@@ -430,10 +437,11 @@ canvas{
 
 .seriesDetailHeader {
     font-size: 30px;
-    color: #656565;//#8f100b;//#EE4B2B;
+    color: #c3bdbd;//#656565;//#8f100b;//#EE4B2B;
     font-family: Audiowide;
     margin: 1.5rem;
     z-index: 100;
+    margin-left: 2rem;
 }
 
 .mobile .seriesDetailHeader{
@@ -446,11 +454,12 @@ canvas{
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: #656565;//#8f100b;
-    padding-left: 4.5rem;
+    //padding-left: 4.5rem;
     padding-bottom: 3rem;
     padding-top: 3rem;
     padding-right: 10rem;
     z-index: 100;
+    margin-left: 10rem;
     color: #c3bdbd;//#656565;//#8f100b;//#EE4B2B;
 }
 
@@ -460,12 +469,13 @@ canvas{
 }
 
 .seriesDetailContainer {
-  background-color: black;
+  background-color: #383535;
+  border-top: 3px solid black;
 }
 
 .artDialogTitle{
     font-size: 45px;
-    color: #656565;//#8f100b;//#EE4B2B;
+    //color: #656565;//#8f100b;//#EE4B2B;
     font-family: Audiowide;
     text-align: center;
 }
@@ -481,8 +491,9 @@ canvas{
     align-content: center;
     justify-content: space-between;
     align-items: center;
-        color: #3e3b3b;
-        font-size: 20px;
+    color: #3e3b3b;
+    font-size: 24px;
+    margin-left: 10px;
 }
 
 .modal {
@@ -539,7 +550,7 @@ canvas{
   color: #656565;//#8f100b;
   border-color: #656565;//#8f100b;
   border-width: 2px;
-  background-color: black;
+  //background-color: black;
   border-radius: 50%;
     font-size: 20px;
     padding-right: 5px;
