@@ -58,6 +58,7 @@ canvas{
   display: flex;
   height: max-content;
   flex-direction: column;
+  width: 100%;
 }
 
 /* .mobile .content{
@@ -84,6 +85,10 @@ canvas{
 }
 
 #MenuArtist{
+      margin-left: 5rem;
+}
+
+#MenuArt{
       margin-left: 5rem;
 }
 
@@ -136,7 +141,7 @@ canvas{
 
 /*HOME*/
 .HomeHeader{
-  color: #EE4B2B;
+  color: #656565;
   text-align: center;
   font-family: Audiowide;
   z-index: 100;
@@ -166,16 +171,43 @@ canvas{
   z-index: 100;
 }
 
+.logoImg{
+  position: absolute;
+  top: 13%;
+  left: 46%;
+  height: 20rem;
+}
+
 .HomeSection{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  padding-top: 3rem;
   height: 100%;
   width: 100%;
+}
+
+.BannerImg{
+    width: 100%;
+    //height: 55rem;
+    height: 520px;
+    object-fit: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.BannerText{
+    font-size: 30px;
+    color: #656565;//#8f100b;
+}
+
+.BannerTextSub{
+    font-size: 30px;
+    color: #656565;//#8f100b;
 }
 
 .carousel-inner > .item > img,
@@ -349,7 +381,7 @@ canvas{
 } */
 
 .artworkImg{
-  height: 500px;
+  height: 650px;
 }
 
 .mobile .artWorkImg{
@@ -412,8 +444,8 @@ canvas{
 }
 
 .ImgItemContainer{
-  height: 550px;
-  width: 500px;
+  height: 750px;
+  width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -616,7 +648,7 @@ canvas{
   object-fit: contain;
   margin-left: auto;
   margin-right: auto;
-  height: 80%;
+  height: 75%;
 }
 
 .artDialogButtonContainer{

@@ -162,7 +162,7 @@ function showHome () {
     var myPromise = new Promise((resolve, reject) => {
       $.ajax({
         dataType: "html",
-        url: "/pages/blog.html",
+        url: "/pages/homeIntro.html",
         success: function (data) {
           resolve(data);
         },
@@ -179,9 +179,9 @@ function showHome () {
     var sHome, sSpotlight, sBlog;
 
     sSpotlight = "<div style='height: 100%; width: 50%;'> <h1 id='HomeSpotlightHeader' class='HomeHeader'>Spotlight</h1> <div class='HomeSpotlightContainer'>" + _sSpotlightContent + "</div> </div>";
-    sBlog = "<div style='height: 100%; width: 50%;'> <h1 id='HomeBlogHeader' class='HomeHeader'>Blog</h1> <div class='HomeBlogContainer'>" + _sBlogContent + "</div> </div>";
+    sBlog =_sBlogContent;
 
-    sHome = "<div class='HomeSection'> " + sSpotlight + sBlog + " </div>";
+    sHome = "<div class='HomeSection'> " + sBlog + " </div>";
 
     $(".content").empty();
     $(".content").append(sHome);
