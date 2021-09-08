@@ -78,7 +78,7 @@ function showTitleScreen() {
     //   console.log('callback - particles.js config loaded');
     // });
 
-    showArt();3
+    //showArt();3
 
     setTimeout(function(){
       //showHome();3
@@ -141,24 +141,24 @@ function setGenericMatrixText (sFinalText, sItemId) {
 
 function showHome () {
 
-  var fnGetSpotlightContentPromise = function () {
-    var myPromise = new Promise((resolve, reject) => {
-      $.ajax({
-        dataType: "html",
-        url: "/pages/spotlight.html",
-        success: function (data) {
-          resolve(data);
-        },
-        error: function (sError) {
-          reject();
-        }
-      });
-    });
+  // var fnGetSpotlightContentPromise = function () {
+  //   var myPromise = new Promise((resolve, reject) => {
+  //     $.ajax({
+  //       dataType: "html",
+  //       url: "/pages/spotlight.html",
+  //       success: function (data) {
+  //         resolve(data);
+  //       },
+  //       error: function (sError) {
+  //         reject();
+  //       }
+  //     });
+  //   });
+  //
+  //   return myPromise;
+  // };
 
-    return myPromise;
-  };
-
-  var fngetBlogContentPromise = function () {
+  var fngetHomeContentPromise = function () {
     var myPromise = new Promise((resolve, reject) => {
       $.ajax({
         dataType: "html",
@@ -176,12 +176,11 @@ function showHome () {
   };
 
   var fnBuild = function () {
-    var sHome, sSpotlight, sBlog;
+    var sHome; //, sSpotlight, sBlog;
 
-    sSpotlight = "<div style='height: 100%; width: 50%;'> <h1 id='HomeSpotlightHeader' class='HomeHeader'>Spotlight</h1> <div class='HomeSpotlightContainer'>" + _sSpotlightContent + "</div> </div>";
-    sBlog =_sBlogContent;
+    //sSpotlight = "<div style='height: 100%; width: 50%;'> <h1 id='HomeSpotlightHeader' class='HomeHeader'>Spotlight</h1> <div class='HomeSpotlightContainer'>" + _sSpotlightContent + "</div> </div>";
 
-    sHome = "<div class='HomeSection'> " + sBlog + " </div>";
+    sHome = "<div class='HomeSection'> " + _sHomeContent + " </div>";
 
     $(".content").empty();
     $(".content").append(sHome);
@@ -190,25 +189,23 @@ function showHome () {
     //setGenericMatrixText($("#HomeBlogHeader").text(), "HomeBlogHeader");
   };
 
-  if (window._sSpotlightContent == null) {
-    fnGetSpotlightContentPromise().then( (spotlightHtml) => {
-      _sSpotlightContent = spotlightHtml;
-      if (_sBlogContent != null) {
-        fnBuild();
-      }
-    });
-  }
+  // if (window._sSpotlightContent == null) {
+  //   fnGetSpotlightContentPromise().then( (spotlightHtml) => {
+  //     _sSpotlightContent = spotlightHtml;
+  //     if (_sBlogContent != null) {
+  //       fnBuild();
+  //     }
+  //   });
+  // }
 
-  if (window._sBlogContent == null) {
-    fngetBlogContentPromise().then( (blogHtml) => {
-      _sBlogContent = blogHtml;
-      if (_sSpotlightContent != null) {
+  if (window._sHomeContent == null) {
+    fngetHomeContentPromise().then( (Html) => {
+      _sHomeContent = Html;
         fnBuild();
-      }
     });
+  } else {
+    fnBuild();
   }
-
-  if (_sSpotlightContent != null && _sBlogContent != null) { fnBuild(); }
 }
 
 function showArt () {

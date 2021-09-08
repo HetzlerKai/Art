@@ -176,6 +176,7 @@ canvas{
   top: 13%;
   left: 46%;
   height: 20rem;
+    display: none;
 }
 
 .HomeSection{
@@ -196,18 +197,90 @@ canvas{
     object-fit: cover;
     overflow: hidden;
     background-repeat: no-repeat;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    //margin-top: 8rem;
+    //margin-bottom: 8rem;
 }
+
+.HomeImageDescriptor{
+    font-size: 25px;
+    color: #656565;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.HomeImageName{
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-family: 'Audiowide';
+}
+
+.homeImage{
+  height: 600px;
+  margin-top: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.homeImageSmall{
+    height: 400px;
+    margin-top: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.HomeConent{
+    //height: 25rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.HomeImageContainer{
+  display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   margin-bottom: 10rem;
+}
+
+.HomeImageHeader{
+    font-size: 50px;
+    font-family: 'AUDIOWIDE';
+    margin-top: 10rem;
+    color: #656565;
+}
+
 
 .BannerText{
     font-size: 30px;
-    color: #656565;//#8f100b;
+    width: 75%;
+    margin-top: 10px;
 }
 
 .BannerTextSub{
     font-size: 30px;
     color: #656565;//#8f100b;
+}
+
+.BannerTextContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #c3bdbd;
+  background-color: #383535 !important;
+  height: 100%;
+  margin-top: -5rem;
+  padding: 25px;
+  justify-content: center;
+    width: 100%;
 }
 
 .carousel-inner > .item > img,
@@ -240,6 +313,8 @@ canvas{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+    background-color: #383535;
+    padding: 5rem;
 }
 
 .fa {
@@ -319,7 +394,7 @@ canvas{
 
 .artistContact{
   z-index: 100;
-    margin-top: 5rem;
+    //margin-top: 5rem;
 }
 
 .mobile .artistContact{
