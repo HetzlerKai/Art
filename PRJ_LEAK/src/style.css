@@ -176,7 +176,7 @@ canvas{
   top: 13%;
   left: 46%;
   height: 20rem;
-    display: none;
+    //display: none;
 }
 
 .HomeSection{
@@ -249,6 +249,19 @@ canvas{
     align-items: center;
     justify-content: center;
    margin-bottom: 10rem;
+}
+
+.mobile .HomeImageContainer{
+    margin-bottom: 30rem;
+    flex-direction: column;
+}
+
+.mobile .homeImageSmall{
+  margin-top: 5rem !important;
+}
+
+.mobile .homeImage{
+  margin-top: 5rem !important;
 }
 
 .HomeImageHeader{
