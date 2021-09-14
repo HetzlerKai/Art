@@ -173,10 +173,10 @@ canvas{
 
 .logoImg{
   position: absolute;
-  top: 13%;
-  left: 46%;
-  height: 20rem;
-  display: none;
+  top: 20rem;
+  //left: 46%;
+  height: 25rem;
+  //display: none;
 }
 
 .HomeSection{
