@@ -1202,6 +1202,20 @@
       "series": "10",
       "publish": true,
       "favour": false
+    },
+    {
+      "id": 94,
+      "name": "",
+      "description": "",
+      "type": "ASL",
+      "size": "50cm x 70cm",
+      "sold": false,
+      "price": "",
+      "path": "94.png",
+      "altPaths": "94-1.jpg,94-2.jpg,94-3.jpg,94-4.jpg",
+      "series": "9",
+      "publish": true,
+      "favour": false
     }
   ]
 }
