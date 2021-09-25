@@ -198,6 +198,11 @@ function showHome () {
   //   });
   // }
 
+  getArtContentPromise().then( (data) => {
+    _aSeries = JSON.parse(data).series;
+    _aPics = JSON.parse(data).pics;
+  });
+
   if (window._sHomeContent == null) {
     fngetHomeContentPromise().then( (Html) => {
       _sHomeContent = Html;
@@ -208,24 +213,24 @@ function showHome () {
   }
 }
 
+function getArtContentPromise () {
+  var myPromise = new Promise((resolve, reject) => {
+    $.ajax({
+      dataType: "html",
+      url: "/src/pics.json",
+      success: function (data) {
+        resolve(data);
+      },
+      error: function (sError) {
+        reject();
+      }
+    });
+  });
+
+  return myPromise;
+};
+
 function showArt () {
-    var fnGetArtContentPromise = function () {
-      var myPromise = new Promise((resolve, reject) => {
-        $.ajax({
-          dataType: "html",
-          url: "/src/pics.json",
-          success: function (data) {
-            resolve(data);
-          },
-          error: function (sError) {
-            reject();
-          }
-        });
-      });
-
-      return myPromise;
-    };
-
     var fnBuild = function () {
       $(".content").empty();
       $(".content").append(_sArtHtml);
@@ -248,7 +253,7 @@ function showArt () {
     var seriesHTML = "";
 
     if (window._sArtHtml == null) {
-      fnGetArtContentPromise().then( (data) => {
+      getArtContentPromise().then( (data) => {
         _aSeries = JSON.parse(data).series;
         _aPics = JSON.parse(data).pics;
         /*for (var i = 0; i < _aSeries.length; i++) {
