@@ -575,6 +575,7 @@ canvas{
 }
 
 .seriesDetailDescription {
+    white-space: pre-line;
     font-size: 24px;
     //font-family: Audiowide;
     border-bottom-width: 2px;
