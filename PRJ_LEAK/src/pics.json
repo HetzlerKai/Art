@@ -63,10 +63,10 @@
       "description": "Ich möchte mit meiner Kunst auch etwas Unverständnis, etwas Unklarheit vermitteln. Statt uns vor dem unverständlichen und komplexem zu verschließen sollten wir neugierig bleiben und weiter forschen. Dieses Gefühl steht im Zentrum dieser Serie."
     }, {
       "id": 10,
-      "name": "Was heut noch glüht, Ist bald versunken",
+      "name": "Was heut noch glüht...",
       "publish": true,
       "previewImg": "/pics/10/92-1.jpeg",
-      "description": "Im Zentrum dieser Serie steht Rost als Manifestation von Vergänglichkeit. \n\"Der Gedanke an die Vergänglichkeit aller irdischen Dinge ist ein Quell unendlichen Leids - und ein Quell unendlichen Trostes.\""
+      "description": "..ist bald versunken. \nIm Zentrum dieser Serie steht Rost als Manifestation von Vergänglichkeit. \n\"Der Gedanke an die Vergänglichkeit aller irdischen Dinge ist ein Quell unendlichen Leids - und ein Quell unendlichen Trostes.\""
     }
   ],
   "pics": [
@@ -1191,7 +1191,7 @@
     },
     {
       "id": 93,
-      "name": "Was heut noch glüht, Ist bald versunken",
+      "name": "Was heut noch glüht...",
       "description": "",
       "type": "MMR",
       "size": "80cm x 80cm",
