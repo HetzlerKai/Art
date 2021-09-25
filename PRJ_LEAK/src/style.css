@@ -173,10 +173,16 @@ canvas{
 
 .logoImg{
   position: absolute;
-  top: 20rem;
-  //left: 46%;
+  top: 30rem;
   height: 25rem;
-  //display: none;
+}
+
+.logoImgMenu{
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+    border-radius: 50%;
+    background-color: #cacaca;
 }
 
 .HomeSection{
