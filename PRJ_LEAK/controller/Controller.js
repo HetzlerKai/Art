@@ -72,14 +72,6 @@ function showTitleScreen() {
     var itemContact = document.getElementById("MenuContact");
     var itemHome = document.getElementById("HomeIcon")
 
-    //menuMatrixText();
-
-    // particlesJS.load('particles-js', 'src/particlesjs-config.json', function() {
-    //   console.log('callback - particles.js config loaded');
-    // });
-
-    //showArt();3
-
     setTimeout(function(){
       //showHome();3
       $(".seriesContainer").addClass("loaded");
@@ -141,22 +133,7 @@ function setGenericMatrixText (sFinalText, sItemId) {
 
 function showHome () {
 
-  // var fnGetSpotlightContentPromise = function () {
-  //   var myPromise = new Promise((resolve, reject) => {
-  //     $.ajax({
-  //       dataType: "html",
-  //       url: "/pages/spotlight.html",
-  //       success: function (data) {
-  //         resolve(data);
-  //       },
-  //       error: function (sError) {
-  //         reject();
-  //       }
-  //     });
-  //   });
-  //
-  //   return myPromise;
-  // };
+  history.pushState(null, null, '?home');
 
   var fngetHomeContentPromise = function () {
     var myPromise = new Promise((resolve, reject) => {
@@ -176,27 +153,13 @@ function showHome () {
   };
 
   var fnBuild = function () {
-    var sHome; //, sSpotlight, sBlog;
-
-    //sSpotlight = "<div style='height: 100%; width: 50%;'> <h1 id='HomeSpotlightHeader' class='HomeHeader'>Spotlight</h1> <div class='HomeSpotlightContainer'>" + _sSpotlightContent + "</div> </div>";
+    var sHome;
 
     sHome = "<div class='HomeSection'> " + _sHomeContent + " </div>";
 
     $(".content").empty();
     $(".content").append(sHome);
-
-    //setGenericMatrixText($("#HomeSpotlightHeader").text(), "HomeSpotlightHeader");
-    //setGenericMatrixText($("#HomeBlogHeader").text(), "HomeBlogHeader");
   };
-
-  // if (window._sSpotlightContent == null) {
-  //   fnGetSpotlightContentPromise().then( (spotlightHtml) => {
-  //     _sSpotlightContent = spotlightHtml;
-  //     if (_sBlogContent != null) {
-  //       fnBuild();
-  //     }
-  //   });
-  // }
 
   getArtContentPromise().then( (data) => {
     _aSeries = JSON.parse(data).series;
@@ -231,10 +194,14 @@ function getArtContentPromise () {
 };
 
 function showArt () {
+
+    history.pushState(null, null, '?art');
+
     var fnBuild = function () {
       $(".content").empty();
       $(".content").append(_sArtHtml);
       $(".seriesContainer").addClass("loaded");
+
       //setGenericMatrixText($("#ArtSeriesHeader").text(), "ArtSeriesHeader");
     };
 
@@ -319,6 +286,9 @@ function onClickSeries (id) {
 }
 
 function showArtist () {
+
+    history.pushState(null, null, '?artist');
+
     var fnGetArtistContentPromise = function () {
       var myPromise = new Promise((resolve, reject) => {
         $.ajax({
