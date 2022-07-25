@@ -1,5 +1,5 @@
 var
-oHttp = require('http'),
+oHttps = require('https'),
 fs = require('fs'),
 hGallery, hLeak, fnGetClientAddress;
 var mobile = require('is-mobile');
@@ -25,11 +25,6 @@ function handleRequest(request, response){
 
     try {
         switch(sRequest){
-
-        case "/.well-known/acme-challenge/8JO_766eeT6w4tDMggz4_asO_A8t9OuYZ9tBVww2zC4":
-        response.writeHead(200, {'Content-Type': 'text/plain'});
-        response.end('8JO_766eeT6w4tDMggz4_asO_A8t9OuYZ9tBVww2zC4.qA_1M3nn-DZ4tARocoZWx9N_doHj1W6cV2cXkLFXEE0');
-        break;
 
         case "/":
         case "/art":
@@ -86,7 +81,7 @@ function handleRequest(request, response){
     }
 }
 
-var oServer = oHttp.createServer(handleRequest);
+var oServer = oHttps.createServer(handleRequest);
 oServer.listen(process.env.PORT || 5000, function(){
     console.log("Server listening on: http://localhost:" + PORT);
     console.log(" ");
