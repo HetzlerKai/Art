@@ -82,8 +82,8 @@ function handleRequest(request, response){
 }
 
 var oServer = oHttps.createServer({
-  key: fs.readFileSync('/sec/privkey1.pem'),
-  cert: fs.readFileSync('/sec/fullchain1.pem')
+  key: fs.readFileSync('PRJ_LEAK/sec/privkey1.pem'),
+  cert: fs.readFileSync('PRJ_LEAK/sec/fullchain1.pem')
 }, handleRequest);
 oServer.listen(process.env.PORT || 5000, function(){
     console.log("Server listening on: http://localhost:" + PORT);
