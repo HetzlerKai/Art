@@ -26,6 +26,11 @@ function handleRequest(request, response){
     try {
         switch(sRequest){
 
+        case ".well-known/acme-challenge/8JO_766eeT6w4tDMggz4_asO_A8t9OuYZ9tBVww2zC4":
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+        response.end('8JO_766eeT6w4tDMggz4_asO_A8t9OuYZ9tBVww2zC4.qA_1M3nn-DZ4tARocoZWx9N_doHj1W6cV2cXkLFXEE0');
+        break;
+
         case "/":
         case "/art":
         case "/Art":
