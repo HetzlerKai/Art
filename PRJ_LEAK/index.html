@@ -11,13 +11,12 @@
 
 	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="src/jquery.bcSwipe.min.js"></script>
 
 		<script src="controller/Controller.js"></script>
 		<link rel="stylesheet" href="src/style.css">
 
 		<script>
-
-			//window._sMatrixChars = "甸甹町Ⓐ画甼甽Ⓐ甾甿畂畃せポ畄畅Ⓐ畋界畑";
 
 			jQuery(document).ready(function(){
 
@@ -43,6 +42,8 @@
 			    modal.find('#artDialogTitle').text(sName)
 					modal.find('#artDialogContent').empty();
 				  modal.find('#artDialogContent').append(sDialogContentHTML);
+
+					$('.carousel').bcSwipe({ threshold: 50 });
 			  })
 
 
