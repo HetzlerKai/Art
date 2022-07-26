@@ -141,8 +141,8 @@ function onClickSeries (id) {
           sImageName = "Untitled: Nr. " + _aPics[i].id;
         }
 
-        sImageNameHTML = "<div class='AtworkName' onClick='onClickArtwork(" + _aPics[i].id + ")' data-toggle='modal' data-target='#artDialog' data-artWorkId='" + i + "'>" + sImageName + "</div>";
-        sImage = "<img src='pics/" + seriesId + "/" + _aPics[i].path + "' alt='Image not found' class='img artworkImg' data-toggle='modal' data-target='#artDialog' data-artWorkId='" + i + "'></img>";
+        sImageNameHTML = "<div class='AtworkName' onClick='onClickArtwork(" + _aPics[i].id + ")' data-toggle='modal' data-target='#artDialog' data-seriesid='" + seriesId + "' data-artWorkId='" + i + "'>" + sImageName + "</div>";
+        sImage = "<img src='pics/" + seriesId + "/" + _aPics[i].path + "' alt='Image not found' class='img artworkImg' data-toggle='modal' data-target='#artDialog' data-seriesid='" + seriesId + "' data-artWorkId='" + i + "'></img>";
         sIMGHTML = sIMGHTML + "<div class='ImgItemContainer'>" + sImageNameHTML + sImage + "</div>";
       }
     }

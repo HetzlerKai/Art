@@ -55,7 +55,12 @@
 				}
 
 				window.addEventListener('popstate', function(event) {
-						closeArtDialog();
+						if ($('#artDialog') && $('#artDialog').data('bs.modal') && $('#artDialog').data('bs.modal').isShown) {
+							closeArtDialog();
+							//history.forward();
+							history.pushState(null, null, "/?art/" + $('#artDialog').data('bs.modal').options.seriesid);
+							return;
+						}
 
 						if (window.location && window.location.search.startsWith('?art')) {
 							showArt(true);
