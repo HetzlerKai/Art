@@ -131,9 +131,11 @@ function setGenericMatrixText (sFinalText, sItemId) {
   }, 40);
 }
 
-function showHome () {
+function showHome (bSupressHistoryChange) {
 
-  history.pushState(null, null, '?home');
+  if (!bSupressHistoryChange) {
+    history.pushState(null, null, '?home');
+  }
 
   var fngetHomeContentPromise = function () {
     var myPromise = new Promise((resolve, reject) => {
@@ -193,9 +195,11 @@ function getArtContentPromise () {
   return myPromise;
 };
 
-function showArt () {
+function showArt (bSupressHistoryChange) {
 
-    history.pushState(null, null, '?art');
+    if (!bSupressHistoryChange) {
+      history.pushState(null, null, '?art');
+    }
 
     var fnBuild = function () {
       $(".content").empty();
@@ -285,9 +289,11 @@ function onClickSeries (id) {
   $(".content").append(seriesHTML);
 }
 
-function showArtist () {
+function showArtist (bSupressHistoryChange) {
 
-    history.pushState(null, null, '?artist');
+    if (!bSupressHistoryChange) {
+      history.pushState(null, null, '?artist');
+    }
 
     var fnGetArtistContentPromise = function () {
       var myPromise = new Promise((resolve, reject) => {

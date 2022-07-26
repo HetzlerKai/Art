@@ -49,12 +49,27 @@
 			  })
 
 
-        //showTitleScreen();
-				//showArt();
-				showHome();
+				if (window.location && window.location.search == '?art') {
+					showArt();
+				} else if (window.location && window.location.search == '?artist') {
+					showArtist();
+				} else {
+					showHome();
+				}
+
+				window.addEventListener('popstate', function(event) {
+					console.log("pressed");
+
+						if (window.location && window.location.search == '?art') {
+							showArt(true);
+						} else if (window.location && window.location.search == '?artist') {
+							showArtist(true);
+						} else {
+							showHome(true);
+						}
+				}, false);
 
 				setTimeout(function(){
-		      //showHome();3
 		      $(".seriesContainer").addClass("loaded");
 		    },1000);
 
