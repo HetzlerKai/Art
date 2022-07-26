@@ -11,16 +11,13 @@
 
 	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
-		<!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
 
 		<script src="controller/Controller.js"></script>
 		<link rel="stylesheet" href="src/style.css">
 
 		<script>
 
-			window._sMatrixChars = "甸甹町Ⓐ画甼甽Ⓐ甾甿畂畃せポ畄畅Ⓐ畋界畑"; //"_YX☣❤☢⚘⚒☮☥K男ヱ甸甹町Ⓐ画甼ヷ甽Ⓐ甾甿☣❤☢⚘ヸKK畀ャ畂畃せポ畄畅Ⓐ畋界畑"
+			//window._sMatrixChars = "甸甹町Ⓐ画甼甽Ⓐ甾甿畂畃せポ畄畅Ⓐ畋界畑";
 
 			jQuery(document).ready(function(){
 
@@ -49,7 +46,7 @@
 			  })
 
 
-				if (window.location && window.location.search == '?art') {
+				if (window.location && window.location.search.startsWith('?art')) {
 					showArt();
 				} else if (window.location && window.location.search == '?artist') {
 					showArtist();
@@ -58,9 +55,9 @@
 				}
 
 				window.addEventListener('popstate', function(event) {
-					console.log("pressed");
+						closeArtDialog();
 
-						if (window.location && window.location.search == '?art') {
+						if (window.location && window.location.search.startsWith('?art')) {
 							showArt(true);
 						} else if (window.location && window.location.search == '?artist') {
 							showArtist(true);
@@ -84,15 +81,12 @@
 				  itemArt.removeClass("invisible");
 				  itemContact.removeClass("invisible");
 
-				    //document.getElementById("canvas").classList.add("invisible");
 				    document.getElementById("Menu").classList.remove("invisible");
 				    document.getElementById("content").classList.remove("invisible");
 
 				window._oData = null;
         window._bDataReady = false;
 				window._sHomeContent = null;
-				//window._sSpotlightContent = null;
-				//window._sBlogContent = null;
 				window._sContactHtml = null;
 				window._sArtistHtml = null;
 				window._sArtHtml = null;
@@ -121,15 +115,10 @@
 			        </button>
 			      </div>
 			      <div class="modal-body" id="artDialogContent"></div>
-			      <!--<div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			        <button type="button" class="btn btn-primary">Kaufanfrage</button>
-			      </div>-->
 			    </div>
 			  </div>
 			</div>
-      <!--<canvas id="canvas" style="display: block;"></canvas>-->
-      <div id="breachedMSG" class="invisible breachedDialog">[BREACHED]</div>
+      <!--<div id="breachedMSG" class="invisible breachedDialog">[BREACHED]</div>-->
 			<div class="contentContainer">
       <div id="Menu" class="Menu invisible">
 				<div style="display: flex; flex-direction: column; align-items: center;">
@@ -139,14 +128,9 @@
 				      <div id="MenuArt" class="invisible MenuItem" onclick="showArt();">Art</div>
 				      <div id="MenuArtist" class="invisible MenuItem" onclick="showArtist();">Artist</div>
 					</div>
-		      <!--<div id="MenuContact" class="invisible MenuItem" onclick="showContact();">Contact</div>-->
 				</div>
 			</div>
 			<div id="content" class="content invisible"></div>
-		<!-- </div>
-			<canvas class="background"></canvas>
-			<div id="particles-js"></div>
-    <div> -->
 
 		<div class="hidden">
 			<script type="text/javascript">
@@ -164,28 +148,6 @@
 					preload(["/pics/prev0.jpeg","/pics/prev1.jpeg","/pics/prev2.jpeg","/pics/prev3.jpeg","/pics/prev6.jpeg","/pics/prev7.jpeg","/pics/prev8.jpeg","/pics/prev9.jpeg"]);
 					preload(["/src/logo.png", "/pics/9/90-4.jpg", "/pics/9/90.png", "/pics/9/90-2.jpg", "/pics/9/92-2.jpeg", "/pics/9/92.png", "/pics/9/92-3.jpg", "/pics/10/93-4.jpg", "/pics/10/93.jpg", "/pics/10/93-5.jpg"]);
 
-					/*$.ajax({
-	          dataType: "html",
-	          url: "/src/pics.json",
-	          success: function (data) {
-							JSON.parse(data).pics.forEach(function (item) {
-								if (item.publish) {
-									paths.push("pics/" + item.series + "/" + item.path);
-									altPaths = item.altPaths.split(",");
-									for (var i = 0; i < altPaths.length; i++) {
-										if (altPaths[i]) {
-											paths.push("pics/" + item.series + "/" + altPaths[i]);
-										}
-									}
-								}
-							});
-
-							preload(paths)
-	          },
-	          error: function (sError) {
-							console.log("Preload failed");
-							console.log(sError);
-	          }});*/
 			</script>
 		</div>
 

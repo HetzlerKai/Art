@@ -1,136 +1,4 @@
-
-function showTitleScreen() {
-  var oDisplay = document.getElementById("canvas");
-  var ctx = oDisplay.getContext("2d");
-  var sChars = window._sMatrixChars;
-  var aChars = sChars.split("");
-  var iFontSize = 16;
-  var drops = [];
-
-  //making the canvas full screen
-  oDisplay.height = window.innerHeight;
-  oDisplay.width = window.innerWidth;
-
-  var columns = oDisplay.width/iFontSize; //number of columns for the rain
-
-  //x below is the x coordinate
-  //1 = y co-ordinate of the drop(same for every drop initially)
-  for(var x = 0; x < columns; x++)
-  	drops[x] = 1;
-
-  //drawing the characters
-  fnDraw = function () {
-  	//Black BG for the canvas
-  	//translucent BG to show trail
-  	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-  	ctx.fillRect(0, 0, oDisplay.width, oDisplay.height);
-
-  	ctx.fillStyle = "#EE4B2B";//"#880808";
-  	ctx.font = iFontSize + "px arial";
-  	//looping over drops
-  	for(var i = 0; i < drops.length; i++)
-  	{
-  		//a random chinese character to print
-  		var text = aChars[Math.floor(Math.random()*aChars.length)];
-  		//x = i*font_size, y = value of drops[i]*font_size
-  		ctx.fillText(text, i*iFontSize, drops[i]*iFontSize);
-
-  		//sending the drop back to the top randomly after it has crossed the screen
-  		//adding a randomness to the reset to make the drops scattered on the Y axis
-  		if(drops[i]*iFontSize > oDisplay.height && Math.random() > 0.975)
-  			drops[i] = 0;
-
-  		//incrementing Y coordinate
-  		drops[i]++;
-  	}
-  }
-
-  fnStartPhase2 = function () {
-    clearInterval(donny);
-    setTimeout(() => { fnDraw() }, 100);
-    setTimeout(() => { fnDraw() }, 150);
-    setTimeout(() => { fnDraw() }, 200);
-    setTimeout(() => { fnDraw() }, 270);
-    setTimeout(() => { fnDraw() }, 300);
-    setTimeout(() => { fnDraw() }, 400);
-    setTimeout(() => { fnDraw() }, 500);
-    setTimeout(() => { fnDraw() }, 700);
-    setTimeout(() => { ctx.clearRect(0, 0, oDisplay.width, oDisplay.height); }, 1000);
-    setTimeout(() => { dialog.classList.add("invisible"); fnStartPhase3(); }, 1300);
-
-    var dialog = document.getElementById("breachedMSG");
-    dialog.classList.remove("invisible");
-  }
-
-  fnStartPhase3 = function () {
-    oDisplay.classList.add("invisible");
-    document.getElementById("Menu").classList.remove("invisible");
-    document.getElementById("content").classList.remove("invisible");
-
-    var itemArtist = document.getElementById("MenuArtist");
-    var itemArt = document.getElementById("MenuArt");
-    var itemContact = document.getElementById("MenuContact");
-    var itemHome = document.getElementById("HomeIcon")
-
-    setTimeout(function(){
-      //showHome();3
-      $(".seriesContainer").addClass("loaded");
-    },1000);
-  }
-
-  //fnStartPhase3();
-  var donny = setInterval(fnDraw, 20);
-  setTimeout(() => { fnStartPhase2() }, 4000);
-}
-
-function menuMatrixText () {
-  var itemArtist = $("#MenuArtist");
-  var itemArt = $("#MenuArt");
-  var itemContact = $("#MenuContact");
-  var itemHome = $("#HomeIcon");
-
-  itemHome.removeClass("invisible");
-  itemArtist.removeClass("invisible");
-  itemArt.removeClass("invisible");
-  itemContact.removeClass("invisible");
-
-  //setGenericMatrixText(itemHome.text(), "HomeIcon");
-  //setGenericMatrixText(itemArtist.text(), "MenuArtist");
-  //setGenericMatrixText(itemArt.text(), "MenuArt");
-  //setGenericMatrixText(itemContact.text(), "MenuContact");
-}
-
-function setGenericMatrixText (sFinalText, sItemId) {
-  var fnGetMatrixRand = function (sFinal, finalCharIndex) {
-    let i = 0, text = "", possible = window._sMatrixChars;
-
-    for (i = 0; i < sFinal.length; i++) {
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-
-    if (finalCharIndex != 0) {
-      text = sFinal.substring(0,finalCharIndex) + text.substring(finalCharIndex, sFinal.length);
-    }
-
-    return text;
-  }
-
-  let item = $("#" + sItemId), index = 0, secIndex = 0, interval = {};
-
-  interval["interval-" + sItemId] = setInterval(function(){
-    if (index >= sFinalText.length) {
-      clearInterval(interval["interval-" + sItemId]);
-    }
-    item.text(fnGetMatrixRand(sFinalText, index));
-    if (secIndex >= 4) {
-      secIndex = 0;
-      index++;
-    } else {
-      secIndex++;
-    }
-  }, 40);
-}
-
+// HOME -------------------------------------------------------------
 function showHome (bSupressHistoryChange) {
 
   if (!bSupressHistoryChange) {
@@ -178,6 +46,7 @@ function showHome (bSupressHistoryChange) {
   }
 }
 
+// ART -------------------------------------------------------------
 function getArtContentPromise () {
   var myPromise = new Promise((resolve, reject) => {
     $.ajax({
@@ -196,6 +65,11 @@ function getArtContentPromise () {
 };
 
 function showArt (bSupressHistoryChange) {
+    var navToSeriesId = null;
+
+    if (window.location.search && window.location.search.startsWith("?art/")) {
+       navToSeriesId = window.location.search.split("?art/")[1];
+    }
 
     if (!bSupressHistoryChange) {
       history.pushState(null, null, '?art');
@@ -205,8 +79,6 @@ function showArt (bSupressHistoryChange) {
       $(".content").empty();
       $(".content").append(_sArtHtml);
       $(".seriesContainer").addClass("loaded");
-
-      //setGenericMatrixText($("#ArtSeriesHeader").text(), "ArtSeriesHeader");
     };
 
     var fnGetSeriesItem = function (series) {
@@ -227,9 +99,7 @@ function showArt (bSupressHistoryChange) {
       getArtContentPromise().then( (data) => {
         _aSeries = JSON.parse(data).series;
         _aPics = JSON.parse(data).pics;
-        /*for (var i = 0; i < _aSeries.length; i++) {
-          seriesHTML = seriesHTML + fnGetSeriesItem(_aSeries[i]);
-        }*/
+
         i = _aSeries.length;
         while (i > 0) {
           i--;
@@ -237,9 +107,19 @@ function showArt (bSupressHistoryChange) {
         }
         _sArtHtml = "<div id='ArtSeriesHeader' class='ArtSeriesHeader'>Projekte</div><div class='seriesContainer'>" + seriesHTML + "</div>";
         fnBuild();
+        window.setTimeout(function () {
+          if (navToSeriesId) {
+            onClickSeries(navToSeriesId);
+          }
+        }, 0);
       });
     } else {
       fnBuild();
+      window.setTimeout(function () {
+        if (navToSeriesId) {
+          onClickSeries(navToSeriesId);
+        }
+      }, 0);
     }
 }
 
@@ -280,91 +160,15 @@ function onClickSeries (id) {
   var sImgHTML = fnGetImgHTMLContent(id);
 
   seriesHTML = "<div class='seriesDetailContainer'>";
-  seriesHTML = seriesHTML + "<div class='seriesDetailHeaderContent'><button type='button' class='btn btn-default btnBack' onclick='showArt();'>ᗒ</button>";
+  seriesHTML = seriesHTML + "<div class='seriesDetailHeaderContent'><button type='button' class='btn btn-default btnBack' onclick='history.back();'>ᗒ</button>";
   seriesHTML = seriesHTML + "<div class='seriesDetailHeader'>" + name + "</div></div>";
   seriesHTML = seriesHTML + "<div class='seriesDetailDescription'>" + desc + "</div>";
   seriesHTML = seriesHTML + "<div class='seriesDetailImgContainer'>" + sImgHTML + "</div></div>";
 
+  history.pushState(null, null, '?art/' + id);
+
   $(".content").empty();
   $(".content").append(seriesHTML);
-}
-
-function showArtist (bSupressHistoryChange) {
-
-    if (!bSupressHistoryChange) {
-      history.pushState(null, null, '?artist');
-    }
-
-    var fnGetArtistContentPromise = function () {
-      var myPromise = new Promise((resolve, reject) => {
-        $.ajax({
-          dataType: "html",
-          url: "/pages/artist.html",
-          success: function (data) {
-            resolve(data);
-          },
-          error: function (sError) {
-            reject();
-          }
-        });
-      });
-
-      return myPromise;
-    };
-
-    var fnBuild = function () {
-      $(".content").empty();
-      $(".content").append(_sArtistHtml);
-      //setGenericMatrixText($("#artistHeader").text(), "artistHeader");
-      //setGenericMatrixText($("#artistContactHeader").text(), "artistContactHeader");
-      //setGenericMatrixText($("#artistImpressumHeader").text(), "artistImpressumHeader");
-    };
-
-    if (window._sArtistHtml == null) {
-      fnGetArtistContentPromise().then( (artistHtml) => {
-        _sArtistHtml = artistHtml;
-        fnBuild();
-      });
-    } else {
-      fnBuild();
-    }
-}
-
-function showContact () {
-    var fnGetContactContentPromise = function () {
-      var myPromise = new Promise((resolve, reject) => {
-        $.ajax({
-          dataType: "html",
-          url: "/pages/contact.html",
-          success: function (data) {
-            resolve(data);
-          },
-          error: function (sError) {
-            reject();
-          }
-        });
-      });
-
-      return myPromise;
-    };
-
-    var fnBuild = function () {
-      $(".content").empty();
-      $(".content").append(_sContactHtml);
-    };
-
-    if (window._sContactHtml == null) {
-      fnGetContactContentPromise().then( (contactHtml) => {
-        _sContactHtml = contactHtml;
-        fnBuild();
-      });
-    } else {
-      fnBuild();
-    }
-}
-
-function instagramIconPressed () {
-  window.open("https://www.instagram.com/kaihetzler", "_blank");
 }
 
 function getDialogContent (id) {
@@ -461,4 +265,81 @@ function closeArtDialog () {
 
 function triggerKaufanfrage (id) {
   alert("Kaufanfrage für Artwork: " + id);
+}
+
+
+// ARTIST -------------------------------------------------------------
+function showArtist (bSupressHistoryChange) {
+
+    if (!bSupressHistoryChange) {
+      history.pushState(null, null, '?artist');
+    }
+
+    var fnGetArtistContentPromise = function () {
+      var myPromise = new Promise((resolve, reject) => {
+        $.ajax({
+          dataType: "html",
+          url: "/pages/artist.html",
+          success: function (data) {
+            resolve(data);
+          },
+          error: function (sError) {
+            reject();
+          }
+        });
+      });
+
+      return myPromise;
+    };
+
+    var fnBuild = function () {
+      $(".content").empty();
+      $(".content").append(_sArtistHtml);
+    };
+
+    if (window._sArtistHtml == null) {
+      fnGetArtistContentPromise().then( (artistHtml) => {
+        _sArtistHtml = artistHtml;
+        fnBuild();
+      });
+    } else {
+      fnBuild();
+    }
+}
+
+function showContact () {
+    var fnGetContactContentPromise = function () {
+      var myPromise = new Promise((resolve, reject) => {
+        $.ajax({
+          dataType: "html",
+          url: "/pages/contact.html",
+          success: function (data) {
+            resolve(data);
+          },
+          error: function (sError) {
+            reject();
+          }
+        });
+      });
+
+      return myPromise;
+    };
+
+    var fnBuild = function () {
+      $(".content").empty();
+      $(".content").append(_sContactHtml);
+    };
+
+    if (window._sContactHtml == null) {
+      fnGetContactContentPromise().then( (contactHtml) => {
+        _sContactHtml = contactHtml;
+        fnBuild();
+      });
+    } else {
+      fnBuild();
+    }
+}
+
+function instagramIconPressed () {
+  window.open("https://www.instagram.com/kaihetzler", "_blank");
 }
